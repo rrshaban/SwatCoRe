@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :courses
+
   get 'sessions/new'
 
   get 'users/new'

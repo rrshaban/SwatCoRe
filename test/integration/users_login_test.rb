@@ -9,5 +9,5 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     assert_not flash.empty?
     get root_path
     assert flash.empty?
-end
+  end
 end
