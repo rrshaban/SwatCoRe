@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
                       uniqueness: { case_sensitive: false }
 
     has_secure_password
-    validates :password, length: { minimum: 6 }
+    validates :password, length: { minimum: 6 }, allow_blank: true
 
     has_many :reviews, dependent: :destroy
 
