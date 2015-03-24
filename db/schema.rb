@@ -11,23 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150324145842) do
+ActiveRecord::Schema.define(version: 20150324200901) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "name"
     t.string   "department"
-    t.string   "professor"
+    t.string   "crn"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "models", force: :cascade do |t|
+    t.string   "Course"
+    t.string   "name"
+    t.string   "department"
+    t.string   "crn"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer  "overall"
-    t.text     "comment"
+    t.text     "content"
+    t.integer  "helpful"
+    t.integer  "user_id"
+    t.integer  "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "user_id"
   end
+
+  add_index "reviews", ["course_id"], name: "index_reviews_on_course_id"
+  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

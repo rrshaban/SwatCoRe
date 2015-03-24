@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :reviews
 
-  resources :courses
 
+  resources :models
   get 'sessions/new'
 
   get 'users/new'

@@ -1,16 +1,20 @@
-<%= form_for(@course) do |f| %>
-  <% if @course.errors.any? %>
+<%= form_for(@model) do |f| %>
+  <% if @model.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
+      <h2><%= pluralize(@model.errors.count, "error") %> prohibited this model from being saved:</h2>
 
       <ul>
-      <% @course.errors.full_messages.each do |message| %>
+      <% @model.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :Course %><br>
+    <%= f.text_field :Course %>
+  </div>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -20,8 +24,8 @@
     <%= f.text_field :department %>
   </div>
   <div class="field">
-    <%= f.label :professor %><br>
-    <%= f.text_field :professor %>
+    <%= f.label :crn %><br>
+    <%= f.text_field :crn %>
   </div>
   <div class="actions">
     <%= f.submit %>
