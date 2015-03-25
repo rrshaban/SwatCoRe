@@ -1,10 +1,9 @@
 <li id="review-<%= review.id %>">
-  <%= link_to gravatar_for(review.user, size: 50), review.user %>
-  <span class="user"><%= link_to review.user.name, review.user %></span>
-  <span class="course"><%= link_to review.course.name, review.course %></span>
+  <!-- <%= link_to gravatar_for(review.user, size: 50), review.user %> -->
+  <!-- <span class="course"><%= link_to review.course.name, review.course %></span> -->
   <span class="content"><%= review.content %></span>
   <span class="overall"><%= review.overall %></span>
   <span class="timestamp">
-    Posted <%= time_ago_in_words(review.created_at) %> ago.
+    Posted <%= time_ago_in_words(review.created_at) %> ago by <%= link_to review.user.name, review.user %>.
   </span>
 </li>

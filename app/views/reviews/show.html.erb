@@ -7,15 +7,5 @@
       </h1>
     </section>
   </aside>
-  <div class="col-md-8">
-    <% if @course.reviews.any? %>
-      <h3>Reviews (<%= @course.reviews.count %>)</h3>
-      <ol class="reviews">
-        <%= render @reviews %>
-      </ol>
-      <%= will_paginate @reviews %>
-    <% else %>
-      <h3>No reviews yet for this class :( </h3>
-    <% end %>
-  </div>
+  
 </div>

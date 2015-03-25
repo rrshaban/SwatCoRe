@@ -1,19 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @course.name %>
-</p>
 
-<p>
-  <strong>Department:</strong>
-  <%= @course.department %>
-</p>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="course_info">
+      <h1>
+        <%= @course.name %>
+      </h1>
+      <p></p>
+      <p>
+        <strong>Department:</strong>
+        <%= @course.department %>
+      </p>
 
-<p>
-  <strong>Crn:</strong>
-  <%= @course.crn %>
-</p>
+      <p>
+        <strong>Crn:</strong>
+        <%= @course.crn %>
+      </p>
 
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
+      <%= link_to 'Edit', edit_course_path(@course) %> |
+      <%= link_to 'Back', courses_path %>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <% if @course.reviews.any? %>
+      <h3>Reviews (<%= @course.reviews.count %>)</h3>
+      <ol class="reviews">
+        <%= render @reviews %>
+      </ol>
+      <%= will_paginate @reviews %>
+    <% else %>
+      <h3>No reviews yet for this class :( </h3>
+    <% end %>
+  </div>
+</div>
