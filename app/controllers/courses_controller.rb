@@ -10,6 +10,8 @@ class CoursesController < ApplicationController
   # GET /courses/1
   # GET /courses/1.json
   def show
+    @course = Course.find(params[:id])
+    @reviews = @course.reviews.paginate(page: params[:page])
   end
 
   # GET /courses/new

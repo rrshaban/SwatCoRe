@@ -5,6 +5,7 @@ class UserTest < ActiveSupport::TestCase
   def setup
     @user = User.new(name: "Example User", email: "user@swarthmore.edu",
                       password: "foobar", password_confirmation: "foobar")
+    @course = courses(:cs21)
   end
 
   test "should be valid" do
@@ -72,6 +73,14 @@ class UserTest < ActiveSupport::TestCase
 
   test "authenticated? should return false for a user with nil digest" do
     assert_not @user.authenticated?('')
+  end
+
+  test "associated reviews should be destroyed" do
+    @user.save
+    @course.reviews.create!(content: "Lorem ipsum", overall: 3, user_id: @user.id)
+    assert_difference 'Review.count', -1 do
+      @user.destroy
+    end
   end
   
 end
