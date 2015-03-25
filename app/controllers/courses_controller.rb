@@ -12,6 +12,7 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
     @reviews = @course.reviews.paginate(page: params[:page])
+    @review = current_user.reviews.build if logged_in?
   end
 
   # GET /courses/new

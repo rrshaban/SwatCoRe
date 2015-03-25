@@ -1,0 +1,11 @@
+<%= form_for(@review) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Write new review..." %>
+  
+    <%= f.label :overall %>
+    <%= f.number_field :overall, class: 'form-control' %>
+
+    <%= f.submit "Post", class: "btn btn-primary" %>
+  </div>
+<% end %>
