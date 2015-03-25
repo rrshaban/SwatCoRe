@@ -1,15 +1,31 @@
 orange:
   content: "I just ate an orange!"
   created_at: <%= 10.minutes.ago %>
+  overall: 5
+  user: razi
 
 tau_manifesto:
   content: "Check out the internet at google.com"
   created_at: <%= 3.years.ago %>
+  overall: 5
+  user: razi
 
 cat_video:
   content: "Sad cats are sad: http://youtu.be/PKffm2uI4dk"
   created_at: <%= 2.hours.ago %>
+  overall: 5
+  user: razi
 
 most_recent:
   content: "Writing a short test"
   created_at: <%= Time.zone.now %>
+  overall: 5
+  user: razi
+
+<% 30.times do |n| %>
+review_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+  overall: 5
+  user: razi
+<% end %>
