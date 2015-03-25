@@ -2,24 +2,24 @@
 
 razi:
     name: Razi Example
-    email: razi@example.com
+    email: razi@swarthmore.edu
     password_digest: <%= User.digest('password') %>
     admin: true
 
 
 archer:
     name: Sterling Archer
-    email: duchess@example.gov
+    email: duchess@swarthmore.edu
     password_digest: <%= User.digest('password') %>
 
 lana:
     name: Lana Kane
-    email: hands@example.gov
+    email: hands@swarthmore.edu
     password_digest: <%= User.digest('password') %>
 
 mallory:
     name: Mallory Archer
-    email: boss@example.gov
+    email: boss@swarthmore.edu
     password_digest: <%= User.digest('password') %>
 
 <% 30.times do |n| %>
