@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
     has_secure_password
     validates :password, length: { minimum: 6 }, allow_blank: true
 
-    has_many :reviews, dependent: :destroy
+    # has_many :reviews, dependent: :destroy
 
     # returns the hash difest of the given string.
     def User.digest(string)

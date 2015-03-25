@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
 
 
-  resources :models
   get 'sessions/new'
 
   get 'users/new'
