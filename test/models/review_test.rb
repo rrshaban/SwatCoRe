@@ -5,7 +5,7 @@ class ReviewTest < ActiveSupport::TestCase
   def setup
     @user = users(:razi)
     # code is bad below
-    @review = Review.new(content: "Lorem ipsum", user_id: @user.id)
+    @review = @course.review.build(content: "Lorem ipsum", user_id: @user.id)
   end
 
   test "should be valid" do
