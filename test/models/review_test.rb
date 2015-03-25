@@ -5,7 +5,7 @@ class ReviewTest < ActiveSupport::TestCase
   def setup
     @user = users(:razi)
     @course = courses(:cs21)
-    @review = Review.new(content: "Lorem Ipsum", overall: 5, user_id: @user.id, course_id: @course.id)
+    @review = @course.reviews.new(content: "Lorem Ipsum", overall: 5, user_id: @user.id)
   end
 
   test "should be valid" do
