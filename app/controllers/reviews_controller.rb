@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
     @course = Course.find(params[:course_id])
 
     p = review_params
-    p[:user_id] = @current_user.id
+    p[:user_id] = @current_user.id    # this is a hack
 
     @review = @course.reviews.build(p)
 
