@@ -4,13 +4,19 @@ class ReviewsController < ApplicationController
   
   def create
 
-    @review = @course.reviews.build(review_params)
+    @course = Course.find(params[:course_id])
+
+    p = review_params
+    p[:user_id] = @current_user.id
+
+    @review = @course.reviews.build(p)
+
     if @review.save
       flash[:success] = "Review created!"
-      redirect_to course_path(id: @course)
     else
-      redirect_to course_path
+      flash[:error] = "Error creating review."
     end
+    redirect_to course_path(id: @course)
   end
 
   def destroy
@@ -19,7 +25,7 @@ class ReviewsController < ApplicationController
   private
 
     def review_params
-      params.require(:review).permit(:content,:overall,:user_id,:course_id,)
+      params.require(:review).permit(:content,:overall,:id,:course_id)
     end
 
 end
