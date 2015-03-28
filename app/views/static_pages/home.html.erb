@@ -7,7 +7,12 @@
     development pge.
   </h2>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <% if not logged_in? %>
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <% else %>
+    <%= link_to "View Courses Now!", courses_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
+
 </div>
 
 <%= link_to image_tag("rails.png", alt: "Rails logo"),
