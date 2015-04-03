@@ -26,6 +26,7 @@ end
 group :test do
   gem 'minitest-reporters', '1.0.5'
   gem 'guard-minitest',     '2.3.1'
+  gem 'minitest'
   gem 'rake'
 end
 
