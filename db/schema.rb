@@ -11,29 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150325023620) do
+ActiveRecord::Schema.define(version: 20150403195540) do
 
+  # modify course_params in courses_controller to mirror
   create_table "courses", force: :cascade do |t|
     t.string   "name"
     t.string   "department"
     t.string   "crn"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "professor_id"
+  end
+
+  add_index "courses", ["professor_id"], name: "index_courses_on_professor_id"
+
+  create_table "professors", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
     t.text     "content"
-    
     t.string   "professor"
-
     t.integer  "clarity"
-    t.integer  "workload" 
+    t.integer  "intensity"
     t.integer  "worthit"
-
-    t.integer "helpful"
-    t.integer "total"
-    t.float   "avg_review"
-    
     t.integer  "user_id"
     t.integer  "course_id"
     t.datetime "created_at", null: false
