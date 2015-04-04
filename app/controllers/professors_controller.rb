@@ -29,20 +29,6 @@ class ProfessorsController < ApplicationController
     end
   end
 
-  def create
-    @professor = Professor.new(professor_params)
-
-    respond_to do |format|
-      if @professor.save
-        format.html { redirect_to @professor, notice: 'Professor was successfully created.' }
-        format.json { render :show, status: :created, location: @professor }
-      else
-        format.html { render :new }
-        format.json { render json: @professor.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
   def destroy
     @professor.destroy
     respond_to do |format|
@@ -57,7 +43,7 @@ class ProfessorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def professor_params
-      params.require(:professor).permit(:name)
+      params.require(:professor).permit(:name, :department_id)
     end
 
 end
