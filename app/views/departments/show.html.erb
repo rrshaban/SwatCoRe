@@ -5,31 +5,49 @@
 <div class="row">
   <aside class="col-md-4">
       <section class="course_info">
-        <%= render 'shared/course_info' %>
+
+    <p>
+      <strong>Department:</strong>
+      <%= @department.name %>
+    </p>
+
+
+
+
       </section>
 
-      <%= link_to 'Edit', edit_course_path(@course) %> |
-      <%= link_to 'Back', courses_path %>
   </aside>
   <div class="col-md-8">
+    <% if @department.courses.any? %>
 
-    <% if logged_in? %>
+      <h3>Courses (<%= @department.courses.count %>)</h3>
 
-      <section class="review_form">
-        <%= render 'shared/review_form' %>
-      </section>
-    </aside>
+      <ol class="department_links">
+      <% @department.courses.each do |course| %>
+          <li id="course-<%= course.id %>">
+          <span class="name">   <%= link_to course.name, course %>  </span>     <br />  <!-- ew, breaks. no time to sass -->
+          <span class="crn">    <%= course.crn %>     </span>                   <br /> 
+          <span class="professor_id">   <%= course.professor_id %>    </span>   <br />
 
-    <% end %>
+          <span class="timestamp">
+            Last reviewed <%= time_ago_in_words(course.updated_at) %> ago.
+          </span>
+          </li>
 
-    <% if @course.reviews.any? %>
-      <h3>Reviews (<%= @course.reviews.count %>)</h3>
-      <ol class="reviews">
-        <%= render @reviews %>
+
+        <%#=  THESE LINKS SHOULD NOT GO ON THE ACTUAL COURSE PAGE
+              Even though they should only be functional for an admin user  %>
+        <td><%= link_to 'Show', course %></td>
+        <td><%= link_to 'Edit', edit_course_path(course) %></td>
+        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      <% end %>
+
       </ol>
-      <%= will_paginate @reviews %>
+
+
     <% else %>
-      <h3>No reviews yet for this class :( </h3>
+      <h3>No courses yet listed for this department :( </h3>
     <% end %>
   </div>
 </div>
