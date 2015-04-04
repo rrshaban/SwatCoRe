@@ -2,14 +2,23 @@
   <%= @course.name %>
 </h1>
 <p></p>
-<p>
-  <strong>Department:</strong>
-  <%= @course.department %>
-</p>
 
 <p>
   <strong>Crn:</strong>
   <%= @course.crn %>
 </p>
 
+<p>
+  <strong>Professor:</strong>
+  <%= @course.professor_id %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @course.department_id %>
+</p>
+
+
+
 <%= @course.reviews.count %> Reviews
+

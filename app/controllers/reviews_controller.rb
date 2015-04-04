@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
     @course = Course.find(params[:course_id])
 
     p = review_params
-    p[:user_id] = @current_user.id    # this is a hack
+    p[:user_id] = @current_user.id    # this is a hack (I think)
 
     @review = @course.reviews.build(p)
 
@@ -25,7 +25,14 @@ class ReviewsController < ApplicationController
   private
 
     def review_params
-      params.require(:review).permit(:content,:overall,:id,:course_id)
+      params.require(:review).permit(:content,
+                                    :clarity,
+                                    :workload,
+                                    :worthit,
+                                    :professor_id,
+                                    :department_id,
+                                    :course_id,
+                                    :id)
     end
 
 end

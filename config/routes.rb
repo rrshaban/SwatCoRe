@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   resources :users
   resources :courses
+  resources :departments, only: [:index, :show, :new, :create]
+  resources :professors, only: [:index, :show, :new, :create]
 
   resources :reviews, only: [:create, :destroy]
 

@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20150404025611) do
   create_table "reviews", force: :cascade do |t|
     t.text     "content"
     t.integer  "clarity"
-    t.integer  "intensity"
+    t.integer  "workload"
     t.integer  "worthit"
     t.integer  "user_id"
     t.integer  "course_id"

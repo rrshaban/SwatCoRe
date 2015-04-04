@@ -17,7 +17,7 @@
     <% @courses.each do |course| %>
       <tr>
         <td><%= course.name %></td>
-        <td><%= course.department %></td>
+        <td><%= course.department_id %></td>
         <td><%= course.crn %></td>
         <td><%= course.professor_id %></td>
         <td><%= link_to 'Show', course %></td>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Course', new_course_path %>
+<%= if new_course_path: link_to 'New Course', new_course_path end %>
