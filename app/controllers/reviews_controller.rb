@@ -27,7 +27,7 @@ class ReviewsController < ApplicationController
     def review_params
       params.require(:review).permit(:content,
                                     :clarity,
-                                    :workload,
+                                    :intensity,
                                     :worthit,
                                     :professor_id,
                                     :department_id,

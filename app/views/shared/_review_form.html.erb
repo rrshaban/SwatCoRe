@@ -4,9 +4,9 @@
     <%= f.text_area :content, placeholder: "Write new review..." %>
 
     <%= f.label :clarity %>
-    <%= f.number_field :clarity, class: 'form-control' %>
+    <%= f.number_field :clarity, clap0ss: 'form-control' %>
 
-    <%= f.label :intensity %>
+    <%= f.label :workload %>
     <%= f.number_field :intensity, class: 'form-control' %>
 
     <%= f.label :worthit %>
@@ -15,6 +15,7 @@
 
     <input type="hidden" name="course_id" value="<%= @course.id %>" />
     <input type="hidden" name="professor_id" value="<%= @course.professor_id %>" />
+    <input type="hidden" name="department_id" value="<%= @course.department_id %>" />
 
     <%= f.submit "Post", class: "btn btn-primary" %>
   </div>

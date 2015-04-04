@@ -1,7 +1,10 @@
 <li id="review-<%= review.id %>">
   <!-- <span class="course"><%= link_to review.course.name, review.course %></span> -->
-  <span class="content"><%= review.content %></span>
-  <span class="overall"><%= review.overall %></span>
+  <span class="content"><%= review.content %></span>              <br />    <!-- EW EW PLEASE CSS FIX -->
+  <span class="clarity">Clarity: <%= review.clarity %></span>     <br />
+  <span class="workload">Workload: <%= review.intensity %></span> <br />
+  <span class="worthit">Worth it?: <%= review.worthit %></span>   <br />
+
   <span class="timestamp">
     Posted <%= time_ago_in_words(review.created_at) %> ago by <%= link_to review.user.name, review.user %>.
   </span>

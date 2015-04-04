@@ -19,6 +19,7 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
+    @dept_options = Department.all.map{|d| [d.name, d.id]}
   end
 
   # GET /courses/1/edit
