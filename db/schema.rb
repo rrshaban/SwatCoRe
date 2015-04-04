@@ -11,41 +11,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150403195540) do
+ActiveRecord::Schema.define(version: 20150404025611) do
 
-  # modify course_params in courses_controller to mirror
-  create_table "courses", force: :cascade do |t|
-    t.string   "name"
-    t.string   "department"
-    t.string   "crn"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.integer  "professor_id"
-  end
-
-  add_index "courses", ["professor_id"], name: "index_courses_on_professor_id"
-
-  create_table "professors", force: :cascade do |t|
+  create_table "departments", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "professors", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "department_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end    
+
+  add_index "professors", ["department_id"], name: "index_professors_on_department_id"
+
+
+  create_table "courses", force: :cascade do |t|
+    t.string   "name"
+    t.string   "crn"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "professor_id"
+    t.integer  "department_id"
+  end
+
+  add_index "courses", ["crn"],          name: "index_crn_on_courses"
+  add_index "courses", ["professor_id"], name: "index_courses_on_professor_id"
+  add_index "courses", ["department_id"], name: "index_courses_on_department_id"
+
   create_table "reviews", force: :cascade do |t|
     t.text     "content"
-    t.string   "professor"
     t.integer  "clarity"
     t.integer  "intensity"
     t.integer  "worthit"
     t.integer  "user_id"
     t.integer  "course_id"
+    t.integer  "professor_id"
+    t.integer  "department_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_index "reviews", ["course_id"], name: "index_reviews_on_course_id"
   add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
-
+  add_index "reviews", ["professor_id"], name: "index_reviews_on_professor_id"
+  add_index "reviews", ["department_id"], name: "index_reviews_on_department_id"
+  
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
