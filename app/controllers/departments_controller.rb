@@ -11,8 +11,6 @@ class DepartmentsController < ApplicationController
 
   def show
     @department = Department.find(params[:id])
-    # @reviews = @course.reviews.paginate(page: params[:page])
-    # @new_review = @course.reviews.build if logged_in?
   end
 
   def create
