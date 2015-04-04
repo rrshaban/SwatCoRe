@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20150404025611) do
     t.integer  "clarity"
     t.integer  "intensity"
     t.integer  "worthit"
+    
     t.integer  "user_id"
     t.integer  "course_id"
     t.integer  "professor_id"

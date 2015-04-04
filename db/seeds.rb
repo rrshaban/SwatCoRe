@@ -12,6 +12,8 @@ User.create!(name:  "Studious Swattie",
              password_confirmation: "foobar",
              admin: true)
 
+Department.create!(name: "Computer Science")
+
 99.times do |n|
   name  = Faker::Name.name
   email = "example#{n+1}@swarthmore.edu"
@@ -23,15 +25,15 @@ User.create!(name:  "Studious Swattie",
 end
 
 Course.create!( name:        "Introduction to Computer Science",
-                department:  "Computer Science",
+                department_id:  1,
                 crn:         "CS021")
 
 Course.create!( name:        "Introduction to Computer Systems",
-                department:  "Computer Science",
+                department_id:  1,
                 crn:         "CS031")
 
 Course.create!( name:        "Data Structures and Algorithms",
-                department:  "Computer Science",
+                department_id:  1,
                 crn:         "CS035")
 
 
@@ -40,6 +42,8 @@ courses = Course.order(:created_at).take(3)
   content = Faker::Lorem.sentence(5)
   courses.each { |course| course.reviews.create!(content: content, 
                                                     user: User.find_by(id: 1), 
-                                                 overall: 5) }
+                                                    clarity: 5,
+                                                    intensity: 5,
+                                                    worthit: 5) }
 end
 

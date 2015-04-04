@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :department_id %><br>
-    <%= select_tag(:department_id, options_for_select(@dept_options)) %>
+    <%= select(:course, :department_id, @dept_options) %>
    
   </div>
     <div class="field">
