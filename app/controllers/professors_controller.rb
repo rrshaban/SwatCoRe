@@ -1,6 +1,7 @@
 class ProfessorsController < ApplicationController
   before_action :logged_in_user
   before_action :get_depts
+  before_action :get_profs
 
   def index
     @professors = Professor.all
@@ -59,7 +60,4 @@ class ProfessorsController < ApplicationController
       params.require(:professor).permit(:name)
     end
 
-    def get_depts
-       @dept_options = Department.all.map{|d| [d.name, d.id]}
-    end
 end

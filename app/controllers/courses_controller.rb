@@ -2,6 +2,7 @@ class CoursesController < ApplicationController
   before_action :logged_in_user
   before_action :set_course, only: [:show, :edit, :update, :destroy]
   before_action :get_depts
+  before_action :get_profs
 
   # GET /courses
   # GET /courses.json
@@ -77,8 +78,5 @@ class CoursesController < ApplicationController
       params.require(:course).permit(:name, :department_id, :crn, :professor_id)
     end
 
-    def get_depts
-       @dept_options = Department.all.map{|d| [d.name, d.id]}
-    end
 
 end

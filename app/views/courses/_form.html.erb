@@ -17,13 +17,12 @@
   </div>
   <div class="field">
     <%= f.label :department_id %><br>
-    <%#= @dept_options %>
     <%= select(:course, :department_id, @dept_options) %>
    
   </div>
     <div class="field">
     <%= f.label :professor_id %><br>
-    <%= f.number_field :professor_id %>
+    <%= select(:course, :professor_id, @prof_options) %>
   </div>
   <div class="field">
     <%= f.label :crn %><br>

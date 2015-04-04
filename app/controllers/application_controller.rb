@@ -14,4 +14,17 @@ class ApplicationController < ActionController::Base
         redirect_to login_url
       end
     end
+
+    def get_depts
+       @dept_options = Department.all.map{|d| [d.name, d.id]}
+    end
+
+    def get_profs
+       @prof_options = Professor.all.map{|p| [p.name, p.id]}
+    end
+
+
+
+
+
 end
