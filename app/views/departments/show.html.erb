@@ -10,8 +10,15 @@
 
       <% if @department.professors.any? %>
 
+        <ol class="professor_links">
+        <% @department.professors.each do |p| %>
+          <li><%= link_to p.name, p %>
+          
+        <% end %>
+        </ol>
 
       <% else %>
+        <%= @department.id %>
         No professors currently listed for this department.
       <% end %>
 
