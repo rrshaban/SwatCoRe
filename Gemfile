@@ -17,6 +17,7 @@ gem 'sdoc',                 '0.4.0', group: :doc
 gem 'minitest',             '5.5.1'
 gem 'pg',                   '0.18.1'
 gem 'oboe-heroku',          '0.9.18.1'
+gem 'devise',               '3.4.1'
 
 group :development, :test do
   # gem 'sqlite3',     '1.3.9'
