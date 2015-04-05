@@ -6,25 +6,29 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create!(name:  "Studious Swattie",
-             email: "example@swarthmore.edu",
-             password:              "foobar",
-             password_confirmation: "foobar",
-             admin: true)
+# User.create!(name:  "Studious Swattie",
+#              email: "example@swarthmore.edu",
+#              password:              "foobar",
+#              password_confirmation: "foobar",
+#              admin: true)
 
 Department.create!(name: "Computer Science")
 
 Professor.create!(name: "Ameet Soni",
                   department_id: 1)
 
-99.times do |n|
+1.times do |n|
   name  = Faker::Name.name
-  email = "example#{n+1}@swarthmore.edu"
+  # email = "example#{n+1}@swarthmore.edu"
+  email = "rshaban1@swarthmore.edu"
   password = "password"
-  User.create!(name:  name,
-               email: email,
-               password:              password,
-               password_confirmation: password)
+  @user = User.new(name:              name,
+               email:                 email,
+               password:              password)
+
+  # so we don't accidentally spam Swarthmore again
+  u.skip_confirmation!
+  u.save!
 end
 
 Course.create!( name:        "Introduction to Computer Science",

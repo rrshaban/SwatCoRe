@@ -1,0 +1,17 @@
+server {
+	listen 80 default_server;
+	root /opt/trico-cc/trico-cc/static;
+	index index.html index.htm;
+	server_name dev-trico-cc.haverford.edu;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+
+	#location = /api { rewrite ^ /api/; }
+	location /api { try_files $uri @tricocc; }
+	location @tricocc {
+		include uwsgi_params;
+		uwsgi_pass unix:/run/uwsgi/app/trico-cc/trico-cc.socket;
+	}
+}

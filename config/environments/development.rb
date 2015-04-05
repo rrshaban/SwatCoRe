@@ -14,7 +14,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -38,4 +38,19 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.action_mailer.perform_deliveries = true # Set it to false to disable the email in dev mode
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { :host => "localhost:3000" }
+
+  ActionMailer::Base.smtp_settings = {
+                      :address        => "smtp.gmail.com",
+                      :port           => 587,
+                      :authentication => :plain,
+                      :user_name      => "swatcoreteam@gmail.com",
+                      :password       => "coursereview"
+  }
 end

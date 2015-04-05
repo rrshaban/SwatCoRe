@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-  before_action :logged_in_user
+  # before_action :logged_in_user
   before_action :set_course, only: [:show, :edit, :update, :destroy]
   before_action :get_depts
   before_action :get_profs
@@ -15,7 +15,7 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
     @reviews = @course.reviews.paginate(page: params[:page])
-    @new_review = @course.reviews.build if logged_in?
+    @new_review = @course.reviews.new()
   end
 
   # GET /courses/new

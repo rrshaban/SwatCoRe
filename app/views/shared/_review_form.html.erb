@@ -1,4 +1,4 @@
-<%= form_for(@new_review) do |f| %>
+<%= form_for @new_review, :url => reviews_path do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
     <%= f.text_area :content, placeholder: "Write new review..." %>
@@ -12,11 +12,10 @@
     <%= f.label :worthit %>
     <%= f.number_field :worthit, class: 'form-control' %>
     
-
-    <input type="hidden" name="course_id" value="<%= @course.id %>" />
-    <input type="hidden" name="professor_id" value="<%= @course.professor_id %>" />
-    <input type="hidden" name="department_id" value="<%= @course.department_id %>" />
-
+    <%= hidden_field_tag 'review[course_id]', @course.id %>
+    <%= hidden_field_tag 'review[professor_id]', @course.professor_id %>
+    <%= hidden_field_tag 'review[department_id]', @course.department_id %>
+    
     <%= f.submit "Post", class: "btn btn-primary" %>
   </div>
 <% end %>

@@ -1,5 +1,5 @@
 class ProfessorsController < ApplicationController
-  before_action :logged_in_user
+  # before_action :logged_in_user
   before_action :get_depts
   before_action :get_profs
 

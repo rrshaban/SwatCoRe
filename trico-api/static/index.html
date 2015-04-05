@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>Trico Course Catalog API Documentation</title>
+</head>
+
+<h1>Trico Course Catalog API Documentation</h1>
+
+<p>This is a RESTful API service for searching and returning data about courses available at Haverford, Bryn Mawr and Swarthmore colleges. Listed below are all the currently implemented URI endpoints and the parameters needed to use them. Use a tool like <a href="http://curl.haxx.se/">cURL</a> to test the URIs, or libraries like <a href="http://jquery.com/">jQuery</a> to develop applications to use the data. All syntax examples are given using cURL.</p>
+
+<p>Source code for API Flask application available <a href="source.tar.gz">here</a></p>
+
+<h2>Valid URIs</h2>
+
+<h3>Department List</h3>
+<ul>
+<li>URI Endpoint: /api/department/list
+<li>Type: GET
+<li>Parameters: None
+<li>Returns: A list of all departments currently represented in the course data
+<li>Example: curl -i http://dev-trico-cc.haverford.edu/api/department/list
+</ul>
+  
+<h3>Semester List</h3>
+<ul>
+<li>URI Endpoint: /api/semester/list
+<li>Type: POST
+<li>Parameters: None
+<li>Returns: A list of all semesters currently represented in the course data
+<li>Example: curl -i http://dev-trico-cc.haverford.edu/api/semester/list
+</ul>
+  
+<h3>Semester Get</h3>
+<ul>
+<li>URI Endpoint: /api/semester/get
+<li>Type: POST
+<li>Parameters:
+    <ul>
+    <li>String "college", one of "haverford", "bryn_mawr" or "swarthmore"
+    <li>String "semester", a valid semester from the "Semester List" return
+    </ul>
+<li>Returns: A list of all courses for the requested college and semester, returning college, semester, registration ID and title only
+<li>Example: curl -i -H "Content-Type: application/json" -X POST -d '{"college":"haverford","semester":"fall_2014"}' http://dev-trico-cc.haverford.edu/api/semester/get
+</ul>
+  
+<h3>Course Get</h3>
+<ul>
+<li>URI Endpoint: /api/course/get
+<li>Type: POST
+<li>Parameters:
+    <ul>
+    <li>String "college", one of "haverford", "bryn_mawr" or "swarthmore"
+    <li>String "semester", a valid semester from the "Semester List" return
+    <li>String "reg_id", a valid registration ID from either a "Semester Get" or "Course Search" return
+    </ul>
+<li>Returns: All data for the requested course, including miscellaneous data like course description
+<li>Example: curl -i -H "Content-Type: application/json" -X POST -d '{"college":"haverford","semester":"fall_2014","reg_id":"ANTHH103A001"}' http://dev-trico-cc.haverford.edu/api/course/get
+</ul>
+
+<h3>Course Search</h3>
+<li>URI Endpoint: /api/course/search
+<li>Type: POST
+<li>Parameters (all optional):
+    <ul>
+    <li>List of strings "college", "haverford", "bryn_mawr" and "swarthmore" are all valid
+    <li>List of strings "semester", must be a valid semester from the "Semester List" return
+    <li>List of strings "department", must be a valid department name from the "Department List" return
+    <li>String "reg_id", contains a partial match for the registation ID of the course(s)
+    <li>String "instructor", contains a partial match for the instructor's name
+    <li>List of strings "days", "M", "T", "W", "Th", "F", "Sa", "Su" are all valid
+    <li>List of strings "start_times" for desired start times. Format is HH:MM(am|pm); ex. 12:00pm, 01:00pm, 10:00am
+    <li>String "keyword", contains a partial match to perform a general search on course data (Note: this currently only searches the title, searching "misc" data will be added later)
+    </ul>
+<li>Returns: All data matching ALL fields supplied. Return does not include the "misc" field of each course. Detailed examples below.
+
+<h2>Examples</h2>
+
+<h3>Course Search Examples</h3>
+<p>These examples all use the "curl" command line tool to construct a valid JSON HTTP request. Other JSON request tools like jQuery can be used instead.</p>
+
+<h4>Search for all courses Fall 2014 / Spring 2015 just from Haverford and Bryn Mawr</h4>
+curl -i -H "Content-Type: application/json" -X POST -d '{"college":["haverford","bryn_mawr"],"semester":["fall_2014","spring_2015"]}' http://dev-trico-cc.haverford.edu/api/course/search<br>
+
+<h4>Search for all courses Fall 2014 / Spring 2015 where instructor contains the name "tortorelli"</h4>
+curl -i -H "Content-Type: application/json" -X POST -d '{"instructor":"tortorelli","semester":["fall_2014","spring_2015"]}' http://dev-trico-cc.haverford.edu/api/course/search<br>
+
+<h4>Search for all courses Fall 2014 / Spring 2015 where the title contains the string "art"</h4>
+curl -i -H "Content-Type: application/json" X POST -d '{"keyword":"art","semester":["fall_2014","spring_2015"]}' http://dev-trico-cc.haverford.edu/api/course/search<br>
+
+<h4>Search for all courses Fall 2014 / Spring 2015 where the start time is 1 PM or 10 AM on a Monday</h4>
+curl -i -H "Content-Type: application/json" X POST -d '{"start_times":["01:00pm","10:00am"],"days":["M"],"semester":["fall_2014","spring_2015"]}' http://dev-trico-cc.haverford.edu/api/course/search<br>
+
+<h3>Course Data Ingest Examples</h3>
+
+<p>This will be turned off for the Hackathon, it is used to load data into MongoDB from the flat files.</p>
+
+<h4>Ingest everything currently "valid" in the API's validation RegExs</h4>
+curl -i http://dev-trico-cc.haverford.edu/api/ingest/bulk<br>
+
+<h4>Ingest just the Fall 2014 data for Haverford College</h4>
+curl -i -H "Content-Type: application/json" -X POST -d '{"college":"haverford","semester":"fall_2014"}' http://dev-trico-cc.haverford.edu/api/ingest/semester<br>
