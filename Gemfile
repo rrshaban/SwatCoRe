@@ -16,7 +16,7 @@ gem 'jbuilder',             '2.2.3'
 gem 'sdoc',                 '0.4.0', group: :doc
 gem 'minitest',             '5.5.1'
 gem 'pg',                   '0.18.1'
-
+gem 'oboe-heroku',          '0.9.18.1'
 
 group :development, :test do
   # gem 'sqlite3',     '1.3.9'
@@ -35,4 +35,5 @@ end
 group :production do
   gem 'rails_12factor',     '0.0.2'
   gem 'puma'
+
 end

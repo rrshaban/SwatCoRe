@@ -14,7 +14,8 @@ User.create!(name:  "Studious Swattie",
 
 Department.create!(name: "Computer Science")
 
-Professor.create!(name: "Ameet Soni")
+Professor.create!(name: "Ameet Soni",
+                  department_id: 1)
 
 99.times do |n|
   name  = Faker::Name.name
