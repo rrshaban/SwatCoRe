@@ -12,14 +12,10 @@
   </aside>
   <div class="col-md-8">
 
-    <% if logged_in? %>
-
       <section class="review_form">
         <%= render 'shared/review_form' %>
       </section>
     </aside>
-
-    <% end %>
 
     <% if @course.reviews.any? %>
       <h3>Reviews (<%= @course.reviews.count %>)</h3>
