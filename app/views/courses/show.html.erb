@@ -9,6 +9,7 @@
 
       <%= link_to 'Edit', edit_course_path(@course) %> |
       <%= link_to 'Back', courses_path %>
+
   </aside>
   <div class="col-md-8">
 
@@ -18,6 +19,7 @@
     </aside>
 
     <% if @course.reviews.any? %>
+    
       <h3>Reviews (<%= @course.reviews.count %>)</h3>
       <ol class="reviews">
         <%= render @reviews %>
