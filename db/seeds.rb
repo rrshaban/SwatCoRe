@@ -14,6 +14,8 @@ User.create!(name:  "Studious Swattie",
 
 Department.create!(name: "Computer Science")
 
+Professor.create!(name: "Ameet Soni")
+
 99.times do |n|
   name  = Faker::Name.name
   email = "example#{n+1}@swarthmore.edu"
@@ -26,14 +28,17 @@ end
 
 Course.create!( name:        "Introduction to Computer Science",
                 department_id:  1,
+                professor_id:   1,
                 crn:         "CS021")
 
 Course.create!( name:        "Introduction to Computer Systems",
                 department_id:  1,
+                professor_id:   1,
                 crn:         "CS031")
 
 Course.create!( name:        "Data Structures and Algorithms",
                 department_id:  1,
+                professor_id:   1,
                 crn:         "CS035")
 
 
