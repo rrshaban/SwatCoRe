@@ -4,16 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user!
 
-  private
+  # def after_sign_in_path_for(resource)
+  #   resource_path
+  # end
 
-    # Confirms a logged-in user.
-    # def logged_in_user
-    #   unless logged_in?
-    #     store_location
-    #     flash[:danger] = "Please log in."
-    #     redirect_to login_url
-    #   end
-    # end
+  private
 
     def get_depts
        @dept_options = Department.all.map{|d| [d.name, d.id]}
