@@ -6,6 +6,6 @@
   <span class="worthit">Worth it?: <%= review.worthit %></span>   <br />
 
   <span class="timestamp">
-    Posted <%= time_ago_in_words(review.created_at) %> ago by <%= link_to review.user.name, review.user %>.
+    Posted <%= time_ago_in_words(review.created_at) %> ago by <%= review.user.name %>.
   </span>
 </li>

@@ -7,9 +7,9 @@ class ReviewsController < ApplicationController
     @course = Course.find(params[:course_id])
 
     p = review_params
-    p[:user_id] = current_user    # this is a hack (I think)
+    p[:user_id] = current_user.id    # this is a hack
 
-    @review = @course.reviews.build(p)
+    @review = @course.reviews.new(p)
 
     if @review.save
       flash[:success] = "Review created!"
