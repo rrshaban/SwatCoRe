@@ -18,6 +18,8 @@ gem 'minitest',             '5.5.1'
 gem 'pg',                   '0.18.1'
 gem 'oboe-heroku',          '0.9.18.1'
 gem 'devise',               '3.4.1'
+gem 'sendgrid',             '1.2.0'
+gem 'dotenv-rails', :groups => [:development, :test]
 
 group :development, :test do
   # gem 'sqlite3',     '1.3.9'

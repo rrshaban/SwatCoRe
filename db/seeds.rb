@@ -27,8 +27,8 @@ Professor.create!(name: "Ameet Soni",
                password:              password)
 
   # so we don't accidentally spam Swarthmore again
-  u.skip_confirmation!
-  u.save!
+  # @user.skip_confirmation_notification!
+  @user.save!
 end
 
 Course.create!( name:        "Introduction to Computer Science",
@@ -51,6 +51,8 @@ courses = Course.order(:created_at).take(3)
 10.times do
   content = Faker::Lorem.sentence(5)
   courses.each { |course| course.reviews.create!(content: content, 
+                                                    department_id:  1,
+                                                    professor_id:   1,
                                                     user: User.find_by(id: 1), 
                                                     clarity: 5,
                                                     intensity: 5,
