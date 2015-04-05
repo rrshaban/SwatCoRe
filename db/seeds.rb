@@ -27,7 +27,7 @@ Professor.create!(name: "Ameet Soni",
                password:              password)
 
   # so we don't accidentally spam Swarthmore again
-  # @user.skip_confirmation_notification!
+  @user.skip_confirmation_notification!
   @user.save!
 end
 
