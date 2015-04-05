@@ -88,7 +88,6 @@ Rails.application.configure do
   #   :password       => ENV['SENDGRID_PASSWORD'],
   #   :domain         => ENV['heroku.com'],
   #   :enable_starttls_auto => true
-
   # }
 
   ActionMailer::Base.smtp_settings = {

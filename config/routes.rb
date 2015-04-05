@@ -33,6 +33,8 @@ Rails.application.routes.draw do
   resources :professors, only: [:index, :show, :new, :create]
   resources :courses
 
+  get 'search'    => 'courses#search'
+
   resources :reviews, only: [:create, :destroy]
 
 end

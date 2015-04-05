@@ -1,0 +1,15 @@
+What you are looking for cannot be found. 
+
+
+<% @courses.each do |course| %>
+  <tr>
+    <td><%= course.name %></td>
+    <td><%= course.department_id %></td>
+    <td><%= course.crn %></td>
+    <td><%= Professor.find(course.professor_id).name %></td>
+
+    <td><%= link_to 'Show', course %></td>
+    <td><%= link_to 'Edit', edit_course_path(course) %></td>
+    <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
