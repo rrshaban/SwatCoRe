@@ -1,0 +1,8 @@
+<li id="course-<%= course.id %>">
+  <!-- <span class="course"><%= link_to review.course.name, review.course %></span> -->
+  <span class="content"><%= review.content %></span>
+  <span class="overall"><%= review.overall %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(review.created_at) %> ago by <%= link_to review.user.name, review.user %>.
+  </span>
+</li>

@@ -1,13 +1,13 @@
 class ReviewsController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy]
+  # before_action :logged_in_user
   
   
   def create
 
-    @course = Course.find(params[:course_id])
+    @course = Course.find(review_params[:course_id])
 
     p = review_params
-    p[:user_id] = @current_user.id    # this is a hack
+    p[:user_id] = current_user.id    # this is a hack
 
     @review = @course.reviews.build(p)
 
@@ -16,6 +16,7 @@ class ReviewsController < ApplicationController
     else
       flash[:error] = "Error creating review."
     end
+
     redirect_to course_path(id: @course)
   end
 
@@ -25,7 +26,14 @@ class ReviewsController < ApplicationController
   private
 
     def review_params
-      params.require(:review).permit(:content,:overall,:id,:course_id)
+      params.require(:review).permit(:content,
+                                    :clarity,
+                                    :intensity,
+                                    :worthit,
+                                    :professor_id,
+                                    :department_id,
+                                    :course_id,
+                                    :id)
     end
 
 end

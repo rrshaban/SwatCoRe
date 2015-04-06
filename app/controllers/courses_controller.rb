@@ -1,9 +1,16 @@
 class CoursesController < ApplicationController
+  # before_action :logged_in_user
   before_action :set_course, only: [:show, :edit, :update, :destroy]
+  before_action :get_depts
+  before_action :get_profs
 
   # GET /courses
   # GET /courses.json
   def index
+    @courses = Course.all
+  end
+
+  def search
     @courses = Course.all
   end
 
@@ -12,7 +19,7 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
     @reviews = @course.reviews.paginate(page: params[:page])
-    @new_review = @course.reviews.build if logged_in?
+    @new_review = @course.reviews.new()
   end
 
   # GET /courses/new
@@ -72,6 +79,8 @@ class CoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:course).permit(:name, :department, :crn)
+      params.require(:course).permit(:name, :department_id, :crn, :professor_id)
     end
+
+
 end

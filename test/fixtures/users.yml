@@ -1,30 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-razi:
-    name: Razi Example
-    email: razi@swarthmore.edu
-    password_digest: <%= User.digest('password') %>
-    admin: true
-
-
-archer:
-    name: Sterling Archer
-    email: duchess@swarthmore.edu
-    password_digest: <%= User.digest('password') %>
-
-lana:
-    name: Lana Kane
-    email: hands@swarthmore.edu
-    password_digest: <%= User.digest('password') %>
-
-mallory:
-    name: Mallory Archer
-    email: boss@swarthmore.edu
-    password_digest: <%= User.digest('password') %>
-
-<% 30.times do |n| %>
-user_<%= n %>:
-    name:  <%= "User #{n}" %>
-    email: <%= "user-#{n}@swarthmore.edu" %>
-    password_digest: <%= User.digest('password') %>
-<% end %>
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+#  column: value

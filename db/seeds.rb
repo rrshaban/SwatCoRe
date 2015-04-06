@@ -6,32 +6,44 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create!(name:  "Studious Swattie",
-             email: "example@swarthmore.edu",
-             password:              "foobar",
-             password_confirmation: "foobar",
-             admin: true)
+# User.create!(name:  "Studious Swattie",
+#              email: "example@swarthmore.edu",
+#              password:              "foobar",
+#              password_confirmation: "foobar",
+#              admin: true)
 
-99.times do |n|
+Department.create!(name: "Computer Science")
+
+Professor.create!(name: "Ameet Soni",
+                  department_id: 1)
+
+1.times do |n|
   name  = Faker::Name.name
-  email = "example#{n+1}@swarthmore.edu"
+  # email = "example#{n+1}@swarthmore.edu"
+  email = "rshaban1@swarthmore.edu"
   password = "password"
-  User.create!(name:  name,
-               email: email,
-               password:              password,
-               password_confirmation: password)
+  @user = User.new(name:              name,
+               email:                 email,
+               password:              password)
+
+  # so we don't accidentally spam Swarthmore again
+  @user.skip_confirmation_notification!
+  @user.save!
 end
 
 Course.create!( name:        "Introduction to Computer Science",
-                department:  "Computer Science",
+                department_id:  1,
+                professor_id:   1,
                 crn:         "CS021")
 
 Course.create!( name:        "Introduction to Computer Systems",
-                department:  "Computer Science",
+                department_id:  1,
+                professor_id:   1,
                 crn:         "CS031")
 
 Course.create!( name:        "Data Structures and Algorithms",
-                department:  "Computer Science",
+                department_id:  1,
+                professor_id:   1,
                 crn:         "CS035")
 
 
@@ -39,7 +51,11 @@ courses = Course.order(:created_at).take(3)
 10.times do
   content = Faker::Lorem.sentence(5)
   courses.each { |course| course.reviews.create!(content: content, 
+                                                    department_id:  1,
+                                                    professor_id:   1,
                                                     user: User.find_by(id: 1), 
-                                                 overall: 5) }
+                                                    clarity: 5,
+                                                    intensity: 5,
+                                                    worthit: 5) }
 end
 
