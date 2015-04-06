@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  # before_action :logged_in_user
+  before_action :user_id
   
   
   def create
@@ -8,9 +8,6 @@ class ReviewsController < ApplicationController
 
     p = review_params
     p[:user_id] = current_user.id    # this is a hack
-    p[:helpful] = 0
-    p[:votes] = 0
-    p[:avg] = 0
 
     @review = @course.reviews.build(p)
 
@@ -28,8 +25,14 @@ class ReviewsController < ApplicationController
 
   private
 
+    def user_id
+      current_user = User.find(session["warden.user.user.key"][0][0])
+    end
+  
+
     def review_params
-      params.require(:review).permit(:content,
+      params.require(:review).permit(:review_id,
+                                    :content,
                                     :clarity,
                                     :intensity,
                                     :worthit,

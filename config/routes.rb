@@ -34,6 +34,8 @@ Rails.application.routes.draw do
   resources :courses
 
   get 'search'    => 'courses#search'
+  # patch 'helpful'   => 'reviews#helpful'
+  # patch 'unhelpful' => 'reviews#unhelpful'
 
   resources :reviews, only: [:create, :destroy]
 
