@@ -1,4 +1,7 @@
 class Review < ActiveRecord::Base
+
+  acts_as_votable
+
   # before_create :logged_in_user
   # after_create :timestamp_user
   belongs_to :user
