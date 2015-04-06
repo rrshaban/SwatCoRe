@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150406182635) do
+ActiveRecord::Schema.define(version: 20150406190922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,10 +53,24 @@ ActiveRecord::Schema.define(version: 20150406182635) do
     t.integer  "course_id"
     t.integer  "professor_id"
     t.integer  "department_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.integer  "cached_votes_total",      default: 0
+    t.integer  "cached_votes_score",      default: 0
+    t.integer  "cached_votes_up",         default: 0
+    t.integer  "cached_votes_down",       default: 0
+    t.integer  "cached_weighted_score",   default: 0
+    t.integer  "cached_weighted_total",   default: 0
+    t.float    "cached_weighted_average", default: 0.0
   end
 
+  add_index "reviews", ["cached_votes_down"], name: "index_reviews_on_cached_votes_down", using: :btree
+  add_index "reviews", ["cached_votes_score"], name: "index_reviews_on_cached_votes_score", using: :btree
+  add_index "reviews", ["cached_votes_total"], name: "index_reviews_on_cached_votes_total", using: :btree
+  add_index "reviews", ["cached_votes_up"], name: "index_reviews_on_cached_votes_up", using: :btree
+  add_index "reviews", ["cached_weighted_average"], name: "index_reviews_on_cached_weighted_average", using: :btree
+  add_index "reviews", ["cached_weighted_score"], name: "index_reviews_on_cached_weighted_score", using: :btree
+  add_index "reviews", ["cached_weighted_total"], name: "index_reviews_on_cached_weighted_total", using: :btree
   add_index "reviews", ["course_id"], name: "index_reviews_on_course_id", using: :btree
   add_index "reviews", ["department_id"], name: "index_reviews_on_department_id", using: :btree
   add_index "reviews", ["professor_id"], name: "index_reviews_on_professor_id", using: :btree
