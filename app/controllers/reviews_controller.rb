@@ -8,6 +8,9 @@ class ReviewsController < ApplicationController
 
     p = review_params
     p[:user_id] = current_user.id    # this is a hack
+    p[:helpful] = 0
+    p[:votes] = 0
+    p[:avg] = 0
 
     @review = @course.reviews.build(p)
 
