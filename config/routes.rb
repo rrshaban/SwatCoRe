@@ -34,8 +34,8 @@ Rails.application.routes.draw do
   resources :courses
 
   get 'search'    => 'courses#search'
-  put 'like'      => 'reviews#upvote'
-  put 'dislike'   => 'reviews#downvote'
+  get 'like'      => 'reviews#upvote'
+  get 'dislike'   => 'reviews#downvote'
   
   # patch 'helpful'   => 'reviews#helpful'
   # patch 'unhelpful' => 'reviews#unhelpful'

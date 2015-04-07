@@ -20,6 +20,15 @@ class Review < ActiveRecord::Base
   has_one :professor
   has_one :department
 
+
+  def like(user)
+
+  end
+  
+  def dislike(user)
+  end
+
+
   # Should update user's timestamp whenever they post a review
   # can't get @current_user, it's not in params
   # private

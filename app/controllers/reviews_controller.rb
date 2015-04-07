@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
-  before_action :user_id
+  # before_action :user_id
+
   
   
   def create
@@ -24,49 +25,35 @@ class ReviewsController < ApplicationController
   end
 
   def upvote
-    @review = Review.find(params[:id])
-    respond_to do |format|
-      unless current_user.voted_for? @review
-        format.html { redirect_to :back }
-        format.json { head :no_content }
-        format.js { render :layout => false }
-        @review.vote_total = @review.vote_total + 1
-        @review.save
-        @review.upvote_by current_user
-      else
-        flash[:danger] = 'You already voted this on review.'
-        format.html { redirect_to :back }
-        format.json { head :no_content }
-        format.js
-      end
-    end
+    @review = Review.find(params[:format])
+    @review.liked_by current_user
+    redirect_to(:back)
+    # render course_path(@review.course_id), :via => :GET
   end
 
   def downvote
-    @review = Review.find(params[:review_id])
-    respond_to do |format|
-    unless current_user.voted_for? @review
-      format.html { redirect_to :back }
-      format.json { head :no_content }
-      format.js { render :layout => false }
-      @review.vote_total = @review.vote_total + 1
-      @review.save
-      @review.downvote_by current_user
-    else
-      flash[:danger] = 'You already voted on this review.'
-      format.html { redirect_to :back }
-      format.json { head :no_content }
-      format.js
-    end
-   end
+    
+    # self.dislike()
+
+    # current_user.dislikes @review
+
+   #  unless current_user.voted_for? @review
+   #    format.html { redirect_to :back }
+   #    format.json { head :no_content }
+   #    format.js { render :layout => false }
+   #    @review.vote_total = @review.vote_total + 1
+   #    @review.save
+   #    @review.downvote_by current_user
+   #  else
+   #    flash[:danger] = 'You already voted on this review.'
+   #    format.html { redirect_to :back }
+   #    format.json { head :no_content }
+   #    format.js
+   #  end
+   # end
   end
 
   private
-
-    def user_id
-      current_user = User.find(session["warden.user.user.key"][0][0])
-    end
-  
 
     def review_params
       params.require(:review).permit(:review_id,

@@ -5,14 +5,14 @@
   <span class="workload">Workload: <%= review.intensity %></span> <br />
   <span class="worthit">Worth it?: <%= review.worthit %></span>   <br />
 
-  <%= link_to like_path(review), :remote => true, method: :put, class: 'vpos' do %>
-    <i class="fa fa-thumbs-up"></i>
-    <span class="vcount-<%= review.id %>"><%= review.get_upvotes.size %></span>
+  <%= link_to like_path(review), :remote => true, class: 'npos' do  %>
+    <i class="fa fa-thumbs-up">Helpful</i>
+    <span class="vcount-<%= review.id %>">(<%= review.get_upvotes.size %>)</span>
   <% end %>
 
-  <%= link_to dislike_path(review), :remote => true, method: :put, class: 'npos' do %>
-    <i class="fa fa-thumbs-down"></i> 
-    <span class="ncount-<%= review.id %>"><%= review.get_downvotes.size %></span>
+  <%= link_to dislike_path(review), :remote => true, class: 'npos' do %>
+    <i class="fa fa-thumbs-down">Unhelpful</i> 
+    <span class="ncount-<%= review.id %>">(<%= review.get_downvotes.size %>)</span>
   <% end %>
 
   <span class="timestamp">
