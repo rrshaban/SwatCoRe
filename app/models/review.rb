@@ -1,12 +1,11 @@
 class Review < ActiveRecord::Base
-
   acts_as_votable
 
   # before_create :logged_in_user
   # after_create :timestamp_user
   belongs_to :user
   belongs_to :course
-  default_scope -> { order(created_at: :desc) } ## NEWEST FIRST. TO BE CHANGED.
+  default_scope -> { order(cached_votes_score: :desc, cached_votes_up: :desc) } ## cached_votes_score
   
   validates :user_id, presence: true
   validates :content, presence: true
