@@ -1,16 +1,16 @@
 <li id="review-<%= review.id %>">
   <!-- <span class="course"><%= link_to review.course.name, review.course %></span> -->
-  <span class="content"><%= review.content %></span>              <br />    <!-- EW EW PLEASE CSS FIX -->
-  <span class="clarity">Clarity: <%= review.clarity %></span>     <br />
-  <span class="workload">Workload: <%= review.intensity %></span> <br />
-  <span class="worthit">Worth it?: <%= review.worthit %></span>   <br />
+  <span class="content">     <%= review.content %></span>              <br />    <!-- EW EW PLEASE CSS FIX -->
+  <span class="clarity">  Clarity: <%= review.clarity %></span>     <br />
+  <span class="workload"> Workload: <%= review.intensity %></span> <br />
+  <span class="worthit">  Worth it?: <%= review.worthit %></span>   <br />
 
-  <%= link_to like_path(review), :remote => true, class: 'npos' do  %>
+  <%= link_to like_path(review), :remote => true, class: 'down-'+review.id.to_s do  %>
     <i class="fa fa-thumbs-up">Helpful</i>
     <span class="vcount-<%= review.id %>">(<%= review.get_upvotes.size %>)</span>
   <% end %>
 
-  <%= link_to dislike_path(review), :remote => true, class: 'npos' do %>
+  <%= link_to dislike_path(review), :remote => true, class: 'down-'+review.id.to_s do %>
     <i class="fa fa-thumbs-down">Unhelpful</i> 
     <span class="ncount-<%= review.id %>">(<%= review.get_downvotes.size %>)</span>
   <% end %>

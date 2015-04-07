@@ -4,13 +4,15 @@
     <%= f.text_area :content, placeholder: "Write new review..." %>
 
     <%= f.label :clarity %>
-    <%= f.number_field :clarity, clap0ss: 'form-control' %>
+    <%= f.range_field :clarity, min: 1, max: 5, value: 3, step: 1 %>
 
     <%= f.label :workload %>
-    <%= f.number_field :intensity, class: 'form-control' %>
+    <%= image_tag 'crying.png', height: 32, class: "emoji", alt: "Miserable" %>
+
+    <%= f.range_field :intensity, min: 1, max: 5, value: 3, step: 1 %>
 
     <%= f.label :worthit %>
-    <%= f.number_field :worthit, class: 'form-control' %>
+    <%= f.range_field :worthit, min: 1, max: 5, value: 3, step: 1 %>
     
     <%= hidden_field_tag 'review[course_id]', @course.id %>
     <%= hidden_field_tag 'review[professor_id]', @course.professor_id %>

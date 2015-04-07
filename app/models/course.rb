@@ -3,6 +3,8 @@ class Course < ActiveRecord::Base
   has_many :reviews, dependent: :destroy
   has_one :professor
   has_one :department           # we can accept this for now
+  default_scope -> { order(crn: :asc) } ## cached_votes_score
+ 
 
   def prof
     Professor.find(self.professor_id)
