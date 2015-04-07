@@ -32,8 +32,6 @@
       <ol class="department_links">
 
       <% @department.courses.each do |course| %>
-          HERE GOES: <% course %>
-
           <li id="course-<%= course.id %>">
           <span class="name">           <%= link_to course.name, course %>  </span>     <br />  <!-- ew, breaks. no time to sass -->
           <span class="crn">            <%= course.crn %>                   </span>    <br /> 
