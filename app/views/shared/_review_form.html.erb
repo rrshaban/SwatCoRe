@@ -6,28 +6,32 @@
     <%= f.label :clarity %>
     <%#  COLD_SWEAT frowning SMILE  %>
     <br />
-    <%= image_tag 'cold_sweat.png', height: 32, class: "emoji" %>
+    <center>
+    <%= image_tag 'cold_sweat.png', height: 32, class: "emoji", 'align': "left"  %>
     <%= image_tag 'frowning.png', height: 32, class: "emoji" %>
-    <%= image_tag 'smile.png', height: 32, class: "emoji" %>
+    <%= image_tag 'smile.png', height: 32, class: "emoji", 'align': "right" %>
     <%= f.range_field :clarity, min: 1, max: 5, value: 3, step: 1 %>
-
+    </center>
+    
     <%= f.label :workload %>
     <%# SOB, frowning, SUNGLASSES  %>
     <br />
-    <%= image_tag 'sob.png', height: 32, class: "emoji" %>
+    <center>
+    <%= image_tag 'sob.png', height: 32, class: "emoji", 'align': "left" %>
     <%= image_tag 'confused.png', height: 32, class: "emoji" %>
-    <%= image_tag 'sunglasses.png', height: 32, class: "emoji" %>
+    <%= image_tag 'sunglasses.png', height: 32, class: "emoji", 'align': "right" %>
     <%= f.range_field :intensity, min: 1, max: 5, value: 3, step: 1 %>
-
+    </center>
 
     <%= f.label :worthit %>
     <%# SHIT, RELIEVED, 100 %>
     <br />
-    <%= image_tag 'shit.png', height: 32, class: "emoji" %>
+    <center>
+    <%= image_tag 'shit.png', height: 32, class: "emoji", 'align': "left" %>
     <%= image_tag 'relieved.png', height: 32, class: "emoji" %>
-    <%= image_tag '100.png', height: 32, class: "emoji" %>
+    <%= image_tag '100.png', height: 32, class: "emoji", 'align': "right" %>
     <%= f.range_field :worthit, min: 1, max: 5, value: 3, step: 1 %>
-    
+    </center>
 
     <%= hidden_field_tag 'review[course_id]', @course.id %>
     <%= hidden_field_tag 'review[professor_id]', @course.professor_id %>
