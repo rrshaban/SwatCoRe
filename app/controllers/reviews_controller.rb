@@ -28,29 +28,12 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:format])
     @review.liked_by current_user
     redirect_to(:back)
-    # render course_path(@review.course_id), :via => :GET
   end
 
   def downvote
-    
-    # self.dislike()
-
-    # current_user.dislikes @review
-
-   #  unless current_user.voted_for? @review
-   #    format.html { redirect_to :back }
-   #    format.json { head :no_content }
-   #    format.js { render :layout => false }
-   #    @review.vote_total = @review.vote_total + 1
-   #    @review.save
-   #    @review.downvote_by current_user
-   #  else
-   #    flash[:danger] = 'You already voted on this review.'
-   #    format.html { redirect_to :back }
-   #    format.json { head :no_content }
-   #    format.js
-   #  end
-   # end
+    @review = Review.find(params[:format])
+    @review.disliked_by current_user
+    redirect_to(:back)
   end
 
   private

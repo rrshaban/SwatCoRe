@@ -22,10 +22,11 @@ class Review < ActiveRecord::Base
 
 
   def like(user)
-
+    self.liked_by user
   end
-  
+
   def dislike(user)
+    self.liked_by user
   end
 
 
