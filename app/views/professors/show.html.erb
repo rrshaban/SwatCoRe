@@ -6,7 +6,7 @@
       <section class="course_info">
 
       <h3><%= @professor.name %></h3>
-      <h5><%= Department.find(@professor.department_id).name %></h5>
+      <h5><%= @professor.dept_name %></h5>
 
       </section>
 
@@ -15,7 +15,7 @@
     <% @courses = Course.where(professor_id: @professor.id) %>
     <% if @courses.any? %>
 
-      <h3><%#= @professor.courses.count %> <%= pluralize(@professor.courses.count, "Course") %> in <%= @professor.name %></h3>
+      <h3><%= pluralize(@professor.courses.count, "Course") %> in <%= @professor.name %></h3>
 
       <ol class="professor_links">
 
@@ -23,10 +23,10 @@
           <li id="course-<%= course.id %>">
           <span class="name">   <%= link_to course.name, course %>  </span>     <br />  <!-- ew, breaks. no time to sass -->
           <span class="crn">    <%= course.crn %>     </span>                   <br /> 
-          <span class="professor_id">   <%= course.professor_id %>    </span>   <br />
+          <span class="professor_id">   <%= course.professor.name %>    </span>   <br />
 
           <span class="timestamp">
-            Last reviewed <%= time_ago_in_words(course.updated_at) %> ago. (this is wrong)      
+            <%= course.last %>     
           </span>
 
           </li>
