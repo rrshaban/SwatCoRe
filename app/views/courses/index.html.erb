@@ -31,20 +31,4 @@
 
 <%= link_to 'New Course', new_course_path %>
 
-<%= search_form_for @search do |f| %>
-  <fieldset>
-    <legend>User</legend>
-    <ul>
-      <li>
-        <%= f.label :name_cont %>
-        <%= f.text_field :name_cont %>
-      </li>
-      <li>
-        <%= f.label :crn_cont %>
-        <%= f.text_field :crn_cont %>
-      </li>
-    </ul>
-  </fieldset>
-
-  <%= f.submit "Search!" %>
-<% end %>
+<%= render 'shared/search_form' %>
