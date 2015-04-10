@@ -1,6 +1,3 @@
-What you are looking for cannot be found.
-
-
 <table>
   <thead>
     <tr>
@@ -21,8 +18,6 @@ What you are looking for cannot be found.
         <td><%= Professor.find(course.professor_id).name %></td>
 
         <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,8 +31,12 @@ What you are looking for cannot be found.
         <%= f.label :name_cont %>
         <%= f.text_field :name_cont %>
       </li>
+      <li>
+        <%= f.label :crn_cont %>
+        <%= f.text_field :crn_cont %>
+      </li>
     </ul>
   </fieldset>
 
-  <%= f.submit %>
+  <%= f.submit "Search!" %>
 <% end %>

@@ -41,7 +41,6 @@ Rails.application.routes.draw do
 
   # patch 'helpful'   => 'reviews#helpful'
   # patch 'unhelpful' => 'reviews#unhelpful'
->>>>>>> master
 
   resources :reviews, only: [:create, :destroy]
 
