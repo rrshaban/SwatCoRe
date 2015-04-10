@@ -8,7 +8,13 @@ class ApplicationController < ActionController::Base
   #   resource_path
   # end
 
-  private
+  private 
+
+    # def current_user
+
+    # User.find(session["warden.user.user.key"][0][0])
+
+    # end
 
     def get_depts
        @dept_options = Department.all.map{|d| [d.name, d.id]}

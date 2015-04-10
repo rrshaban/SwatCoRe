@@ -27,31 +27,28 @@
   <div class="col-md-8">
     <% if @department.courses.any? %>
 
-      <h3><%#= @department.courses.count %> <%= pluralize(@department.courses.count, "Course") %> in <%= @department.name %></h3>
+      <h3><%= pluralize(@department.courses.count, "Course") %> in <%= @department.name %></h3>
 
       <ol class="department_links">
 
       <% @department.courses.each do |course| %>
           <li id="course-<%= course.id %>">
-          <span class="name">   <%= link_to course.name, course %>  </span>     <br />  <!-- ew, breaks. no time to sass -->
-          <span class="crn">    <%= course.crn %>     </span>                   <br /> 
-          <span class="professor_id">   <%= course.professor_id %>    </span>   <br />
+          <span class="name">           <%= link_to course.name, course %>  </span>     <br />  <!-- ew, breaks. no time to sass -->
+          <span class="crn">            <%= course.crn %>                   </span>    <br /> 
+          <span class="professor_id">   <%= course.prof_name %>             </span>   <br />
 
           <span class="timestamp">
-            Last reviewed <%= time_ago_in_words(course.updated_at) %> ago. (this is wrong)      
+            Last reviewed <%= course.last %> ago.  
           </span>
 
           </li>
 
-
         <%#=  THESE LINKS SHOULD NOT GO ON THE ACTUAL COURSE PAGE
               Even though they should only be functional for an admin user  %>
-        <% if current_user.admin? %>
+        <%# if current_user.admin? %>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-        
-
+        <%# end %>
                                                                                 <br /><br />
       <% end %>
 

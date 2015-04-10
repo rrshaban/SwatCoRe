@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
-  # before_action :logged_in_user
+  # before_action :user_id
+
   
   
   def create
@@ -23,10 +24,23 @@ class ReviewsController < ApplicationController
   def destroy
   end
 
+  def upvote
+    @review = Review.find(params[:format])
+    @review.liked_by current_user
+    redirect_to(:back)
+  end
+
+  def downvote
+    @review = Review.find(params[:format])
+    @review.disliked_by current_user
+    redirect_to(:back)
+  end
+
   private
 
     def review_params
-      params.require(:review).permit(:content,
+      params.require(:review).permit(:review_id,
+                                    :content,
                                     :clarity,
                                     :intensity,
                                     :worthit,

@@ -20,6 +20,7 @@ gem 'pg',                   '0.18.1'
 gem 'oboe-heroku',          '0.9.18.1'
 gem 'devise',               '3.4.1'
 gem 'sendgrid',             '1.2.0'
+gem 'acts_as_votable',      '0.10.0'
 gem 'dotenv-rails', :groups => [:development, :test]
 
 group :development, :test do
@@ -29,6 +30,7 @@ group :development, :test do
   gem 'mini_backtrace',     '0.1.3'
   gem 'web-console',        '2.0.0.beta3'
   gem 'spring',              '1.1.3'
+  gem 'json'
 end
 
 group :test do
@@ -41,4 +43,3 @@ group :production do
   gem 'rails_12factor',     '0.0.2'
   gem 'puma'
 end
-
