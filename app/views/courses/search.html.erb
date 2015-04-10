@@ -1,4 +1,4 @@
-What you are looking for cannot be found. 
+What you are looking for cannot be found.
 
 
 <table>
@@ -27,3 +27,17 @@ What you are looking for cannot be found.
     <% end %>
   </tbody>
 </table>
+
+<%= search_form_for @search do |f| %>
+  <fieldset>
+    <legend>User</legend>
+    <ul>
+      <li>
+        <%= f.label :name_cont %>
+        <%= f.text_field :name_cont %>
+      </li>
+    </ul>
+  </fieldset>
+
+  <%= f.submit %>
+<% end %>
