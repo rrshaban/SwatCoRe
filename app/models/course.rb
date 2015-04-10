@@ -17,7 +17,5 @@ class Course < ActiveRecord::Base
   def last
     time_ago_in_words(self.reviews.order('updated_at DESC')[0].updated_at)
   end
-
-    # Professor.find(course)
-
+  
 end
