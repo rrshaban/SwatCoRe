@@ -14,10 +14,20 @@ class Course < ActiveRecord::Base
     prof.name
   end
 
-  def last
-    time_ago_in_words(self.reviews.order('updated_at DESC')[0].updated_at)
+  def dept
+    Department.find(self.department_id)
   end
 
-    # Professor.find(course)
+  def dept_name
+    dept.name
+  end
 
+  def last
+    if self.reviews.any?
+      "Last reviewed " + time_ago_in_words(self.reviews.order('updated_at DESC')[0].updated_at) + " ago."
+    else
+      "No reviews yet — you could be the first!"
+    end
+  end
+  
 end

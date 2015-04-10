@@ -1,0 +1,15 @@
+<%= search_form_for @search do |f| %>
+
+  <div class="field">
+
+    <%= f.label :name_cont %>
+    <%= f.text_field :name_cont %>
+
+    <%= f.label :crn_cont %>
+    <%= f.text_field :crn_cont %>
+    
+    <%= f.submit "Search!", class: "btn btn-primary" %>
+
+  </div>
+
+<% end %>
