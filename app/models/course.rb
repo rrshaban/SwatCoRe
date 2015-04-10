@@ -14,6 +14,14 @@ class Course < ActiveRecord::Base
     prof.name
   end
 
+  def dept
+    Department.find(self.department_id)
+  end
+
+  def dept_name
+    dept.name
+  end
+
   def last
 
     if self.reviews.any?
