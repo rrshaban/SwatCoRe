@@ -23,13 +23,11 @@ class Course < ActiveRecord::Base
   end
 
   def last
-
     if self.reviews.any?
       "Last reviewed " + time_ago_in_words(self.reviews.order('updated_at DESC')[0].updated_at) + " ago."
     else
       "No reviews yet — you could be the first!"
     end
-
   end
   
 end
