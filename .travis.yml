@@ -2,6 +2,7 @@
 language: ruby
 rvm:
   - 2.2.1
+
 before_script:
   - bundle exec rake db:test:prepare
   - bundle exec rake db:schema:load
