@@ -19,8 +19,9 @@ class CoursesController < ApplicationController
   # GET /courses/1.json
   def show
     @course = Course.find(params[:id])
-    @reviews = @course.reviews.paginate(page: params[:page])
+    @reviews = @course.reviews.page(params[:page])
     @new_review = @course.reviews.new()
+    @current_user = User.find(session["warden.user.user.key"][0][0])
   end
 
   # GET /courses/new
