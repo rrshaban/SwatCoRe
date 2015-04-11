@@ -3,6 +3,14 @@
   <div class="field">
     <%= f.text_area :content, placeholder: "Write new review..." %>
 
+    <datalist id="nums"><%# this allows for ticks on the sliders. HTML is dumb %>
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+    </datalist>
+
     <%= f.label :clarity %>
     <%#  COLD_SWEAT frowning SMILE  %>
     <br />
@@ -10,7 +18,7 @@
     <%= image_tag 'cold_sweat.png', height: 32, class: "emoji", 'align': "left"  %>
     <%= image_tag 'frowning.png', height: 32, class: "emoji" %>
     <%= image_tag 'smile.png', height: 32, class: "emoji", 'align': "right" %>
-    <%= f.range_field :clarity, min: 1, max: 5, value: 3, step: 1 %>
+    <%= f.range_field :clarity, in: 1..5, value: 3, step: 1, list: "nums" %>
     </center>
 
     <%= f.label :workload %>
@@ -20,7 +28,7 @@
     <%= image_tag 'sob.png', height: 32, class: "emoji", 'align': "left" %>
     <%= image_tag 'confused.png', height: 32, class: "emoji" %>
     <%= image_tag 'sunglasses.png', height: 32, class: "emoji", 'align': "right" %>
-    <%= f.range_field :intensity, min: 1, max: 5, value: 3, step: 1 %>
+    <%= f.range_field :intensity, in: 1..5, value: 3, step: 1, list: "nums" %>
     </center>
 
     <%= f.label :worthit %>
@@ -30,7 +38,7 @@
     <%= image_tag 'shit.png', height: 32, class: "emoji", 'align': "left" %>
     <%= image_tag 'relieved.png', height: 32, class: "emoji" %>
     <%= image_tag '100.png', height: 32, class: "emoji", 'align': "right" %>
-    <%= f.range_field :worthit, min: 1, max: 5, value: 3, step: 1 %>
+    <%= f.range_field :worthit, in: 1..5, value: 3, step: 1, list: "nums" %>
     </center>
 
     <%= hidden_field_tag 'review[course_id]', @course.id %>
