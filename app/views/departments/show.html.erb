@@ -31,26 +31,8 @@
 
       <ol class="department_links">
 
-      <% @department.courses.each do |course| %>
-          <li id="course-<%= course.id %>">
-          <span class="name">           <%= link_to course.name, course %>  </span>     <br />  <!-- ew, breaks. no time to sass -->
-          <span class="crn">            <%= course.crn %>                   </span>    <br /> 
-          <span class="professor_id">   <%= course.prof_name %>             </span>   <br />
-
-          <span class="timestamp">
-            <%= course.last() %>  
-          </span>
-
-          </li>
-
-        <%#=  THESE LINKS SHOULD NOT GO ON THE ACTUAL COURSE PAGE
-              Even though they should only be functional for an admin user  %>
-        <%# if current_user.admin? %>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <%# end %>
-                                                                                <br /><br />
-      <% end %>
+      <% @courses = @department.courses %>
+      <%= render partial: "shared/course_list", collection: @department.courses, as: :course %>
 
       </ol>
 
