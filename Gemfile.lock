@@ -85,6 +85,8 @@ GEM
     faker (1.4.2)
       i18n (~> 0.5)
     ffi (1.9.8)
+    font-awesome-sass (4.3.2.1)
+      sass (~> 3.2)
     formatador (0.2.5)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
@@ -261,6 +263,7 @@ DEPENDENCIES
   devise (= 3.4.1)
   dotenv-rails
   faker (= 1.4.2)
+  font-awesome-sass
   guard-minitest (= 2.3.1)
   jbuilder (= 2.2.3)
   jquery-rails (= 4.0.3)
