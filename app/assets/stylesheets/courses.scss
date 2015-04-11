@@ -1,3 +1,44 @@
 // Place all the styles related to the Courses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'partials/base';
+
+.course_index{
+	h2{
+		text-align: left;
+		text-transform: uppercase;
+	}
+	ul{
+		list-style: none;
+		border: 2px $gray-light solid;
+		border-radius: 3px;
+		padding: 20px 25px;
+		.course_name{
+			color: $green;
+			font-weight: bold;
+			font-size: 14px;
+		}
+	}
+	img{
+		height: 30px;
+		width: 30px;
+		margin: 5px;
+	}
+	a{
+	  &:hover{
+	    background: none !important;
+	    color: black !important;
+	    text-decoration: none;
+	  }
+	}
+	.add_course{
+		a{
+			&:hover{
+				color: inherit;
+				text-decoration: underline;
+			}
+		}
+	}
+}
