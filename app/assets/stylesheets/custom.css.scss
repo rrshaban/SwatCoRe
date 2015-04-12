@@ -14,7 +14,9 @@ body {
 }
 
 section {
+  margin-top: 20px;
   overflow: auto;
+  padding: 0 !important;
 }
 
 textarea {
@@ -41,8 +43,10 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
-  margin-bottom: 30px;
   text-align: center;
+  margin: 30px 0 20px 0;
+  font-weight: bold;
+  text-align: left;
 }
 
 h2 {
@@ -56,12 +60,12 @@ h2 {
 h4{
   font-size: 1 em;
   letter-spacing: -1px;
-  font-weight: bold;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  letter-spacing: -1px;
 }
 
 li{
@@ -174,12 +178,8 @@ aside {
 
 .course_info{
   margin: 20px 0 80px 0;
-  h1{
-    margin: 30px 0 20px 0;
-    font-weight: bold;
-  }
   p{
-    font-size: 18px;
+    font-size: 20px;
     line-height: 35px;
   }
   em{
@@ -189,14 +189,16 @@ aside {
   }
 }
 .course_avg_ratings{
+  text-align: center;
   margin-top: 50px;
   table{
+    margin: 0 auto;
     border-collapse: separate;
     border: solid 2px $gray-light;
     border-radius: 3px ;
-    width: 100%;
+    width: 80%;
+    max-width: 300px;
     height: 90px;
-    text-align: center;
     table-layout: fixed;
     td{
       border-left:  solid 2px $gray-light;

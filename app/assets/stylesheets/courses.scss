@@ -5,18 +5,21 @@
 @import "bootstrap";
 @import 'partials/base';
 
-.course_index, .department_index{
-	h2{
+.course_index, .department_index, .department_page{
+  h2{
 		text-align: left;
 		text-transform: uppercase;
 	}
+  h3{
+    margin-bottom: 30px;
+  }
 	ul{
 		list-style: none;
 		border: 2px $gray-light solid;
 		border-radius: 3px;
 		padding: 15px 25px;
 		margin-bottom: 15px;
-		.course_name{
+		.name{
 			color: $green;
 			font-weight: bold;
 			font-size: 14px;
@@ -25,7 +28,7 @@
 			margin-right: 12px;
 		}
 		&:hover{
-			& > .course_name{
+			& >.name{
 				text-decoration: underline;
 			}
 		}
@@ -98,6 +101,9 @@
   .timestamp {
     color: $gray-light;
     font-size: 12px;
+  }
+  i{
+    margin-right: 4px;
   }
   .vote{
 	  &:hover{
