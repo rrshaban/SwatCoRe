@@ -28,6 +28,10 @@ textarea {
   }
 }
 
+.container{
+  max-width: 1024px;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -52,7 +56,6 @@ h2 {
 h4{
   font-size: 1 em;
   letter-spacing: -1px;
-  color: $green;
   font-weight: bold;
 }
 
@@ -72,8 +75,12 @@ li{
   border:none;
   text-transform: uppercase;
   padding: 14px;
+  margin-bottom: 10px;
   &:hover{
-    background-color: rgba(0, 66, 55, 0.8)
+    background-color: rgba(0, 66, 55, 0.7) !important;
+  }
+  &:visited{
+    color: inherit;
   }
 }
 
@@ -197,11 +204,17 @@ aside {
         border:none;
       }
     }
+    tr{
+      h3{
+        color: $green;
+        font-weight: bold;
+      }
+    }
   }
  }
 
 .field{
-  padding: 10px;
+  padding: 10px 20px;
   background-color: white;
   border: 10px solid $lightest-gray;
   h3{
