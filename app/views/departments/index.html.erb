@@ -1,23 +1,18 @@
-<h1>Academic Departments</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @departments.each do |d| %>
-      <tr>
-        <td><%= link_to d.name, d %></td>
-
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Department', new_department_path %>
+<div class="department_index">
+  <div class="list row">
+    <div class="col-lg-8 col-md-offset-2">
+    <h2>Departments</h2>
+      <% @departments.each do |d| %>
+        <%= link_to d do %>
+          <ul>
+            <li class="department name"><%= d.name %></li>
+          </ul>
+        <% end %>
+      <% end %>
+    <br>
+    <div class="add_course">
+      <%= link_to "#{image_tag("plus.png")}Add a Department".html_safe, new_department_path %>
+    </div>
+    </div>
+  </div>
+</div>

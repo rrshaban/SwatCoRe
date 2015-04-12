@@ -13,7 +13,7 @@
       :remote => true, 
       class: 'up-'+review.id.to_s, 
       data: { disable_with: "Thanks!" } do  %>
-
+      
       <span class="vote helpful">
         <i class="fa fa-thumbs-up"></i> Helpful
         <span class="vcount-<%= review.id %>">(<%= review.get_upvotes.size %>)</span>

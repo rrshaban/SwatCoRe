@@ -14,7 +14,13 @@ body {
 }
 
 section {
+  margin-top: 20px;
   overflow: auto;
+  padding: 0 15px !important;
+}
+
+div{
+  padding: 10px 0;
 }
 
 textarea {
@@ -28,6 +34,11 @@ textarea {
   }
 }
 
+.container{
+  max-width: 1024px;
+  padding: 0;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,8 +48,10 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
-  margin-bottom: 30px;
   text-align: center;
+  margin: 30px 0 20px 0;
+  font-weight: bold;
+  text-align: left;
 }
 
 h2 {
@@ -49,16 +62,18 @@ h2 {
   font-weight: bold;
   color: $gray-light;
 }
+h3{
+  margin-top: 10px;
+}
 h4{
   font-size: 1 em;
   letter-spacing: -1px;
-  color: $green;
-  font-weight: bold;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  letter-spacing: -1px;
 }
 
 li{
@@ -72,8 +87,12 @@ li{
   border:none;
   text-transform: uppercase;
   padding: 14px;
+  margin-bottom: 10px;
   &:hover{
-    background-color: rgba(0, 66, 55, 0.8)
+    background-color: rgba(0, 66, 55, 0.7) !important;
+  }
+  &:visited{
+    color: inherit;
   }
 }
 
@@ -166,13 +185,12 @@ aside {
 }
 
 .course_info{
-  margin: 20px 0 80px 0;
+  margin: 20px 0 60px 0;
   h1{
-    margin: 30px 0 20px 0;
-    font-weight: bold;
+    margin-top: 20px;
   }
   p{
-    font-size: 18px;
+    font-size: 20px;
     line-height: 35px;
   }
   em{
@@ -182,14 +200,16 @@ aside {
   }
 }
 .course_avg_ratings{
+  text-align: center;
   margin-top: 50px;
   table{
+    margin: 0 auto;
     border-collapse: separate;
     border: solid 2px $gray-light;
     border-radius: 3px ;
-    width: 100%;
+    width: 85%;
+    max-width: 300px;
     height: 90px;
-    text-align: center;
     table-layout: fixed;
     td{
       border-left:  solid 2px $gray-light;
@@ -197,11 +217,17 @@ aside {
         border:none;
       }
     }
+    tr{
+      h3{
+        color: $green;
+        font-weight: bold;
+      }
+    }
   }
  }
 
 .field{
-  padding: 10px;
+  padding: 10px 20px;
   background-color: white;
   border: 10px solid $lightest-gray;
   h3{
