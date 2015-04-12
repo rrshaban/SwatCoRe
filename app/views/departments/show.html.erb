@@ -2,40 +2,30 @@
 <section class="row department_page">
   <h1><%= @department.name %></h1>
   <div class="col-md-4">
-      <section>
-      <h3><%= pluralize(@department.professors.count, "Professor") %> Found</h3>
+    <h3><%= pluralize(@department.professors.count, "Professor") %> Found</h3>
 
-      <% if @department.professors.any? %>
-        <% @department.professors.each do |p| %>
-          <%= link_to p do %>
-            <ul>
-              <li class="prof name"><%= p.name %>     
-            </ul>
-          <% end %>
+    <% if @department.professors.any? %>
+      <% @department.professors.each do |p| %>
+        <%= link_to p do %>
+          <ul>
+            <li class="prof name"><%= p.name %>     
+          </ul>
         <% end %>
-
-      <% else %>
-        <%= @department.id %>
-        No professors currently listed for this department.
       <% end %>
-
-      </section>
-
+    <% else %>
+      <%= @department.id %>
+      No professors currently listed for this department.
+    <% end %>
   </div>
   <div class="col-md-8">
-    <section>
     <% if @department.courses.any? %>
 
       <h3><%= pluralize(@department.courses.count, "Course") %> Found</h3>
 
       <% @courses = @department.courses %>
       <%= render partial: "shared/course_list", collection: @department.courses, as: :course %>
-
-
-
     <% else %>
       <h3>No courses yet listed for this department :( </h3>
     <% end %>
-  </section>
   </div>
 </section>
