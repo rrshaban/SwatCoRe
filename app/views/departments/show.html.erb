@@ -31,7 +31,6 @@
 
       <ol class="department_links">
 
-      <% @courses = @department.courses %>
       <%= render partial: "shared/course_list", collection: @department.courses, as: :course %>
 
       </ol>

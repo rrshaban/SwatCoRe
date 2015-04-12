@@ -1,5 +1,9 @@
 class Course < ActiveRecord::Base
   include ActionView::Helpers::DateHelper # for time_ago_in_words
+  # include ActionController::Base.helpers.link_to
+  include Rails.application.routes.url_helpers
+
+  # include Rails.application.routes.url_helpers
   has_many :reviews, dependent: :destroy
   has_one :professor
   has_one :department           # we can accept this for now
@@ -10,8 +14,12 @@ class Course < ActiveRecord::Base
     Professor.find(self.professor_id)
   end
 
+  def prof_path
+    Rails.application.routes.url_helpers.professors_path(prof)
+  end
+
   def prof_name
-    prof.name
+    ActionController::Base.helpers.link_to(prof.name, prof_path)
   end
 
   def dept
@@ -28,6 +36,11 @@ class Course < ActiveRecord::Base
     else
       "No reviews yet — you could be the first!"
     end
+  end
+
+
+  def avg
+    { clarity: 5, workload: 5, worthit: 5 }
   end
   
 end
