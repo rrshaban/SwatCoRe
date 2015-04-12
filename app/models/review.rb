@@ -28,6 +28,10 @@ class Review < ActiveRecord::Base
     self.liked_by user
   end
 
+  def user_name
+    User.find(self.user_id).name
+  end
+
 
   # Should update user's timestamp whenever they post a review
   # can't get @current_user, it's not in params

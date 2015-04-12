@@ -21,6 +21,7 @@ gem 'oboe-heroku',          '0.9.18.1'
 gem 'devise',               '3.4.1'
 gem 'sendgrid',             '1.2.0'
 gem 'acts_as_votable',      '0.10.0'
+gem 'font-awesome-sass'
 gem 'dotenv-rails', :groups => [:development, :test]
 
 group :development, :test do

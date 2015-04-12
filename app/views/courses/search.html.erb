@@ -13,9 +13,9 @@
     <% @courses.each do |course| %>
       <tr>
         <td><%= course.name %></td>
-        <td><%= course.department_id %></td>
+        <td><%= course.dept_name %></td>
         <td><%= course.crn %></td>
-        <td><%= Professor.find(course.professor_id).name %></td>
+        <td><%= course.prof_name %></td>
 
         <td><%= link_to 'Show', course %></td>
       </tr>

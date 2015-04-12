@@ -33,6 +33,7 @@ courseList.each{|course|
 	courseName = course['courseName']
 	courseDept = course['dept']
 	courseId = course['courseId']
+<<<<<<< HEAD
 	courseProf = course['profFirstName'] + ' ' + course['profLastName']
         courseType = course['courseType']
 	credit = course['credit']
@@ -45,10 +46,21 @@ courseList.each{|course|
 
 	dept = departments.find_by(name: courseDept).deptartment_id
 	prof = professors.find_by(name: courseProf).professor_id
+=======
+	# puts "#{courseName}\t#{courseDept}-#{courseId}"
+>>>>>>> upstream/master
 
 	Course.create!( name:        coursename,
                department_id:        dept,
                 professor_id:        prof,
 		       	 crn:        courseId ) 
 
+<<<<<<< HEAD
+=======
+  # This might want to work, but we'll need to add all the depts and profs first
+  Course.create!( name:        coursename,
+              department:  courseDept,
+              crn:         courseId)
+  Course.save
+>>>>>>> upstream/master
 }

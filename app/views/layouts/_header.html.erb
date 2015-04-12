@@ -1,6 +1,8 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-inverse header">
   <div class="container">
-    <%= link_to "Swarthmore Course Review", root_path, id: "logo" %>
+    <%= link_to root_path do%>
+      <h3 class="logo"><em>Swat</em>CourseReview.</h1>
+    <% end %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>

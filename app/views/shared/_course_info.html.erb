@@ -1,24 +1,12 @@
- <h1>
+ <h1 class="text-left">
   <%= @course.name %>
 </h1>
-<p></p>
 
-<p>
-  <strong>Crn:</strong>
+<h3>
   <%= @course.crn %>
+</h3>
+
+ <p><%= @course.prof_name %> | <%= @course.dept_name %> | <em><%= @course.reviews.count %></em> Reviews
 </p>
 
-<p>
-  <strong>Professor:</strong>
-  <%= @course.prof_name %>
-</p>
-
-<p>
-  <strong>Department:</strong>
-  <%= @course.dept_name %>
-</p>
-
-
-
-<%= @course.reviews.count %> Reviews
 
