@@ -1,25 +1,36 @@
 <% provide(:title, @course.name) %>
 
+<div class="row">
+    <section class="course_info col-md-8">
+      <%= render 'shared/course_info' %>
+    </section>
+    <section class="course_avg_ratings col-md-4"?>
+      <table>
+        <thead>
+          <td><h4>Clarity</h4></td>
+          <td><h4>Workload</h4></td>
+          <td><h4>Worth</h4></td>
+        </thead>
+        <tr>
+          <td>
+            <h3>5</h3>
+          </td>
+          <td>
+            <h3>5</h3>
+          </td>
+          <td>
+            <h3>5</h3>
+          </td>
+        </tr>
+      </table>
+    </section>
+   <!--  <%= link_to 'Edit', edit_course_path(@course) %> |
+   <%= link_to 'Back', courses_path %> -->
+</div>
 
 <div class="row">
-  <aside class="col-md-4">
-      <section class="course_info">
-        <%= render 'shared/course_info' %>
-      </section>
-
-      <%= link_to 'Edit', edit_course_path(@course) %> |
-      <%= link_to 'Back', courses_path %>
-
-  </aside>
   <div class="col-md-8">
-
-      <section class="review_form">
-        <%= render 'shared/review_form' %>
-      </section>
-    </aside>
-
-    <% if @course.reviews.any? %>
-    
+    <% if @course.reviews.any? %>  
       <h3>Reviews (<%= @course.reviews.count %>)</h3>
       <ol class="reviews">
         <%= render @reviews %>
@@ -29,4 +40,7 @@
       <h3>No reviews yet for this class :( </h3>
     <% end %>
   </div>
+  <section class="review_form col-md-4">
+    <%= render 'shared/review_form' %>
+  </section>
 </div>

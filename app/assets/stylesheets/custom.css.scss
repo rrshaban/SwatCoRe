@@ -49,6 +49,12 @@ h2 {
   font-weight: bold;
   color: $gray-light;
 }
+h4{
+  font-size: 1 em;
+  letter-spacing: -1px;
+  color: $green;
+  font-weight: bold;
+}
 
 p {
   font-size: 1.1em;
@@ -59,12 +65,27 @@ li{
   color: $gray;
 }
 
-
+.btn{
+  font-size: 16px;
+  background-color: $green;
+  border-radius: 3px;
+  border:none;
+  text-transform: uppercase;
+  padding: 14px;
+  &:hover{
+    background-color: rgba(0, 66, 55, 0.8)
+  }
+}
 
 /* header */
 .header{
   background-color: white;
   border-bottom: 1px $gray-lighter solid;
+  a{
+    &:hover{
+      color: black !important; 
+    }
+  }
   .logo {
     float: left;
     margin: 0 auto;
@@ -78,7 +99,6 @@ li{
       font-style: normal;
     }
     &:hover {
-      color: white;
       text-decoration: none;
     }
   }
@@ -144,6 +164,59 @@ aside {
     }
   }
 }
+
+.course_info{
+  margin: 20px 0 80px 0;
+  h1{
+    margin: 30px 0 20px 0;
+    font-weight: bold;
+  }
+  p{
+    font-size: 18px;
+    line-height: 35px;
+  }
+  em{
+    color: $green;
+    font-style: normal;
+    font-weight: bold;
+  }
+}
+.course_avg_ratings{
+  margin-top: 50px;
+  table{
+    border-collapse: separate;
+    border: solid 2px $gray-light;
+    border-radius: 3px ;
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    table-layout: fixed;
+    td{
+      border-left:  solid 2px $gray-light;
+      &:first-child{
+        border:none;
+      }
+    }
+  }
+ }
+
+.field{
+  padding: 10px;
+  background-color: white;
+  border: 10px solid $lightest-gray;
+  h3{
+    margin: 10px 0 35px 0 ;
+    font-weight: bold; 
+  }
+  textarea{
+    padding: 5px;
+    margin: 15px 0 30px 0;
+    &:focus{
+      border-color: $green;
+      outline-style: none;
+    }
+  }
+ }
 
 .gravatar {
   float: left;
@@ -221,38 +294,6 @@ input {
   }
 }
 
-/* reviews */
-
-.reviews {
-  list-style: none;
-  padding: 0;
-  li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
-  }
-  .user {
-    margin-top: 5em;
-    padding-top: 0;
-  }
-  .content {
-    display: block;
-    margin-left: 60px;
-    img {
-      display: block;
-      padding: 5px 0;
-    }
-  }
-  .timestamp {
-    color: $gray-light;
-    display: block;
-    margin-left: 60px;
-  }
-  .gravatar {
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
-  }
-}
 
 aside {
   textarea {

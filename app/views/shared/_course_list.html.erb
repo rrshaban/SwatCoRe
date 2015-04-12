@@ -1,8 +1,8 @@
 <%= link_to course do%>
 <ul>
-    <li class="course_name"><%= course.name %></li>
-    <li class="course_num"><%= course.crn %></li>
+    <li class="course_name"><%= course.name %> (<%= course.crn %>)</li>
     <li class="course_prof"><%= course.prof_name %></li>
+    <li class="course_ratings"><span>Clarity: 5</span><span>Workload: 5</span><span>Worth it?: 5</span>
     <li class="course_last"><%= course.last %>
 </ul>
       <td><%#= link_to 'Show', course %></td>
