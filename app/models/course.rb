@@ -26,8 +26,12 @@ class Course < ActiveRecord::Base
     Department.find(self.department_id)
   end
 
+  def dept_path
+    Rails.application.routes.url_helpers.departments_path(dept)
+  end
+
   def dept_name
-    dept.name
+    ActionController::Base.helpers.link_to(dept.name, dept_path)
   end
 
   def last

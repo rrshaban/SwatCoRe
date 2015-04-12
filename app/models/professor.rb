@@ -3,8 +3,16 @@ class Professor < ActiveRecord::Base
   has_one  :department
   has_many :reviews,  through: :courses
 
+  def dept
+    Department.find(self.department_id)
+  end
+
+  def dept_path
+    Rails.application.routes.url_helpers.departments_path(dept)
+  end
+
   def dept_name
-    Department.find(self.department_id).name
+    ActionController::Base.helpers.link_to(dept.name, dept_path)
   end
   
 end
