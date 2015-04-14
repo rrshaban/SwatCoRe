@@ -1,33 +1,35 @@
 <li class="row" id="review-<%= review.id %>">
   <div class="photo col-md-2"><h3 class="text-center">CN</h3></div>
   <div class="col-md-10">
-    <span class="name"> <%= User.find(review.user_id).name %></span>
-    <span class="timestamp"><%= time_ago_in_words(review.created_at) %> ago</span><br>
-    <!-- <span class="course"><%= link_to review.course.name, review.course %></span> -->
-    <span class="ratings clarity">  Clarity: <%= review.clarity %></span>     
-    <span class="ratings workload"> Workload: <%= review.intensity %></span> 
-    <span class="ratings worthit">  Worth it?: <%= review.worthit %></span>   <br />
-    <span class="content">     <%= review.content %></span>              <br /> 
+    <span class="name"> <%= review.user_name %></span>
+    <span class="timestamp"><%=     time_ago_in_words(review.created_at)  %> ago</span><br>
+
+    <span class="ratings clarity">  Clarity:    <%=   review.clarity    %></span>     
+    <span class="ratings workload"> Workload:   <%=   review.intensity  %></span> 
+    <span class="ratings worthit">  Worth it?:  <%=   review.worthit    %></span>  <br />
+    <span class="content">     <%=                    review.content    %></span>  <br /> 
 
     <%= link_to like_path(review), 
       :remote => true, 
-      class: 'up', #+review.id.to_s, 
+      class: 'up-'+review.id.to_s, 
       data: { disable_with: "Thanks!" } do  %>
-      <span class="vote helpful"><i class="fa fa-thumbs-up"></i>Helpful<span class="vcount-<%= review.id %>">(<%= review.get_upvotes.size %>)</span></span>
-      <!-- <i class="fa fa-thumbs-up">Helpful</i> -->
+      
+      <span class="vote helpful">
+        <i class="fa fa-thumbs-up"></i> Helpful
+        <span class="vcount-<%= review.id %>">(<%= review.get_upvotes.size %>)</span>
+      </span>
     <% end %>
 
     <%= link_to dislike_path(review), 
         :remote => true, 
-        class: 'down', #+review.id.to_s, 
+        class: 'down-'+review.id.to_s, 
         data: { disable_with: "Thanks!" } do %>
 
-      <span class="vote unhelpful"><i class="fa fa-thumbs-down"></i>Unhelpful<span class="ncount-<%= review.id %>">(<%= review.get_downvotes.size %>)</span></span>
-
+        <span class="vote unhelpful">
+          <i class="fa fa-thumbs-down"></i> Unhelpful
+          <span class="ncount-<%= review.id %>">(<%= review.get_downvotes.size %>)</span>
+        </span>
     <% end %>
 
-    <!-- <span class="timestamp">
-      Posted <%= time_ago_in_words(review.created_at) %> ago by <%= User.find(review.user_id).name %>.
-    </span> -->
   </div>
 </li>

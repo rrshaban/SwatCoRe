@@ -11,7 +11,60 @@
 #              password:              "foobar",
 #              password_confirmation: "foobar",
 #              admin: true)
+require 'json'
+file = File.read(File.dirname(__FILE__) + '/CourseScraped.json')
+hash = JSON.parse(file)
 
+courseList = hash['results']
+
+departmentsArray = Array.new 
+professorsArray = Array.new
+courseList.each{|course|
+	courseDept = course['dept']
+	courseProf = course['profFirstName'] + ' ' + course['profLastName']
+
+if !departmentsArray.include?(courseDept)
+	departmentsArray.push(courseDept)
+end
+
+if !professorsArray.include?(courseProf)
+	newArray = [courseProf, courseDept]
+	professorsArray.push(newArray)
+end
+}
+
+departmentsArray.each{|dept|
+	Department.create!(name: dept)
+}
+professorsArray.each{|prof|
+	dept = Department.find_by(name:prof[1]).id
+	Professor.create!( name: prof[0],
+		  department_id: dept )
+}
+
+courseList.each{|course|
+	courseName = course['courseName']
+	courseDept = course['dept']
+	courseId = course['courseId']
+	courseProf = course['profFirstName'] + ' ' + course['profLastName']
+        courseType = course['courseType']
+	credit = course['credit']
+	division = course['division']
+	hasLab = course['hasLab']
+	isFYS = course['isFYS']
+	isWritingCourse = course['isWritingCourse']
+	couseSummary = course['summary']
+	#puts "#{courseName}\t#{courseDept}-#{courseId}"
+
+	dept = Department.find_by(name: courseDept).id
+	prof = Professor.find_by(name: courseProf).id
+
+	Course.create!( name:        courseName,
+               department_id:        dept,
+                professor_id:        prof,
+		       	 crn:        courseId ) 
+
+}
 Department.create!(name: "Computer Science")
 
 Professor.create!(name: "Ameet Soni",

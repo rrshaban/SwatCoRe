@@ -9,23 +9,16 @@
         <thead>
           <td><h4>Clarity</h4></td>
           <td><h4>Workload</h4></td>
-          <td><h4>Worth</h4></td>
+          <td><h4>Worth it?</h4></td>
         </thead>
         <tr>
-          <td>
-            <h3>5</h3>
-          </td>
-          <td>
-            <h3>5</h3>
-          </td>
-          <td>
-            <h3>5</h3>
-          </td>
+          <td><h3><%=  @course.avg[:clarity ]    %></h3></td>
+          <td><h3><%=  @course.avg[:workload]    %></h3></td>
+          <td><h3><%=  @course.avg[:worthit ]    %></h3></td>
         </tr>
       </table>
     </section>
-   <!--  <%= link_to 'Edit', edit_course_path(@course) %> |
-   <%= link_to 'Back', courses_path %> -->
+    <%#= link_to 'Admin: Edit Course', edit_course_path(@course) %>
 </div>
 
 <div class="row">
