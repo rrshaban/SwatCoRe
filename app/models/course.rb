@@ -22,6 +22,10 @@ class Course < ActiveRecord::Base
     ActionController::Base.helpers.link_to(prof.name, prof_path)
   end
 
+  def prof_name_raw
+    prof.name
+  end
+
   def dept
     Department.find(self.department_id)
   end
