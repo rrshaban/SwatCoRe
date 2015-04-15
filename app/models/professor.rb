@@ -8,7 +8,7 @@ class Professor < ActiveRecord::Base
   end
 
   def dept_path
-    Rails.application.routes.url_helpers.departments_path(dept)
+    Rails.application.routes.url_helpers.department_path(dept)
   end
 
   def dept_name
