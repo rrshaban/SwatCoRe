@@ -19,8 +19,8 @@
 		border-radius: 3px;
 		padding: 15px 25px;
 		margin-bottom: 15px;
-		.name{
-			color: $green;
+		.name, a{
+			color: $green !important;
 			font-weight: bold;
 			font-size: 14px;
 		}
@@ -29,7 +29,8 @@
 		}
 		&:hover{
       background: $lightest-gray;
-			& >.name{
+      cursor: pointer;
+			& >.name, a{
 				text-decoration: underline;
 			}
 		}
@@ -106,6 +107,11 @@
   i{
     margin-right: 4px;
   }
+  a{
+    .vcount-7{
+      margin: 0 !important; //this is really ugly, just a quick fix.
+    }
+  }
   .vote{
 	  &:hover{
   		text-decoration: underline;
@@ -115,7 +121,6 @@
   	color: $green;
   	font-weight: bold;
   }
-  
   .gravatar {
     float: left;
     margin-right: 10px;
