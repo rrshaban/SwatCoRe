@@ -11,7 +11,7 @@ class CoursesController < ApplicationController
     @courses = @search.result(distinct: true)
   end
 
-  def search
+  def search # TODO: advanced search.
     @search = Course.ransack(params[:q])
     @courses = @search.result(distinct: true)
   end
