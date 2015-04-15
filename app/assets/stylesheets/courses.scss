@@ -5,7 +5,7 @@
 @import "bootstrap";
 @import 'partials/base';
 
-.course_index, .department_index, .department_page{
+.course_index, .department_index, .department_page, .professor_index, .professor_page{
   h2{
 		text-align: left;
 		text-transform: uppercase;
@@ -28,6 +28,7 @@
 			margin-right: 12px;
 		}
 		&:hover{
+      background: $lightest-gray;
 			& >.name{
 				text-decoration: underline;
 			}
