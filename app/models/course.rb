@@ -15,7 +15,7 @@ class Course < ActiveRecord::Base
   end
 
   def prof_path
-    Rails.application.routes.url_helpers.professors_path(prof)
+    Rails.application.routes.url_helpers.professor_path(prof)
   end
 
   def prof_name
