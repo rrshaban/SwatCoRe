@@ -86,8 +86,9 @@ li{
   border-radius: 3px;
   border:none;
   text-transform: uppercase;
-  padding: 14px;
+  padding: 14px !important;
   margin-bottom: 10px;
+  color: white;
   &:hover{
     background-color: rgba(0, 66, 55, 0.7) !important;
   }
@@ -230,11 +231,15 @@ aside {
   padding: 10px 20px;
   background-color: white;
   border: 10px solid $lightest-gray;
+  margin-bottom: 60px !important;
+  h2{
+    text-align: left;
+  }
   h3{
     margin: 10px 0 35px 0 ;
     font-weight: bold; 
   }
-  textarea{
+  textarea, input{
     padding: 5px;
     margin: 15px 0 30px 0;
     &:focus{
@@ -291,6 +296,11 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.alert-error{
+  color: red;
+  background: rgba(255,0,0,0.15);
 }
 
 .checkbox {
