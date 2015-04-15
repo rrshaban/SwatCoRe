@@ -1,31 +1,19 @@
 <% provide(:title, @professor.name) %>
-
-
-<div class="row">
-  <aside class="col-md-4">
-      <section class="course_info">
-
-      <h3><%= @professor.name %></h3>
-      <h5><%= @professor.dept_name %></h5>
-
-      </section>
-
-  </aside>
+<section class="row professor_page">
+  <h1><%= @professor.name %></h1>
+  <div class="col-md-4">
+    <h3>1 Department Found</h3>
+      <ul>
+        <li class="prof name"><%= @professor.dept_name %></li>    
+      </ul>
+  </div>
   <div class="col-md-8">
     <% @courses = Course.where(professor_id: @professor.id) %>
     <% if @courses.any? %>
-
-      <h3><%= pluralize(@professor.courses.count, "Course") %> in <%= @professor.name %></h3>
-
-      <ol class="professor_links">
-
+      <h3><%= pluralize(@professor.courses.count, "Course") %> Found with <%= @professor.name %></h3>
       <%= render partial: "shared/course_list", collection: @professor.courses, as: :course %>
-
-      </ol>
-
-
     <% else %>
       <h3>No courses yet listed for this professor :( </h3>
     <% end %>
   </div>
-</div>
+</section>
