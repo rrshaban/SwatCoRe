@@ -129,7 +129,7 @@ courses.keys.each{ |course_crn|
 }
 
 ### DELETES BLANK PROFESSOR
-Professor.find_by(name: " ").delete
+Professor.find_by(name: " ").destroy
 
 
 # Course.all.each{ |course|

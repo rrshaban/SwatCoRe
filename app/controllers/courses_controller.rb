@@ -7,7 +7,7 @@ class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
   def index
-    @courses = @search.result(distinct: true)
+    @courses = Course.all
   end
 
   # GET /search
