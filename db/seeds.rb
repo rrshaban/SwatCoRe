@@ -97,6 +97,7 @@ courseList.each{ |course|
   course_dept = Department.find_by(name: course['Registration-ID'].split[0])
   course_crn  = course['Registration-ID'].split[0..1].join
 
+  
   if !courses.include?(course_crn)
     courses[course_crn] = { 'course_prof' => { course_prof => 1},
                             'course_name' => course_name,
@@ -126,6 +127,9 @@ courses.keys.each{ |course_crn|
     # puts course_name, course_prof, course_dept, course_crn
   }
 }
+
+### DELETES BLANK PROFESSOR
+Professor.find_by(name: " ").delete
 
 
 # Course.all.each{ |course|
