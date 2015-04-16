@@ -15,11 +15,15 @@ class Course < ActiveRecord::Base
   end
 
   def prof_path
-    Rails.application.routes.url_helpers.professors_path(prof)
+    Rails.application.routes.url_helpers.professor_path(prof)
   end
 
   def prof_name
     ActionController::Base.helpers.link_to(prof.name, prof_path)
+  end
+
+  def prof_name_raw
+    prof.name
   end
 
   def dept
@@ -27,7 +31,7 @@ class Course < ActiveRecord::Base
   end
 
   def dept_path
-    Rails.application.routes.url_helpers.departments_path(dept)
+    Rails.application.routes.url_helpers.department_path(dept)
   end
 
   def dept_name

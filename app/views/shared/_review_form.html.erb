@@ -1,7 +1,7 @@
 <%= form_for @new_review, :url => reviews_path do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <h3>Add a Comment</h3>
+    <h3>Add a Review</h3>
 
     <datalist id="nums"><%# this allows for ticks on the sliders. HTML is dumb %>
         <option value="1">
@@ -47,6 +47,6 @@
     
     <%= f.text_area :content, placeholder: "Write new review..." %>
 
-    <%= f.submit "Add Comment", class: "btn btn-primary" %>
+    <%= f.submit "Post your review", class: "btn btn-primary" %>
   </div>
 <% end %>
