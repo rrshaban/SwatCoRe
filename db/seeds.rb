@@ -3,45 +3,53 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# User.create!(name:  "Studious Swattie",
-#              email: "example@swarthmore.edu",
-#              password:              "foobar",
-#              password_confirmation: "foobar",
-#              admin: true)
 
-# 1.times do |n|
-#   name  = "Razi Shaban"
-#   email = "rshaban1@swarthmore.edu"
-#   password = "password"
-#   @user = User.new(name:              name,
-#                email:                 email,
-#                password:              password)
+name  = "Razi Shaban"
+email = "rshaban1@swarthmore.edu"
+password = "password"
+@user = User.new(name:              name,
+             email:                 email,
+             password:              password)
 
-#   # so we don't accidentally spam Swarthmore again
-#   @user.skip_confirmation_notification!
-#   @user.save!
-#   @user.confirm!
-# end
+# so we don't accidentally spam Swarthmore again
+@user.skip_confirmation_notification!
+@user.save!
+@user.confirm!
+
 
 require 'json'
 file = File.read(File.dirname(__FILE__) + '/classes.json')
-hash = JSON.parse(file)
+json_parse = JSON.parse(file)
 
-courseList = hash
-
-i = 0
+courseList = json_parse
 depts = Hash.new 
 profs = Hash.new
+courses = Hash.new
 
-# puts courseList
+
+# { # EXAMPLE JSON INPUT FROM AJ'S scraper.py
+#     "Course Name": "FYS: Augustus and Rome",
+#     "Days and Times": "TTH 02:40pm-03:55pm",
+#     "Instructor": "Turpin, W",
+#     "Location": "Kohlberg 334",
+#     "Misc": " ",
+#     "Registration-ID": "ANCH 016 01"
+# }
+###### COURSE MODEL 
+#     t.string   "name"
+#     t.string   "crn"
+#     t.datetime "created_at",    null: false
+#     t.datetime "updated_at",    null: false
+#     t.integer  "professor_id"
+#     t.integer  "department_id"
+
+# builds list of unique entries
 courseList.each{ |course|
-  i += 1
   courseDept = course['Registration-ID'].split[0]
   courseProf = course['Instructor']
 
+  
   if !depts.include?(courseDept)
     depts[courseDept] = 1
   else
@@ -50,6 +58,12 @@ courseList.each{ |course|
 
   if !profs.include?(courseProf)
     # what if more courses are listed for a given prof?
+    #
+    #
+    #
+    # => PROBLEM
+    #
+    #
     profs[courseProf] = { courseDept => 1 }
   else
     if !profs[courseProf].include?(courseDept)
@@ -58,15 +72,16 @@ courseList.each{ |course|
       profs[courseProf][courseDept] += 1
     end
   end
+
 }
 
-puts depts
-puts profs
-puts i
+# puts depts
+# puts profs
+# puts i
 
-# depts.keys.each{ |dept|
-#   Department.create!(name: dept)
-# }
+depts.keys.each{ |dept|
+  Department.create!(name: dept)
+}
 
 profs.keys.each{ |prof|
   dept_id = Department.find_by(name: profs[prof].keys[0]).id
@@ -75,127 +90,54 @@ profs.keys.each{ |prof|
     department_id: dept_id)
 }
 
-# courseList.each{ |course|
-#   courseName = course['courseName']
-#   courseDept = course['dept']
-#   courseId = course['courseId']
 
-#   courseProf = course['profFirstName'] + ' ' + course['profLastName']
-#   courseType = course['courseType']
-#   credit = course['credit']
-#   division = course['division']
-#   hasLab = course['hasLab']
-#   isFYS = course['isFYS']
-#   isWritingCourse = course['isWritingCourse']
-#   couseSummary = course['summary']
-#   #puts "#{courseName}\t#{courseDept}-#{courseId}"
+courseList.each{ |course|
+  course_name = course['Course Name']
+  course_prof = Professor.find_by(name: course['Instructor'])
+  course_dept = Department.find_by(name: course['Registration-ID'].split[0])
+  course_crn  = course['Registration-ID'].split[0..1].join
 
-#   dept = departments.find_by(name: courseDept).department_id
-#   prof = professors.find_by(name: courseProf).professor_id
-
-#   Course.create!( name:        coursename,
-#                department_id:        dept,
-#                 professor_id:        prof,
-#              crn:        courseId ) 
+  if !courses.include?(course_crn)
+    courses[course_crn] = { 'course_prof' => { course_prof => 1},
+                            'course_name' => course_name,
+                            'course_dept' => course_dept }
+  else
+    if !courses[course_crn]['course_prof'].include?(course_prof)
+      courses[course_crn]['course_prof'][course_prof] = 1
+    else
+      courses[course_crn]['course_prof'][course_prof] += 1
+      # ugh why did I do this
+    end
+  end
+}
 
 
-# }
+courses.keys.each{ |course_crn|
+  course_name = courses[course_crn]['course_name']
+  course_dept = courses[course_crn]['course_dept']
+
+  courses[course_crn]['course_prof'].keys.each { |course_prof|
+
+    Course.create!( name:                 course_name,
+                department_id:        course_dept.id,
+                professor_id:         course_prof.id,
+                crn:                  course_crn )
+
+    # puts course_name, course_prof, course_dept, course_crn
+  }
+}
 
 
-
-
-
-
-
-
-
-
-
-
-# hash = JSON.parse(file)
-
-# courseList = hash['results']
-
-# departmentsArray = Array.new 
-# professorsArray = Array.new
-# courseList.each{|course|
-# 	courseDept = course['dept']
-# 	courseProf = course['profFirstName'] + ' ' + course['profLastName']
-
-# if !departmentsArray.include?(courseDept)
-# 	departmentsArray.push(courseDept)
-# end
-
-# if !professorsArray.include?(courseProf)
-# 	newArray = [courseProf, courseDept]
-# 	professorsArray.push(newArray)
-# end
-# }
-
-# departmentsArray.each{|dept|
-# 	Department.create!(name: dept)
-# }
-# professorsArray.each{|prof|
-# 	dept = Department.find_by(name:prof[1]).id
-# 	Professor.create!( name: prof[0],
-# 		  department_id: dept )
-# }
-
-# courseList.each{|course|
-# 	courseName = course['courseName']
-# 	courseDept = course['dept']
-# 	courseId = course['courseId']
-# 	courseProf = course['profFirstName'] + ' ' + course['profLastName']
-#         courseType = course['courseType']
-# 	credit = course['credit']
-# 	division = course['division']
-# 	hasLab = course['hasLab']
-# 	isFYS = course['isFYS']
-# 	isWritingCourse = course['isWritingCourse']
-# 	couseSummary = course['summary']
-# 	#puts "#{courseName}\t#{courseDept}-#{courseId}"
-
-# 	dept = Department.find_by(name: courseDept).id
-# 	prof = Professor.find_by(name: courseProf).id
-
-# 	Course.create!( name:        courseName,
-#                department_id:        dept,
-#                 professor_id:        prof,
-# 		       	 crn:        courseId ) 
-
-# }
-# Department.create!(name: "Computer Science")
-
-# Professor.create!(name: "Ameet Soni",
-#                   department_id: 1)
-
-
-
-# Course.create!( name:        "Introduction to Computer Science",
-#                 department_id:  1,
-#                 professor_id:   1,
-#                 crn:         "CS021")
-
-# Course.create!( name:        "Introduction to Computer Systems",
-#                 department_id:  1,
-#                 professor_id:   1,
-#                 crn:         "CS031")
-
-# Course.create!( name:        "Data Structures and Algorithms",
-#                 department_id:  1,
-#                 professor_id:   1,
-#                 crn:         "CS035")
-
-
-# courses = Course.order(:created_at).take(3)
-# 10.times do
+# Course.all.each{ |course|
+#   3.times do
 #   content = Faker::Lorem.sentence(5)
-#   courses.each { |course| course.reviews.create!(content: content, 
+#   course.each { |course| course.reviews.create!(content: content, 
 #                                                     department_id:  1,
 #                                                     professor_id:   1,
 #                                                     user: User.find_by(id: 1), 
-#                                                     clarity: 5,
-#                                                     intensity: 5,
-#                                                     worthit: 5) }
+#                                                     clarity: 3,
+#                                                     intensity: 3,
+#                                                     worthit: 3) }
 # end
+# }
 
