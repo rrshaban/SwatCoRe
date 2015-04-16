@@ -102,9 +102,14 @@ li{
   background-color: white;
   border-bottom: 1px $gray-lighter solid;
   a{
-    &:hover{
+    &:hover, &:active &:visited{
       color: black !important; 
+      background: none;
     }
+  }
+  .dropdown-toggle{
+    color: $gray;
+    background: none;
   }
   .logo {
     float: left;
@@ -227,6 +232,21 @@ aside {
   }
  }
 
+
+.user_signup, .user_login{
+  a{
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  #user_remember_me{
+    margin: 4px 0 0 15px;
+  }
+  label{
+    padding-left: 0;
+  } 
+}
+
 .field{
   padding: 10px 20px;
   background-color: white;
@@ -280,6 +300,9 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+  // &[name="checkbox"]{
+  //   display:inline;
+  // }
 }
 
 
@@ -301,6 +324,11 @@ input {
 .alert-error{
   color: red;
   background: rgba(255,0,0,0.15);
+}
+
+.alert-notice, .alert-alert{
+  color: $green;
+  background: rgba(0, 102, 85, 0.15);
 }
 
 .checkbox {

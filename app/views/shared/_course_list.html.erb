@@ -1,7 +1,7 @@
 <%= link_to course do%>
 <ul>
     <li class="course name"><%= course.name %> (<%= course.crn %>)</li>
-    <li class="course prof"><%= course.prof_name %></li>
+    <li class="course prof"><%= course.prof_name_raw %></li>
     <li class="course ratings"><span>Clarity: 5</span><span>Workload: 5</span><span>Worth it?: 5</span>
     <li class="course last"><%= course.last %>
 </ul>
