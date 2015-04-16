@@ -8,33 +8,33 @@ i = 0
 depts = Hash.new 
 profs = Hash.new
 
-puts courseList[0]
-# courseList.each{ |course|
-#   i += 1
-# 	courseDept = course['dept']
-# 	courseProf = course['profFirstName'] + ' ' + course['profLastName']
+# puts courseList
+courseList.each{ |course|
+  i += 1
+	courseDept = course['Registration-ID'].split[0]
+	courseProf = course['Instructor']
 
-#   if !depts.include?(courseDept)
-#   	depts[courseDept] = 1
-#   else
-#     depts[courseDept] += 1
-#   end
+  if !depts.include?(courseDept)
+  	depts[courseDept] = 1
+  else
+    depts[courseDept] += 1
+  end
 
-#   if !profs.include?(courseProf)
-#     # what if more courses are listed for a given prof?
-#   	profs[courseProf] = 1
-#   else
-#     profs[courseProf] += 1
-#   end
-# }
+  if !profs.include?(courseProf)
+    # what if more courses are listed for a given prof?
+  	profs[courseProf] = 1
+  else
+    profs[courseProf] += 1
+  end
+}
 
-# puts depts
-# puts profs
-# puts i
+puts depts
+puts profs
+puts i
 
-# departmentsArray.each{ |dept|
-# 	Department.create!(name: dept)
-# }
+depts.each{ |dept|
+	Department.create!(name: dept)
+}
 
 # professorsArray.each{ |prof|
 # 	dept = departments.find_by(name:prof[1]).department_id
