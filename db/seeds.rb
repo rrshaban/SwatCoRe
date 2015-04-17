@@ -178,11 +178,23 @@ Department.all.each{ |dept|
 	dept.update(name:   "Gender & Sexuality Studies")
   when "HIST"
 	dept.update(name:  "History")
+  when "INTP"
+	dept.update(name: "Interpretation Theory")
   when "ISLM"
 	dept.update(name:  "Islamic Studies")
   when "JPNS"
 	dept.update(name:  "Japanese")
+  # this department is weird. I don't think it's supposed to exist, but it
+  # has classes (one of which is listed properly, the other I can't find
+  # anyway, so they need to be deleted.  
   when "LALS"
+	Course.all.each { |course|
+		if (course.department_id == dept.id)
+			course.destroy
+		end
+	}
+	dept.destroy
+  when "LASC"
 	dept.update(name:  "Latin American Studies")
   when "LATN"
  	dept.update(name: "Latin")
@@ -194,6 +206,8 @@ Department.all.each{ |dept|
 	dept.update(name:  "Math and Stats")
   when "MUSI"
  	dept.update(name: "Music")
+  when "OCST"
+	dept.destroy
   when "PEAC"
 	dept.update(name:  "Peace & Conflict Studies")
   when "PHED"
@@ -204,6 +218,8 @@ Department.all.each{ |dept|
 	dept.update(name:  "Physics")
   when "POLS"
 	dept.update(name: "Political Science")
+  when "PPOL"
+	dept.update(name: "Public Policy")
   when "PSYC"
 	dept.update(name: "Psychology")
   when "RELG"
