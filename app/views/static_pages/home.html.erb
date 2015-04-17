@@ -2,8 +2,7 @@
   <h1>Swat Course Review.</h1>
 
   <% if not user_signed_in? %>
-
-    <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary home-signup" %>
 
   <% else %>
     <div class="row">
