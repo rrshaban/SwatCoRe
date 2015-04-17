@@ -10,7 +10,8 @@ email = "rshaban1@swarthmore.edu"
 password = "password"
 @user = User.new(name:              name,
              email:                 email,
-             password:              password)
+             password:              password,
+             admin:                 true)
 
 # so we don't accidentally spam Swarthmore again
 @user.skip_confirmation_notification!
