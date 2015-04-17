@@ -5,7 +5,6 @@ hash = JSON.parse(file)
 courseList = hash
 
 i = 0
-j = 0
 depts = Hash.new 
 profs = Hash.new
 
@@ -118,7 +117,6 @@ courseList.each{ |course|
     depts[courseDept] += 1
   end  
 
-  courseDept = course['Registration-ID'].split[0]
   courseProf = course['Instructor']
   
   if !profs.include?(courseProf)
@@ -129,10 +127,10 @@ courseList.each{ |course|
   end
 }
 
-puts depts
-puts profs
-puts i
-puts j
+#puts depts
+#puts profs
+#puts i
+#puts j
 
 
 #depts.each{ |dept|
