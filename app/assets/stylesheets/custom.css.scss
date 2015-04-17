@@ -88,13 +88,53 @@ li{
   text-transform: uppercase;
   padding: 14px !important;
   margin-bottom: 10px;
-  color: white;
+  color: white !important; 
   &:hover{
     background-color: rgba(0, 66, 55, 0.7) !important;
+    color: white !important;
   }
+  &:visited, &:active, &:focus{
+    color: white;
+    background-color: $green !important;
+  }
+}
+
+a{
   &:visited{
-    color: inherit;
+    color: $gray-lighter;
+    background: none !important;
   }
+  &:focus{
+    color: black !important;
+    background: none !important;
+  }
+}
+
+textarea, input{
+  padding: 5px;
+  margin: 15px 0 30px 0;
+  &:focus{
+    border-color: $green;
+    outline-style: none;
+  } 
+}
+
+select {
+  padding: 10px !important;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  text-overflow: '';
+  text-indent: 0.01px;
+  background: url(dropdown_sm.png) no-repeat 98% 50%;
+  border-radius: 0px;
+  &:focus{
+    border-color: $green !important;
+    outline-style: none !important;
+  } 
+}
+::-ms-expand {
+  display: none;
 }
 
 /* header */
@@ -233,7 +273,7 @@ aside {
  }
 
 
-.user_signup, .user_login{
+.user_signup, .user_login, .new_course, .new_department, .new_professor{
   a{
     &:hover{
       text-decoration: underline;
@@ -245,6 +285,19 @@ aside {
   label{
     padding-left: 0;
   } 
+  input[type="text"]{
+    margin-top: 0;
+  }
+}
+
+.homepage{
+  h1{
+    text-align: center;
+  }
+  .search-by{
+    line-height: 45px;
+  }
+  background: none;
 }
 
 .field{
@@ -258,14 +311,6 @@ aside {
   h3{
     margin: 10px 0 35px 0 ;
     font-weight: bold; 
-  }
-  textarea, input{
-    padding: 5px;
-    margin: 15px 0 30px 0;
-    &:focus{
-      border-color: $green;
-      outline-style: none;
-    }
   }
  }
 
