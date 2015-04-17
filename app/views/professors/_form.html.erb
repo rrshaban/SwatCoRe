@@ -1,29 +1,24 @@
-<div class="new_professor row">
-  <div class="col-md-6 col-md-offset-3">
-    <h1>New Professor.</h1>
-    <%= form_for(@professor) do |f| %>
-      <% if @professor.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@professor.errors.count, "error") %> prohibited this professor from being saved:</h2>
+<%= form_for(@professor) do |f| %>
+  <% if @professor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@professor.errors.count, "error") %> prohibited this professor from being saved:</h2>
 
-          <ul>
-          <% @professor.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-          </ul>
-        </div>
+      <ul>
+      <% @professor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
       <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-      <div class="field">
-        <%= f.label :name %><br>
-        <%= f.text_field :name %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
 
-        <%= f.label :department_id %><br>
-        <%= select(:professor, :department_id, @dept_options) %>
+    <%= f.label :department_id %><br>
+    <%= select(:professor, :department_id, @dept_options) %>
 
-        <%= f.submit "Submit", class: "btn btn-primary"%>
-      </div>
-      <%= link_to 'Back', professors_path %>
-    <% end %>
+    <%= f.submit "Submit", class: "btn btn-primary"%>
   </div>
-</div>
+<% end %>
+
