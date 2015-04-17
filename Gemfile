@@ -23,7 +23,7 @@ gem 'sendgrid',             '1.2.0'
 gem 'acts_as_votable',      '0.10.0'
 gem 'font-awesome-sass'
 gem 'dotenv-rails', :groups => [:development, :test]
-gem 'cancan',               '1.6.10'
+gem 'cancancan',            '1.10.1'
 
 group :development, :test do
   # gem 'sqlite3',     '1.3.9'
