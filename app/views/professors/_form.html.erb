@@ -14,14 +14,11 @@
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
-  </div>
 
-  <div class="field">
     <%= f.label :department_id %><br>
     <%= select(:professor, :department_id, @dept_options) %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit", class: "btn btn-primary"%>
   </div>
 <% end %>
+

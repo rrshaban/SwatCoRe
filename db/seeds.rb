@@ -10,7 +10,8 @@ email = "rshaban1@swarthmore.edu"
 password = "password"
 @user = User.new(name:              name,
              email:                 email,
-             password:              password)
+             password:              password,
+             admin:                 true)
 
 # so we don't accidentally spam Swarthmore again
 @user.skip_confirmation_notification!
@@ -19,8 +20,10 @@ password = "password"
 
 
 require 'json'
-file = File.read(File.dirname(__FILE__) + '/classes.json')
-json_parse = JSON.parse(file)
+fall14 = File.read(File.dirname(__FILE__) + '/fall2014.json')
+spring15 = File.read(File.dirname(__FILE__) + '/spring2015.json')
+fall15 = File.read(File.dirname(__FILE__) + '/fall2015.json')
+json_parse = JSON.parse(fall14) + JSON.parse(spring15) + JSON.parse(fall15)
 
 courseList = json_parse
 depts = Hash.new 
@@ -73,10 +76,6 @@ courseList.each{ |course|
   end
 
 }
-
-#puts depts
-#puts profs
-#puts i
 
 depts.keys.each{ |dept|
   Department.create!(name: dept)

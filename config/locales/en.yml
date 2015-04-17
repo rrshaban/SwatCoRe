@@ -20,4 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  manage:
+    all: "Not authorized to %{action} %{subject}."
+    user: "Not allowed to manage other user accounts."
+  update:
+    all: "Not allowed to update this %{subject}."
   hello: "Hello world"

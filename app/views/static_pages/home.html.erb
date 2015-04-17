@@ -1,17 +1,22 @@
-<div class="center jumbotron">
+<div class="center jumbotron homepage">
   <h1>Swat Course Review.</h1>
 
-  <h2>
-    This is the home page for the
-    <%= link_to "SwatCoRe", root_path %>
-    development page.
-  </h2>
-
   <% if not user_signed_in? %>
-
-    <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary home-signup" %>
 
   <% else %>
+    <div class="row">
+      <h3 class="col-sm-offset-2 col-sm-2 search-by">
+       Search by
+      </h3>
+      <h3 class="col-xs-6">
+        <select>
+          <option>Courses</option>
+          <option>Departments</option>
+          <option>Professors</option>
+        </select>
+      </h3>
+    </div>
 
     <%= link_to "View Courses Now!", courses_path, class: "btn btn-lg btn-primary" %>
     <%= link_to "Browse by Departments", departments_path, class: "btn btn-lg btn-primary" %>
