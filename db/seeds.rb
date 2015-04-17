@@ -49,104 +49,6 @@ courseList.each{ |course|
   courseDept = course['Registration-ID'].split[0]
   courseProf = course['Instructor']
 
-  # Changes the key to the full name - ugly, but it works
-  if courseDept == "ANCH"
- 	 courseDept = "Ancient History" 
-  elsif courseDept == "ANTH"
- 	 courseDept = "Anthropology"
-  elsif courseDept == "ARAB" 
- 	 courseDept  = "Arabic"
-  elsif courseDept == "ARTH"
- 	 courseDept = "Art History"
-  elsif courseDept == "ASTR"
- 	 courseDept  = "Astronomy"
-  elsif courseDept == "BIOL"
- 	 courseDept  = "Biology"
-  elsif courseDept == "BLST"
- 	 courseDept  = "Black Studies"
-  elsif courseDept == "CHEM"
- 	 courseDept  = "Chemistry"
-  elsif courseDept == "CHIN"
- 	 courseDept  = "Chinese"
-  elsif courseDept == "CLST"
- 	 courseDept  = "Classics"
-  elsif courseDept == "COGS"
- 	 courseDept  = "Cognitive Science"
-  elsif courseDept == "CPSC"
-	 courseDept  = "Computer Science"
-  elsif courseDept == "DANC"
-  	 courseDept  = "Dance"
-  elsif courseDept == "ECON"
-  	 courseDept  = "Economics"
-  elsif courseDept == "EDUC"
- 	 courseDept  = "Educational Studies"
-  elsif courseDept == "ENGL"
- 	 courseDept  = "English Literature"
-  elsif courseDept == "ENGR"
- 	 courseDept  = "Engineering"
-  elsif courseDept == "ENVS"
- 	 courseDept  = "Environmental Studies"
-  elsif courseDept == "FMST"
- 	 courseDept  = "Film & Media Studies"
-  elsif courseDept == "FREN"
- 	 courseDept  = "French and Francophone Studies"
-  elsif courseDept == "GMST"
- 	 courseDept  = "German Studies"
-  elsif courseDept == "GREK"
- 	 courseDept  = "Greek"
-  elsif courseDept == "GSST"
- 	 courseDept  = "Gender & Sexuality Studies"
-  elsif courseDept == "HIST"
- 	 courseDept  = "History"
-  elsif courseDept == "ISLM"
- 	 courseDept  = "Islamic Studies"
-  elsif courseDept == "JPNS"
- 	 courseDept  = "Japanese"
-  elsif courseDept == "LALS"
- 	 courseDept  = "Latin American Studies"
-  elsif courseDept == "LATN"
- 	 courseDept  = "Latin"
-  elsif courseDept == "LING"
- 	 courseDept  = "Linguistics"
-  elsif courseDept == "LITR"
- 	 courseDept  = "Comparative Literature"
-  elsif courseDept == "MATH"
- 	 courseDept  = "Math and Stats"
-  elsif courseDept == "MUSI"
- 	 courseDept  = "Music"
-  elsif courseDept == "PEAC"
- 	 courseDept  = "Peace & Conflict Studies"
-  elsif courseDept == "PHED"
- 	 courseDept  = "Physical Education"
-  elsif courseDept == "PHIL"
- 	 courseDept  = "Philosophy"
-  elsif courseDept == "PHYS"
- 	 courseDept  = "Physics"
-  elsif courseDept == "POLS"
- 	 courseDept  = "Political Science"
-  elsif courseDept == "PSYC"
- 	 courseDept  = "Psychology"
-  elsif courseDept == "RELG"
- 	 courseDept = "Religion"
-  elsif courseDept == "RUSS"
- 	 courseDept  = "Russian"
-  elsif courseDept == "SOAN"
- 	 courseDept  = "Sociology & Anthropology"
-  elsif courseDept == "SOCI"
- 	 courseDept  = "Sociology"
-  elsif courseDept == "SPAN"
- 	 courseDept  = "Spanish"
-  elsif courseDept == "STAT"
- 	 courseDept  = "Statistics"
-  elsif courseDept == "STUA"
- 	 courseDept = "Studio Art"
-  elsif courseDept == "THEA"
- 	 courseDept = "Theater"
-  else
- 	 puts "Unnamed Department"
-  end
-
-
   if !depts.include?(courseDept)
     depts[courseDept] = 1
   else
@@ -223,6 +125,107 @@ courses.keys.each{ |course_crn|
 
     # puts course_name, course_prof, course_dept, course_crn
   }
+}
+
+Department.all.each{ |dept|
+
+  # Changes the key to the full name - ugly, but it works
+  case dept.name
+  when "ANCH"
+	dept.update(name: "Ancient History") 
+  when "ANTH"
+ 	dept.update(name: "Anthropology")
+  when "ARAB" 
+ 	dept.update(name: "Arabic")
+  when "ARTH"
+  	dept.update(name: "Art History")
+  when "ASTR"
+  	dept.update(name: "Astronomy")
+  when "BIOL"
+  	dept.update(name: "Biology")
+  when "BLST"
+  	dept.update(name: "Black Studies")
+  when "CHEM"
+  	dept.update(name: "Chemistry")
+  when "CHIN"
+  	dept.update(name: "Chinese")
+  when "CLST"
+	dept.update(name:   "Classics")
+  when "COGS"
+	dept.update(name:   "Cognitive Science")
+  when "CPSC"
+	dept.update(name:   "Computer Science")
+  when "DANC"
+	dept.update(name:   "Dance")
+  when "ECON"
+	dept.update(name:   "Economics")
+  when "EDUC"
+	dept.update(name:   "Educational Studies")
+  when "ENGL"
+	dept.update(name:   "English Literature")
+  when "ENGR"
+	dept.update(name:   "Engineering")
+  when "ENVS"
+	dept.update(name:   "Environmental Studies")
+  when "FMST"
+	dept.update(name:   "Film & Media Studies")
+  when "FREN"
+	dept.update(name:   "French and Francophone Studies")
+  when "GMST"
+	dept.update(name:   "German Studies")
+  when "GREK"
+	dept.update(name:   "Greek")
+  when "GSST"
+	dept.update(name:   "Gender & Sexuality Studies")
+  when "HIST"
+	dept.update(name:  "History")
+  when "ISLM"
+	dept.update(name:  "Islamic Studies")
+  when "JPNS"
+	dept.update(name:  "Japanese")
+  when "LALS"
+	dept.update(name:  "Latin American Studies")
+  when "LATN"
+ 	dept.update(name: "Latin")
+  when "LING"
+	dept.update(name:  "Linguistics")
+  when "LITR"
+	dept.update(name:  "Comparative Literature")
+  when "MATH"
+	dept.update(name:  "Math and Stats")
+  when "MUSI"
+ 	dept.update(name: "Music")
+  when "PEAC"
+	dept.update(name:  "Peace & Conflict Studies")
+  when "PHED"
+	dept.update(name:  "Physical Education")
+  when "PHIL"
+	dept.update(name: "Philosophy")
+  when "PHYS"
+	dept.update(name:  "Physics")
+  when "POLS"
+	dept.update(name: "Political Science")
+  when "PSYC"
+	dept.update(name: "Psychology")
+  when "RELG"
+	dept.update(name: "Religion")
+  when "RUSS"
+	dept.update(name: "Russian")
+  when "SOAN"
+	dept.update(name: "Sociology & Anthropology")
+  when "SOCI"
+	dept.update(name: "Sociology")
+  when "SPAN"
+	dept.update(name: "Spanish")
+  when "STAT"
+	dept.update(name: "Statistics")
+  when "STUA"
+	dept.update(name: "Studio Art")
+  when "THEA"
+	dept.update(name: "Theater")
+  else
+ 	 puts "Unnamed Department"
+  end
 }
 
 ### DELETES BLANK PROFESSOR
