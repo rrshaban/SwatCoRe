@@ -49,7 +49,104 @@ courseList.each{ |course|
   courseDept = course['Registration-ID'].split[0]
   courseProf = course['Instructor']
 
-  
+  # Changes the key to the full name - ugly, but it works
+  if courseDept == "ANCH"
+ 	 courseDept = "Ancient History" 
+  elsif courseDept == "ANTH"
+ 	 courseDept = "Anthropology"
+  elsif courseDept == "ARAB" 
+ 	 courseDept  = "Arabic"
+  elsif courseDept == "ARTH"
+ 	 courseDept = "Art History"
+  elsif courseDept == "ASTR"
+ 	 courseDept  = "Astronomy"
+  elsif courseDept == "BIOL"
+ 	 courseDept  = "Biology"
+  elsif courseDept == "BLST"
+ 	 courseDept  = "Black Studies"
+  elsif courseDept == "CHEM"
+ 	 courseDept  = "Chemistry"
+  elsif courseDept == "CHIN"
+ 	 courseDept  = "Chinese"
+  elsif courseDept == "CLST"
+ 	 courseDept  = "Classics"
+  elsif courseDept == "COGS"
+ 	 courseDept  = "Cognitive Science"
+  elsif courseDept == "CPSC"
+	 courseDept  = "Computer Science"
+  elsif courseDept == "DANC"
+  	 courseDept  = "Dance"
+  elsif courseDept == "ECON"
+  	 courseDept  = "Economics"
+  elsif courseDept == "EDUC"
+ 	 courseDept  = "Educational Studies"
+  elsif courseDept == "ENGL"
+ 	 courseDept  = "English Literature"
+  elsif courseDept == "ENGR"
+ 	 courseDept  = "Engineering"
+  elsif courseDept == "ENVS"
+ 	 courseDept  = "Environmental Studies"
+  elsif courseDept == "FMST"
+ 	 courseDept  = "Film & Media Studies"
+  elsif courseDept == "FREN"
+ 	 courseDept  = "French and Francophone Studies"
+  elsif courseDept == "GMST"
+ 	 courseDept  = "German Studies"
+  elsif courseDept == "GREK"
+ 	 courseDept  = "Greek"
+  elsif courseDept == "GSST"
+ 	 courseDept  = "Gender & Sexuality Studies"
+  elsif courseDept == "HIST"
+ 	 courseDept  = "History"
+  elsif courseDept == "ISLM"
+ 	 courseDept  = "Islamic Studies"
+  elsif courseDept == "JPNS"
+ 	 courseDept  = "Japanese"
+  elsif courseDept == "LALS"
+ 	 courseDept  = "Latin American Studies"
+  elsif courseDept == "LATN"
+ 	 courseDept  = "Latin"
+  elsif courseDept == "LING"
+ 	 courseDept  = "Linguistics"
+  elsif courseDept == "LITR"
+ 	 courseDept  = "Comparative Literature"
+  elsif courseDept == "MATH"
+ 	 courseDept  = "Math and Stats"
+  elsif courseDept == "MUSI"
+ 	 courseDept  = "Music"
+  elsif courseDept == "PEAC"
+ 	 courseDept  = "Peace & Conflict Studies"
+  elsif courseDept == "PHED"
+ 	 courseDept  = "Physical Education"
+  elsif courseDept == "PHIL"
+ 	 courseDept  = "Philosophy"
+  elsif courseDept == "PHYS"
+ 	 courseDept  = "Physics"
+  elsif courseDept == "POLS"
+ 	 courseDept  = "Political Science"
+  elsif courseDept == "PSYC"
+ 	 courseDept  = "Psychology"
+  elsif courseDept == "RELG"
+ 	 courseDept = "Religion"
+  elsif courseDept == "RUSS"
+ 	 courseDept  = "Russian"
+  elsif courseDept == "SOAN"
+ 	 courseDept  = "Sociology & Anthropology"
+  elsif courseDept == "SOCI"
+ 	 courseDept  = "Sociology"
+  elsif courseDept == "SPAN"
+ 	 courseDept  = "Spanish"
+  elsif courseDept == "STAT"
+ 	 courseDept  = "Statistics"
+  elsif courseDept == "STUA"
+ 	 courseDept = "Studio Art"
+  elsif courseDept == "THEA"
+ 	 courseDept = "Theater"
+  else
+ 	 puts "Unnamed Department"
+  end
+
+
   if !depts.include?(courseDept)
     depts[courseDept] = 1
   else
@@ -75,9 +172,9 @@ courseList.each{ |course|
 
 }
 
-# puts depts
-# puts profs
-# puts i
+#puts depts
+#puts profs
+#puts i
 
 depts.keys.each{ |dept|
   Department.create!(name: dept)
