@@ -117,7 +117,7 @@ courses.keys.each{ |course_crn|
 
   courses[course_crn]['course_prof'].keys.each { |course_prof|
 
-    Course.create!( name:                 course_name,
+    Course.create!( name:             course_name,
                 department_id:        course_dept.id,
                 professor_id:         course_prof.id,
                 crn:                  course_crn )
@@ -130,133 +130,123 @@ Department.all.each{ |dept|
 
   # Changes the key to the full name - ugly, but it works
   case dept.name
-  when "ANCH"
-	dept.update(name: "Ancient History") 
-  when "ANTH"
- 	dept.update(name: "Anthropology")
-  when "ARAB" 
- 	dept.update(name: "Arabic")
-  when "ARTH"
-  	dept.update(name: "Art History")
-  when "ASTR"
-  	dept.update(name: "Astronomy")
-  when "BIOL"
-  	dept.update(name: "Biology")
-  when "BLST"
-  	dept.update(name: "Black Studies")
-  when "CHEM"
-  	dept.update(name: "Chemistry")
-  when "CHIN"
-  	dept.update(name: "Chinese")
-  when "CLST"
-	dept.update(name:   "Classics")
-  when "COGS"
-	dept.update(name:   "Cognitive Science")
-  when "CPSC"
-	dept.update(name:   "Computer Science")
-  when "DANC"
-	dept.update(name:   "Dance")
-  when "ECON"
-	dept.update(name:   "Economics")
-  when "EDUC"
-	dept.update(name:   "Educational Studies")
-  when "ENGL"
-	dept.update(name:   "English Literature")
-  when "ENGR"
-	dept.update(name:   "Engineering")
-  when "ENVS"
-	dept.update(name:   "Environmental Studies")
-  when "FMST"
-	dept.update(name:   "Film & Media Studies")
-  when "FREN"
-	dept.update(name:   "French and Francophone Studies")
-  when "GMST"
-	dept.update(name:   "German Studies")
-  when "GREK"
-	dept.update(name:   "Greek")
-  when "GSST"
-	dept.update(name:   "Gender & Sexuality Studies")
-  when "HIST"
-	dept.update(name:  "History")
-  when "INTP"
-	dept.update(name: "Interpretation Theory")
-  when "ISLM"
-	dept.update(name:  "Islamic Studies")
-  when "JPNS"
-	dept.update(name:  "Japanese")
-  # this department is weird. I don't think it's supposed to exist, but it
-  # has classes (one of which is listed properly, the other I can't find
-  # anyway, so they need to be deleted.  
-  when "LALS"
-	Course.all.each { |course|
-		if (course.department_id == dept.id)
-			course.destroy
-		end
-	}
-	dept.destroy
-  when "LASC"
-	dept.update(name:  "Latin American Studies")
-  when "LATN"
- 	dept.update(name: "Latin")
-  when "LING"
-	dept.update(name:  "Linguistics")
-  when "LITR"
-	dept.update(name:  "Comparative Literature")
-  when "MATH"
-	dept.update(name:  "Math and Stats")
-  when "MUSI"
- 	dept.update(name: "Music")
-  when "OCST"
-	dept.destroy
-  when "PEAC"
-	dept.update(name:  "Peace & Conflict Studies")
-  when "PHED"
-	dept.update(name:  "Physical Education")
-  when "PHIL"
-	dept.update(name: "Philosophy")
-  when "PHYS"
-	dept.update(name:  "Physics")
-  when "POLS"
-	dept.update(name: "Political Science")
-  when "PPOL"
-	dept.update(name: "Public Policy")
-  when "PSYC"
-	dept.update(name: "Psychology")
-  when "RELG"
-	dept.update(name: "Religion")
-  when "RUSS"
-	dept.update(name: "Russian")
-  when "SOAN"
-	dept.update(name: "Sociology & Anthropology")
-  when "SOCI"
-	dept.update(name: "Sociology")
-  when "SPAN"
-	dept.update(name: "Spanish")
-  when "STAT"
-	dept.update(name: "Statistics")
-  when "STUA"
-	dept.update(name: "Studio Art")
-  when "THEA"
-	dept.update(name: "Theater")
-  else
- 	 puts "Unnamed Department"
+    when "ANCH"
+      dept.update(name: "Ancient History") 
+    when "ANTH"
+      dept.update(name: "Anthropology")
+    when "ARAB" 
+      dept.update(name: "Arabic")
+    when "ARTH"
+      dept.update(name: "Art History")
+    when "ASTR"
+      dept.update(name: "Astronomy")
+    when "BIOL"
+      dept.update(name: "Biology")
+    when "BLST"
+      dept.update(name: "Black Studies")
+    when "CHEM"
+      dept.update(name: "Chemistry")
+    when "CHIN"
+      dept.update(name: "Chinese")
+    when "CLST"
+      dept.update(name: "Classics")
+    when "COGS"
+      dept.update(name: "Cognitive Science")
+    when "CPSC"
+      dept.update(name: "Computer Science")
+    when "DANC"
+      dept.update(name: "Dance")
+    when "ECON"
+      dept.update(name: "Economics")
+    when "EDUC"
+      dept.update(name: "Educational Studies")
+    when "ENGL"
+      dept.update(name: "English Literature")
+    when "ENGR"
+      dept.update(name: "Engineering")
+    when "ENVS"
+      dept.update(name: "Environmental Studies")
+    when "FMST"
+      dept.update(name: "Film & Media Studies")
+    when "FREN"
+      dept.update(name: "French and Francophone Studies")
+    when "GMST"
+      dept.update(name: "German Studies")
+    when "GREK"
+      dept.update(name: "Greek")
+    when "GSST"
+      dept.update(name: "Gender & Sexuality Studies")
+    when "HIST"
+      dept.update(name: "History")
+    when "INTP"
+      dept.update(name: "Interpretation Theory")
+    when "ISLM"
+      dept.update(name: "Islamic Studies")
+    when "JPNS"
+      dept.update(name: "Japanese")
+    when "LALS"
+      dept.update(name: "Latin American and Latino Studies")
+    when "LASC"
+      dept.update(name: "Latin American Studies")
+    when "LATN"
+      dept.update(name: "Latin")
+    when "LING"
+      dept.update(name: "Linguistics")
+    when "LITR"
+      dept.update(name: "Comparative Literature")
+    when "MATH"
+      dept.update(name: "Math and Stats")
+    when "MUSI"
+      dept.update(name: "Music")
+    when "OCST"
+      dept.destroy  # off-campus study
+    when "PEAC"
+      dept.update(name: "Peace & Conflict Studies")
+    when "PHED"
+      dept.update(name: "Physical Education")
+    when "PHIL"
+      dept.update(name: "Philosophy")
+    when "PHYS"
+      dept.update(name: "Physics")
+    when "POLS"
+      dept.update(name: "Political Science")
+    when "PPOL"
+      dept.update(name: "Public Policy")
+    when "PSYC"
+      dept.update(name: "Psychology")
+    when "RELG"
+      dept.update(name: "Religion")
+    when "RUSS"
+      dept.update(name: "Russian")
+    when "SOAN"
+      dept.update(name: "Sociology & Anthropology")
+    when "SOCI"
+      dept.update(name: "Sociology")
+    when "SPAN"
+      dept.update(name: "Spanish")
+    when "STAT"
+      dept.update(name: "Statistics")
+    when "STUA"
+      dept.update(name: "Studio Art")
+    when "THEA"
+      dept.update(name: "Theater")
+    else
+      puts "Unnamed Department" # should never happen
   end
 }
 
 ### DELETES BLANK PROFESSOR
 Professor.find_by(name: " ").destroy
 
-
-# Course.all.each{ |course|
-#   3.times do
-#   content = Faker::Lorem.sentence(5)
-#   course.each { |course| course.reviews.create!(content: content, 
-#                                                     department_id:  1,
-#                                                     professor_id:   1,
-#                                                     user: User.find_by(id: 1), 
-#                                                     clarity: 3,
-#                                                     intensity: 3,
-#                                                     worthit: 3) }
-# end
-# }
-
+Course.all.each{ |course|
+  3.times do
+  content = Faker::Lorem.sentence(3)
+  course.reviews.create!(content: content, 
+                              department_id:  course.department_id,
+                              professor_id:   course.professor_id,
+                              user: User.find_by(id: 1), 
+                              clarity: 3,
+                              intensity: 3,
+                              worthit: 3) 
+end
+}
