@@ -24,6 +24,7 @@ gem 'acts_as_votable',      '0.10.0'
 gem 'font-awesome-sass'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'cancancan',            '1.10.1'
+gem 'make_flaggable', :git => 'git://github.com/dgilperez/make_flaggable.git'
 
 group :development, :test do
   # gem 'sqlite3',     '1.3.9'

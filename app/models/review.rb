@@ -1,5 +1,6 @@
 class Review < ActiveRecord::Base
   acts_as_votable
+  make_flaggable
 
   # before_create :logged_in_user
   # after_create :timestamp_user

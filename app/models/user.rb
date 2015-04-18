@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
          :confirmable
 
   acts_as_voter
+  make_flagger
 
   validates_format_of :email, :with => /\A[a-z]*\d*@(swarthmore|haverford|brynmawr).edu\z/i
 

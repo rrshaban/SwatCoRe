@@ -3,6 +3,8 @@ class Professor < ActiveRecord::Base
   has_one  :department
   has_many :reviews,  through: :courses
 
+  make_flaggable
+
   def dept
     Department.find(self.department_id)
   end

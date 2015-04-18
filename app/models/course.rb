@@ -8,6 +8,8 @@ class Course < ActiveRecord::Base
   has_one :professor
   has_one :department           # we can accept this for now
   default_scope -> { order(crn: :asc) } ## cached_votes_score
+
+  make_flaggable
  
 
   def prof

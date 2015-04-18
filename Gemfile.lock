@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/dgilperez/make_flaggable.git
+  revision: 64ef10c57428808a73207b63a4867250e7969fdd
+  specs:
+    make_flaggable (0.0.3)
+      activerecord (>= 3.2, < 4.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -39,7 +46,7 @@ GEM
     acts_as_votable (0.10.0)
     ansi (1.5.0)
     arel (6.0.0)
-    autoprefixer-rails (5.1.8)
+    autoprefixer-rails (5.1.10)
       execjs
       json
     bcrypt (3.1.10)
@@ -62,10 +69,10 @@ GEM
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
-    coffee-script (2.4.0)
+    coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.9.1)
+    coffee-script-source (1.9.1.1)
     columnize (0.9.0)
     daemons (1.2.2)
     debug_inspector (0.0.2)
@@ -82,14 +89,14 @@ GEM
       dotenv (= 2.0.1)
     erubis (2.7.0)
     eventmachine (1.0.7)
-    execjs (2.5.0)
+    execjs (2.5.2)
     faker (1.4.2)
       i18n (~> 0.5)
     ffi (1.9.8)
     font-awesome-sass (4.3.2.1)
       sass (~> 3.2)
     formatador (0.2.5)
-    globalid (0.3.3)
+    globalid (0.3.5)
       activesupport (>= 4.1.0)
     guard (2.12.5)
       formatador (>= 0.2.4)
@@ -103,7 +110,6 @@ GEM
     guard-minitest (2.3.1)
       guard (~> 2.0)
       minitest (>= 3.0)
-    hike (1.2.3)
     hitimes (1.2.2)
     i18n (0.7.0)
     jbuilder (2.2.3)
@@ -154,7 +160,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    puma (2.11.1)
+    puma (2.11.2)
       rack (>= 1.1, < 2.0)
     rack (1.6.0)
     rack-test (0.6.3)
@@ -214,14 +220,12 @@ GEM
       rdoc (~> 4.0, < 5.0)
     sendgrid (1.2.0)
       json
+      json
     shellany (0.0.1)
     slop (3.6.0)
     spring (1.1.3)
-    sprockets (2.12.3)
-      hike (~> 1.2)
-      multi_json (~> 1.0)
+    sprockets (3.0.1)
       rack (~> 1.0)
-      tilt (~> 1.1, != 1.3.0)
     sprockets-rails (2.2.4)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
@@ -270,6 +274,7 @@ DEPENDENCIES
   jbuilder (= 2.2.3)
   jquery-rails (= 4.0.3)
   json
+  make_flaggable!
   mini_backtrace (= 0.1.3)
   minitest (= 5.5.1)
   minitest-reporters (= 1.0.5)

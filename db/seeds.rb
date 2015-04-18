@@ -238,15 +238,15 @@ Department.all.each{ |dept|
 ### DELETES BLANK PROFESSOR
 Professor.find_by(name: " ").destroy
 
-# Course.all.each{ |course|
-#   3.times do
-#   content = Faker::Lorem.sentence(3)
-#   course.reviews.create!(content: content, 
-#                               department_id:  course.department_id,
-#                               professor_id:   course.professor_id,
-#                               user: User.find_by(id: 1), 
-#                               clarity: 3,
-#                               intensity: 3,
-#                               worthit: 3) 
-#   end
-# }
+Course.all.each{ |course|
+  3.times do
+  content = Faker::Lorem.sentence(3)
+  course.reviews.create!(content: content, 
+                              department_id:  course.department_id,
+                              professor_id:   course.professor_id,
+                              user: User.find_by(id: 1), 
+                              clarity: 3,
+                              intensity: 3,
+                              worthit: 3) 
+  end
+}
