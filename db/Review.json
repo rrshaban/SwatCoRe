@@ -1746,28 +1746,5 @@
         "usefulRating": 3,
         "userObjectId": "2wachIpFUD",
         "workloadRating": 3
-    },
-	{
-        "ACL": {
-            "*": {
-                "read": true
-            },
-            "gLyRPLutZx": {
-                "write": true
-            }
-        },
-        "comment": "Test.",
-        "courseUniqueKey": "phil^010^charles^raff",
-        "createdAt": "2015-04-05T17:49:41.390Z",
-        "difficultyRating": 3,
-        "interestRating": 3,
-        "numDownVote": 0,
-        "numUpVote": 0,
-        "objectId": "TZ7YkWnSKw",
-        "overallRating": 3,
-        "updatedAt": "2015-04-05T17:49:41.390Z",
-        "usefulRating": 3,
-        "userObjectId": "gLyRPLutZx",
-        "workloadRating": 3
     }
 ] }
