@@ -238,6 +238,44 @@ Department.all.each{ |dept|
 ### DELETES BLANK PROFESSOR
 Professor.find_by(name: " ").destroy
 
+require 'json'
+oldReviews = File.read(File.dirname(__FILE__) + '/Review.json') 
+reviewList = JSON.parse(oldReviews)
+
+reviewList['results'].each{ |review|
+  	courseString = review['courseUniqueKey']
+  	overall = review['overallRating'] #clarity
+  	interest = review['interestRating'] #worthit
+  	workload = review['workloadRating'] #intensity
+	comment = review['comment'] 
+
+  	# turn courseString into useful information
+	courseCRN = (courseString.split('^')[0] + courseString.split('^')[1]).upcase
+	profFirst = (courseString.split('^')[2]).capitalize!
+	profLast = (courseString.split('^')[3]).capitalize!
+	profName = profLast + ", " + profFirst[0]
+ 	if !Course.find_by(crn: courseCRN)
+		next
+	end
+	dept_id = Course.find_by(crn: courseCRN).department_id
+	if !Professor.find_by(name: profName)
+		next
+	end
+	prof_id = Professor.find_by(name: profName).id
+	course_id = Course.find_by(crn: courseCRN).id
+	puts courseString
+	Review.create( 
+	    content: comment,
+	    clarity: overall,
+	    intensity: workload,
+	    worthit: interest,
+	    user_id: 1,
+	    course_id: course_id, 
+	    professor_id: prof_id,
+	    department_id: dept_id)
+}
+
+
 # Course.all.each{ |course|
 #   3.times do
 #   content = Faker::Lorem.sentence(3)
