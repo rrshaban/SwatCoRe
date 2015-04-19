@@ -5,8 +5,8 @@
 #
 
 
-name  = "Razi Shaban"
-email = "rshaban1@swarthmore.edu"
+name  = " "
+email = "parse@swarthmore.edu"
 password = "password"
 @user = User.new(name:              name,
              email:                 email,
@@ -244,7 +244,7 @@ reviewList = JSON.parse(oldReviews)
 
 reviewList['results'].each{ |review|
   	courseString = review['courseUniqueKey']
-  	clarity = intensity = worthit = 3
+  	clarity = intensity = worthit = review['overallRating']
 
   	comment = review['comment'] 
 
