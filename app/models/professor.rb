@@ -26,13 +26,13 @@ class Professor < ActiveRecord::Base
         worthit   +=  r.worthit.to_f
       }
 
-      clarity   /= count
+      clarity   /= count        # divides sum by count to generate average
       intensity /= count
       worthit   /= count
 
-      { clarity: clarity.round(1), 
+      { clarity:  clarity.round(1),   # rounds to one decimal place
         workload: intensity.round(1), 
-        worthit: worthit.round(1) 
+        worthit:  worthit.round(1) 
       }
     else
       { clarity: "n/a", 

@@ -5,7 +5,7 @@ class Review < ActiveRecord::Base
   # after_create :timestamp_user
   belongs_to :user
   belongs_to :course
-  default_scope -> { order(cached_votes_score: :desc, cached_votes_up: :desc) } ## cached_votes_score
+  # default_scope -> { order(cached_votes_score: :desc, cached_votes_up: :desc) } ## cached_votes_score
   
   validates :user_id, presence: true
   validates :content, presence: true

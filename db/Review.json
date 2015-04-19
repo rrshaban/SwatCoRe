@@ -1,0 +1,1750 @@
+{ "results": [
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "3DSBX63Ggo": {
+                "write": true
+            }
+        },
+        "comment": "This class is super interesting. I love professor Song because he is so passionate about literature. His enthusiasm really brings this class to life. Although it was somewhat big --- about 40 students --- there was still some really good discussions we had. It is mostly lecture based, though, and almost 3 hours long on a Monday. If you have any interest in Shakespeare, this class is well worth your time.",
+        "courseUniqueKey": "engl^020^eric^song",
+        "createdAt": "2014-11-26T05:46:30.042Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "9d9fjwVN6Q",
+        "overallRating": 5,
+        "updatedAt": "2014-11-26T05:46:30.042Z",
+        "usefulRating": 5,
+        "userObjectId": "3DSBX63Ggo",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "VJfxm91fHW": {
+                "write": true
+            }
+        },
+        "comment": " ",
+        "courseUniqueKey": "chem^038^stephen^miller",
+        "createdAt": "2014-12-06T04:11:58.221Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "4tL5pgOGMQ",
+        "overallRating": 5,
+        "updatedAt": "2014-12-06T04:11:58.221Z",
+        "usefulRating": 5,
+        "userObjectId": "VJfxm91fHW",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "NMQc1h9uwj": {
+                "write": true
+            }
+        },
+        "comment": " ",
+        "courseUniqueKey": "biol^034^vincent^formica",
+        "createdAt": "2015-01-18T19:16:58.210Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "Rm0SwDlgSI",
+        "overallRating": 5,
+        "updatedAt": "2015-01-18T19:16:58.210Z",
+        "usefulRating": 5,
+        "userObjectId": "NMQc1h9uwj",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "H8GcJ57te6": {
+                "write": true
+            }
+        },
+        "comment": "Lots and lots of worthwhile readings...certainly expands the mind without limiting it. Few assignments,  discussion heavy, note-worthy. Highly-recommended for people who can suffer through hundreds of pages every week. Life is hard, deal with it. ",
+        "courseUniqueKey": "hist^082^timothy^burke",
+        "createdAt": "2014-11-26T21:25:30.632Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "DzFBMSWq8i",
+        "overallRating": 5,
+        "updatedAt": "2014-11-26T21:25:30.632Z",
+        "usefulRating": 5,
+        "userObjectId": "H8GcJ57te6",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "sSVC6gUNpc": {
+                "write": true
+            }
+        },
+        "comment": "Good stuff! Lot's of discussion and reading(s). Class discussion is student led, but Professor Nora helps to facilitate; would like to see more lecturing. Class size: 12.",
+        "courseUniqueKey": "engl^101^nora^johnson",
+        "createdAt": "2014-11-26T22:22:50.984Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "8JPvwD1w4q",
+        "overallRating": 4,
+        "updatedAt": "2014-11-26T22:24:19.682Z",
+        "usefulRating": 4,
+        "userObjectId": "sSVC6gUNpc",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "UumWvjltcy": {
+                "write": true
+            }
+        },
+        "comment": "Professor Molter is a nice professor, really helpful during office hours although not a good professor, her lectures are often very difficult to follow. Besides that, concepts in this class are great and inspiring,  although i am biased toward electrical engineering topics. Its a great class however, you learn quite a lot and it is very challenging.  labs are long but wat engin labs arent? but i liked it, labs taught by an Extensions-Friendly professor, Piovoso, love that guy ",
+        "courseUniqueKey": "engr^011^lynne^molter",
+        "createdAt": "2014-11-26T23:22:11.934Z",
+        "difficultyRating": 3,
+        "interestRating": 3,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "WvIk3rwDj5",
+        "overallRating": 3,
+        "updatedAt": "2014-11-27T00:26:11.540Z",
+        "usefulRating": 3,
+        "userObjectId": "UumWvjltcy",
+        "workloadRating": 3
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "69PWAgm7kV": {
+                "write": true
+            }
+        },
+        "comment": "Overall, a very fun class. The material is very stimulating and the recitation sections are informative as well. Magenheim is not afraid to diverge from the text and so she integrates various concepts into the course. The only shortcoming in the class for me was that she was very busy that semester so she missed about 4 classes and skipped 2 chapters from the book. ",
+        "courseUniqueKey": "econ^011^ellen^magenheim",
+        "createdAt": "2014-11-27T01:21:12.415Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "NBwJlLtbZ7",
+        "overallRating": 4,
+        "updatedAt": "2014-11-27T01:21:12.415Z",
+        "usefulRating": 4,
+        "userObjectId": "69PWAgm7kV",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "pWXXMpzbDJ": {
+                "write": true
+            }
+        },
+        "comment": "James is a super fun professor. A very knowledgeable and humorous person. The course itself is very discussion based and requires about 3-5 hours of reading per week. I find the reading and discussions very interesting and intellectually stimulating. ",
+        "courseUniqueKey": "thea^021^james^magruder",
+        "createdAt": "2014-11-27T04:35:39.095Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "MEeBXiiA50",
+        "overallRating": 4,
+        "updatedAt": "2014-11-27T04:35:39.095Z",
+        "usefulRating": 4,
+        "userObjectId": "pWXXMpzbDJ",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "pWXXMpzbDJ": {
+                "write": true
+            }
+        },
+        "comment": "Don is very good at delivering lecture material and explaining things clear. His office hours are also very accessible as long as they are not occupied by other higher level math course students. Although Discrete Math is listed as a writing course, it really doesn't have a lot of writing. All the writing we did was in weekly problem sets where we explain how we prove things in a paragraph or two at most. The only actual writing that I consider as writing is this final paper we have where we have to solve and explain a problem by proof of induction, and it has to be 3-5 pages. Discrete math itself is also really fun and I find it quite helpful for upper level CS courses. I would recommend CS majors to take this as soon as possible. The only downside is that if you are not super into math this course can be a tad too mathy sometimes.",
+        "courseUniqueKey": "math^029^don^shimamoto",
+        "createdAt": "2014-11-27T04:43:36.079Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "QsW6a8WW2r",
+        "overallRating": 4,
+        "updatedAt": "2014-11-27T04:44:03.539Z",
+        "usefulRating": 4,
+        "userObjectId": "pWXXMpzbDJ",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "ctffyQtlo4": {
+                "write": true
+            }
+        },
+        "comment": "Hargadon is great. Take this course if you're doing econ stuff.",
+        "courseUniqueKey": "econ^033^joseph^hargadon",
+        "createdAt": "2014-11-28T05:02:38.445Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "RJ2fHyKgIT",
+        "overallRating": 4,
+        "updatedAt": "2014-11-28T05:02:38.445Z",
+        "usefulRating": 4,
+        "userObjectId": "ctffyQtlo4",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "3DSBX63Ggo": {
+                "write": true
+            }
+        },
+        "comment": "Theory of Computation is usually seen as one of the hardest courses in the CS major. Most people opt to take Algorithms instead to get their theory requirement out of the way. With Andy Danner, however, this course was very manageable. The homework sets were fair, and the exams were not overly difficult. I'm not a math major or even a particularly math-oriented person, but through the help of the professor, my peers on the Piazza forum, and just reading the text book, I managed to do very well in the class.",
+        "courseUniqueKey": "math^046^andrew^danner",
+        "createdAt": "2014-11-28T18:25:09.826Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "J5CkEIN3dl",
+        "overallRating": 5,
+        "updatedAt": "2014-11-28T18:25:09.826Z",
+        "usefulRating": 5,
+        "userObjectId": "3DSBX63Ggo",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "3DSBX63Ggo": {
+                "write": true
+            }
+        },
+        "comment": "Very fun project based course. The labs are really interesting, and the professor is a great lecturer. You'll probably end up spending several hours to complete each lab, however. The bugs that arise can be very difficult to work out. It's best to start early and ask for help on the Piazza forum. Overall, I enjoyed the class a lot, and feel like I've learned a ton about computer graphics.",
+        "courseUniqueKey": "cpsc^040^andrew^danner",
+        "createdAt": "2014-11-28T18:27:51.999Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "X90pSZVGPt",
+        "overallRating": 5,
+        "updatedAt": "2014-11-28T18:27:51.999Z",
+        "usefulRating": 5,
+        "userObjectId": "3DSBX63Ggo",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "K8IP23ih8C": {
+                "write": true
+            }
+        },
+        "comment": "I enjoyed the class overall. I thought the lectures could be more exciting but the interactive recitation sessions made up for it, in my opinion.",
+        "courseUniqueKey": "econ^011^ellen^magenheim",
+        "createdAt": "2014-11-28T19:21:53.330Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "osEPcQVyVd",
+        "overallRating": 4,
+        "updatedAt": "2014-11-28T19:21:53.330Z",
+        "usefulRating": 4,
+        "userObjectId": "K8IP23ih8C",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "Kbhfj8fLd0": {
+                "write": true
+            }
+        },
+        "comment": "The course makes heavy use of some basic linear algebra concepts (especially in weeks 3-6), so if you haven't taken/used linear in a while it might be a good idea to brush on some of those concepts (i.e. normalization of vectors, cross products, etc.)\n\nFor me, Andy's lecturing style is a bit disorganized and while your notes will never look like a textbook, he cracks some great jokes and keeps it interesting throughout (a tall order given the amount of relatively dry matrix manipulation). He's quite good in office hours though.\n\nLabs (called \"projects\") in comparison to other advanced-level Swat CS courses, were a bit easier than average in the sense that they involved less original implementation of code. The difficult aspects were usually trying to make sense of the complicated starter code Andy provided us with, but once you get past that point it's all interesting applications of a basic concept.\n\nCulminating project involved choosing a specific area of graphics not covered in class, extending a topic that was covered in class, or building something of your own using learned concepts. Definitely interesting, though make sure to start early so that you can ask him a lot of questions since it's such an open-ended project.\n\nIn the end, it's not entirely the most useful class in the world; I signed up for it out of an innate interest in how rendering 3-dimensional scenes works, and came away mildly satisfied.",
+        "courseUniqueKey": "cpsc^040^andrew^danner",
+        "createdAt": "2014-11-28T20:44:47.507Z",
+        "difficultyRating": 3,
+        "interestRating": 3,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "HuBRQyCThP",
+        "overallRating": 3,
+        "updatedAt": "2014-11-28T20:44:47.507Z",
+        "usefulRating": 3,
+        "userObjectId": "Kbhfj8fLd0",
+        "workloadRating": 3
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "ysroFIEbHU": {
+                "write": true
+            }
+        },
+        "comment": "Interesting material.  Not as in depth as you would go in neurobio.  If you understood Psych 1 and Bio 1, this class will likely be very easy for you.  Schneider is a good lecturer and, again, the material is very interesting.  I acknowledge that he can be pretty repetitious, but it really helps you to remember key material and sets you up well for the exams (there's only the midterm and the final).  The test are multiple choice and aren't difficult if you go over the lecture material ahead of time.  You have the option of writing a 2-3 page paper if you want to boost your grade.  Schneider is a really great professor and, if you express a little interest, will likely offer you the opportunity to work in his lab.  If you like neurobiology and are taking some other tough classes, this class is an awesome choice. ",
+        "courseUniqueKey": "psyc^030^allen^schneider",
+        "createdAt": "2014-11-29T00:26:33.144Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "mHIIoW3eew",
+        "overallRating": 4,
+        "updatedAt": "2014-11-29T00:26:33.144Z",
+        "usefulRating": 4,
+        "userObjectId": "ysroFIEbHU",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "ysroFIEbHU": {
+                "write": true
+            }
+        },
+        "comment": "Easy and boring.  There are a lot of readings.  Sometimes you have to do them.  Most of the time they're actually pretty good.  You have to write several response papers, but Reimer provides good feedback and is pretty generous with grading.  Final was optional.  Lots of movies in class.  Reimer is a really nice, interesting woman, just a boring lecturer.  ",
+        "courseUniqueKey": "psyc^038^michele^reimer",
+        "createdAt": "2014-11-29T00:29:15.528Z",
+        "difficultyRating": 3,
+        "interestRating": 3,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "Ag7EqiV9k9",
+        "overallRating": 3,
+        "updatedAt": "2014-11-29T00:29:15.528Z",
+        "usefulRating": 3,
+        "userObjectId": "ysroFIEbHU",
+        "workloadRating": 3
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "ruwZ4ScTJV": {
+                "write": true
+            }
+        },
+        "comment": "Rich is an amazing and fun teacher! Intro to CS is also an awesome and very applicable class to take! Work wise it's good and you learn a super cool skill!!! ",
+        "courseUniqueKey": "cpsc^021^richard^wicentowski",
+        "createdAt": "2014-11-30T05:28:07.567Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "UfabJPOcrm",
+        "overallRating": 5,
+        "updatedAt": "2014-11-30T05:28:07.567Z",
+        "usefulRating": 5,
+        "userObjectId": "ruwZ4ScTJV",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "zikL5t4HFy": {
+                "write": true
+            }
+        },
+        "comment": "Extremely clear, helpful, and provides you all the resources needed to do well in the class. It's definitely a tough course, but do-able if you really make use of everything he gives you.",
+        "courseUniqueKey": "chem^032^robert^paley",
+        "createdAt": "2014-11-30T05:57:52.316Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "RsTllLvLJ5",
+        "overallRating": 5,
+        "updatedAt": "2014-11-30T05:57:52.316Z",
+        "usefulRating": 5,
+        "userObjectId": "zikL5t4HFy",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "3QmHbTYzrK": {
+                "write": true
+            }
+        },
+        "comment": "The best! Though at times very partisan, Professor Kuperberg's class has been one of my favorites to date. Kuperberg does a great job using analogies and metaphors to explain concepts. His sense of humor leaks into everything, and is not for everyone, so YMMV. My only quip is that the material after the second midterm felt rushed, making the final fairly difficult compared to the midterms.",
+        "courseUniqueKey": "econ^021^mark^kuperberg",
+        "createdAt": "2014-11-30T06:00:28.796Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "etBKUjZE2K",
+        "overallRating": 4,
+        "updatedAt": "2014-11-30T06:00:28.796Z",
+        "usefulRating": 4,
+        "userObjectId": "3QmHbTYzrK",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "ITsFcvmdfd": {
+                "write": true
+            }
+        },
+        "comment": "I agree with the overall sentiment that though Professor Moulter is nice, her lectures can be hard to follow. One thing that irked me about the class is how she would almost always use variables instead of actual values for example problems, along with the occasional mistake she might make in class that would force her to start over.  She would also sometimes not do the math for examples and move on, which could be a bit annoying for someone like me who prefers seeing a problem worked out entirely in order to better understand it. One thing for class and lab to make note of is that Piovoso and Moulter use different symbols for variables, which can be very confusing. Other than that... it's hard to tell how you're doing in the class because tests get returned very late (Our class got our first quiz back the night before the last test before the final...) but it's interesting stuff.",
+        "courseUniqueKey": "engr^011^lynne^molter",
+        "createdAt": "2014-11-30T06:22:46.227Z",
+        "difficultyRating": 3,
+        "interestRating": 3,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "wvmX86BCh1",
+        "overallRating": 3,
+        "updatedAt": "2014-11-30T06:22:46.227Z",
+        "usefulRating": 3,
+        "userObjectId": "ITsFcvmdfd",
+        "workloadRating": 3
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "mNtTeRFE4Y": {
+                "write": true
+            }
+        },
+        "comment": "This is a good intro class to philosophy. I enjoy the class a lot and we have some active discussion talking about important things about life which we usually won't talk about in other circumstances.",
+        "courseUniqueKey": "phil^001^tamsin^lorraine",
+        "createdAt": "2014-11-30T06:41:33.619Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "O5S726PZW6",
+        "overallRating": 4,
+        "updatedAt": "2014-11-30T06:41:33.619Z",
+        "usefulRating": 4,
+        "userObjectId": "mNtTeRFE4Y",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "BhMOCOnv5f": {
+                "write": true
+            }
+        },
+        "comment": "Donna Jo is an excellent, engaging lecturer. If you like your courses to be highly structured, this is not the course for you, because she tends to tailor each class on what was previously discussed. However, if you like being an active participant, this is definitely the course for you.",
+        "courseUniqueKey": "ling^050^donna^napoli",
+        "createdAt": "2014-11-30T20:45:28.090Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "V3yQONC2mU",
+        "overallRating": 5,
+        "updatedAt": "2014-11-30T20:45:28.090Z",
+        "usefulRating": 5,
+        "userObjectId": "BhMOCOnv5f",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "BhMOCOnv5f": {
+                "write": true
+            }
+        },
+        "comment": "Nathan is one of the best professors I have ever had. Phonphon is a beautifully, logically structured course that does an excellent job of making you think about all the noises that we make while speaking. Even though I no longer know what I really sound like after having taken this course, I would highly recommend it to everyone.",
+        "courseUniqueKey": "ling^045^nathan^sanders",
+        "createdAt": "2014-11-30T20:47:33.684Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "NT8vF39tm6",
+        "overallRating": 5,
+        "updatedAt": "2014-11-30T20:47:33.684Z",
+        "usefulRating": 5,
+        "userObjectId": "BhMOCOnv5f",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "BhMOCOnv5f": {
+                "write": true
+            }
+        },
+        "comment": "While I really love Sibelan and enjoyed this course, the amount of theory that we had to read about translation somewhat bored me, because it seems like there are, more or less, two diametrically opposed viewpoints on what a good translation is. Nonetheless, within the repetition, there were many insights into the difficulties of good translation and the joys of when it all works out. If you have a strong background in at least two languages and are interested in literature, I definitely recommend this course.",
+        "courseUniqueKey": "litr^070r^sibelan^forrester",
+        "createdAt": "2014-11-30T20:53:06.865Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "1mC5PjWNao",
+        "overallRating": 4,
+        "updatedAt": "2014-11-30T20:53:06.865Z",
+        "usefulRating": 4,
+        "userObjectId": "BhMOCOnv5f",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "3DSBX63Ggo": {
+                "write": true
+            }
+        },
+        "comment": "First, I took Economics to get my social science requirement out of the way, so I'm not that excited about economics to begin with. The class was very boring for almost the entire semester. Professor Bayer is extremely intelligent, nice, and passionate about economics, but she moves through material at a very slow pace. It's frustrating to be asked questions like \"Give an example of an opportunity cost you had over the weekend\" at 8:30 in the morning and then wait 10 minutes as classmates say the same thing over and over again. The class is not particularly difficult, but the workload is somewhat annoying. We had problem sets each week and mandatory meetings with assigned groups to talk about the homework together. The midterm was a little bit tricky, but if one actually kept up with the reading and did the practice exam, getting an A should be relatively easy. We also had to do a paper assignment--- it sounded a lot worse than it is. It's only 3-5 pages and you can have diagrams. Still, it's kind of a pointless assignment.\n\nFor someone who was a little bit interested in Econ, the class went too slow in the beginning. I think the class would have been a lot more interesting had the professor went for a more direct lecture style instead of interspersing rather lame class interactive questions/activities.",
+        "courseUniqueKey": "econ^001^amanda^bayer",
+        "createdAt": "2014-12-02T20:29:34.048Z",
+        "difficultyRating": 3,
+        "interestRating": 3,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "nbMeBQTyMV",
+        "overallRating": 3,
+        "updatedAt": "2014-12-02T20:29:34.048Z",
+        "usefulRating": 3,
+        "userObjectId": "3DSBX63Ggo",
+        "workloadRating": 3
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "Iyd2eQAlLt": {
+                "write": true
+            }
+        },
+        "comment": "The course material is interesting and allows a more nuanced understanding of perceived and actual gender differences in psychopathology. While the professor is a really good lecturer (for Clinical Psych), she is not as adept at running a seminar. During group presentations, she often dominates the conversation and is a little bit too controlling of the content of group presentations.",
+        "courseUniqueKey": "psyc^048^elizabeth^krause",
+        "createdAt": "2014-12-03T05:02:49.066Z",
+        "difficultyRating": 3,
+        "interestRating": 3,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "17S2w7lxgq",
+        "overallRating": 3,
+        "updatedAt": "2014-12-03T05:02:49.066Z",
+        "usefulRating": 3,
+        "userObjectId": "Iyd2eQAlLt",
+        "workloadRating": 3
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "Iyd2eQAlLt": {
+                "write": true
+            }
+        },
+        "comment": "This course is really application-based. The papers and structure of the course are built so that within each topic, you learn about the theories, analyze them, and then apply them to actual case studies. Furthermore, the class allows for an understanding of adolescence in both the clinical and educational environments, which is something that is not often talked about together in a class. Elaine is a kind professor who is willing to challenge and work with students in a way that supports them and accounts for their ways of learning and working. Highly recommend taking this class!",
+        "courseUniqueKey": "educ^023^elaine^brenneman",
+        "createdAt": "2014-12-03T05:06:07.747Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "YzC947mwnC",
+        "overallRating": 5,
+        "updatedAt": "2014-12-03T05:06:07.747Z",
+        "usefulRating": 5,
+        "userObjectId": "Iyd2eQAlLt",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "Iyd2eQAlLt": {
+                "write": true
+            }
+        },
+        "comment": "While the subject matter can be a bit dry, the professor is helpful and willing to discuss things outside of class. He is also really helpful in planning and implementing the group research projects. He is very focused on conciseness and writing style (which are important for producing journal articles), and will address these things in your paper. I found this course to be really helpful in improving my psych writing skills.",
+        "courseUniqueKey": "psyc^025^ryan^mruczek",
+        "createdAt": "2014-12-03T05:12:35.916Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "kjmJ7VCyhH",
+        "overallRating": 4,
+        "updatedAt": "2014-12-03T05:12:35.916Z",
+        "usefulRating": 4,
+        "userObjectId": "Iyd2eQAlLt",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "jXgvkFFRYX": {
+                "write": true
+            }
+        },
+        "comment": "This class will make you sad if you happen to have some sense of how the world is so fucked up. Diego Armus seems to care about that, but you might want to cry when he tries to make slavery look prettier by arguing for the slaves' agency which you can obviously see from the little pieces of land where they had their own gardens—and that, my friends, is before he accuses you of being an \"essentialist\"—a crime, apparently, in comparison to which slavery pales. You run the risk of being unable to complete it, because sadness will sometimes seize you to the point where you are paralyzed. You will ask yourself why you are here, in this world, at all. Avoid it—but if you cannot, always remember that history can always be more fun.",
+        "courseUniqueKey": "hist^004^diego^armus",
+        "createdAt": "2014-12-04T06:42:12.449Z",
+        "difficultyRating": 1,
+        "interestRating": 1,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "x6x3FyJ7s0",
+        "overallRating": 1,
+        "updatedAt": "2014-12-04T19:12:01.157Z",
+        "usefulRating": 1,
+        "userObjectId": "jXgvkFFRYX",
+        "workloadRating": 1
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "b3HobAX55a": {
+                "write": true
+            }
+        },
+        "comment": "The beginning of the course focused a lot of VMs, hardware, which I'm not a big fan of. The amount of readings was kind of ridiculous. We had to read an academic paper for every class (MWF). Later in the semester it got a lot better as we started talking about more interesting algorithms for package ordering, modern datacenter infrastructure, cloud computing challenges etc. I also really appreciated the final project. Kevin basically let us do whatever we had in mind. It didn't necessarily have to have anything to do with cloud computing. Some people in the class decided to develop websites / apps that used EC2 as a hosting service and he was fine with it. Overall pretty good class. I'm sure if it's offered again in the future, it would be even better!",
+        "courseUniqueKey": "cpsc^091^kevin^webb",
+        "createdAt": "2015-01-18T01:35:00.325Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "yjS52P0B69",
+        "overallRating": 4,
+        "updatedAt": "2015-01-18T01:35:00.325Z",
+        "usefulRating": 4,
+        "userObjectId": "b3HobAX55a",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "b3HobAX55a": {
+                "write": true
+            }
+        },
+        "comment": "I took this class freshman fall, and it just wasn't fun. Lynne is a great person and she's really nice. But her instructions in the class were hard to follow. We always started walking through a problem in class, and then she screwed up, and we started all over again. It was really confusing especially when we were trying to understand the material. The labs were really hard and confusing. Had to spend \u003e 10 hours in completing each lab report. Overall, not a great experience. Good luck engineering majors!",
+        "courseUniqueKey": "engr^011^lynne^molter",
+        "createdAt": "2015-01-18T01:35:17.652Z",
+        "difficultyRating": 2,
+        "interestRating": 2,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "4qdI6BUwWe",
+        "overallRating": 2,
+        "updatedAt": "2015-01-18T01:35:17.652Z",
+        "usefulRating": 2,
+        "userObjectId": "b3HobAX55a",
+        "workloadRating": 2
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "b3HobAX55a": {
+                "write": true
+            }
+        },
+        "comment": "Jeff is the best!!! Take CS 21 with him. You won't regret it. I took it my freshman spring and it was a wonderful experience. He was really nice and very beginner friendly. He explained his concepts clearly and used funny examples along the way -- you'll hear about ponies, and unicorns a lot. :) CS 21 was not too hard and it gave you a basic understanding of computer science / programming. You get to learn one of the best programming language, Python. After taking this course, I would say you can understand online tutorials of other programming languages. It opened up another way of thinking that is valuable in this era. Even if you don't want to major in Computer Science (or maybe you'll change your mind like I did), this is still a great class to take!! ",
+        "courseUniqueKey": "cpsc^021^jeffrey^knerr",
+        "createdAt": "2015-01-18T01:35:35.181Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "h8y7SNhOV1",
+        "overallRating": 5,
+        "updatedAt": "2015-01-18T01:35:35.181Z",
+        "usefulRating": 5,
+        "userObjectId": "b3HobAX55a",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "b3HobAX55a": {
+                "write": true
+            }
+        },
+        "comment": "I would say this class is relatively easy, especially the lab. I wouldn't say you can learn a lot knowledge-wise from the class if you're already a science person. But the course gives you flexibility to delve into your field of interest. There is a final paper and you can pick whatever topic that interests you. The course material largely revolved around climate models and predictions / reading graphs. I remember the field trip was fun. We went to this wetland park or something next to the airport and it felt like a chill hiking trip. I'll definitely recommend the class. I think it was fun and not a lot of work. If that's what you're looking for, go ahead take it!",
+        "courseUniqueKey": "phys^024^peter^collings",
+        "createdAt": "2015-01-18T01:36:02.782Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "gXXYDry5ZF",
+        "overallRating": 4,
+        "updatedAt": "2015-01-18T01:36:02.782Z",
+        "usefulRating": 4,
+        "userObjectId": "b3HobAX55a",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "b3HobAX55a": {
+                "write": true
+            }
+        },
+        "comment": "This class is horrible. Definitely one of the worst class I've had at Swarthmore. To be fair, I'm not a fan of Math. But Rachel isn't the nicest professor you can find. I was going to this conference and coming back on Sunday. She asked me to hand in my problem set Sunday afternoon when there was a mid-term on Monday. No extension given. In class, she basically walked us through the book. Listening her confused me. Though I heard some good things about her office hours. Still, think twice before you take this class with her!",
+        "courseUniqueKey": "math^034^rachel^epstein",
+        "createdAt": "2015-01-18T01:36:49.366Z",
+        "difficultyRating": 1,
+        "interestRating": 1,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "GZPAEYl67i",
+        "overallRating": 1,
+        "updatedAt": "2015-01-18T01:36:49.366Z",
+        "usefulRating": 1,
+        "userObjectId": "b3HobAX55a",
+        "workloadRating": 1
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "b3HobAX55a": {
+                "write": true
+            }
+        },
+        "comment": "I have a love-hate relationship with this class. Tom is AMAZING! He's one of the most passionate people in music I've ever seen. He gave great lectures and it really got me interested in classical music. This class, I would say, was one of the most valuable classes I've taken here at Swarthmore. Now the down side. This class was quite a lot of work. We have weekly music quizzes (pretty hard too). He played us a part of the music, we had to identify the piece, the part it's from and the elements inside. Pretty crazy. And he was sooooo... hard on writing. He's really picky and I literally got comments from a through y. I wouldn't say he's super nice, but this course is still worth-taking! :)",
+        "courseUniqueKey": "musi^007b^thomas^whitman",
+        "createdAt": "2015-01-18T01:37:17.958Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "ZYSOriByKG",
+        "overallRating": 5,
+        "updatedAt": "2015-01-18T01:37:17.958Z",
+        "usefulRating": 5,
+        "userObjectId": "b3HobAX55a",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "YBaNz0S9V3": {
+                "write": true
+            }
+        },
+        "comment": "Professor Molter is nice, but her lecture is not very organized and hard to follow. Also, a warning before taking this class: you might not get your grade until 1 year later. Professor Molter is known to be a slow grader. \nLabs are better than lecture in my opinion. They are very long, but the material was very interesting. Piovoso is a very nice guy.",
+        "courseUniqueKey": "engr^011^lynne^molter",
+        "createdAt": "2015-01-18T02:06:47.838Z",
+        "difficultyRating": 3,
+        "interestRating": 3,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "nWhQJ3dm61",
+        "overallRating": 3,
+        "updatedAt": "2015-01-18T02:06:47.838Z",
+        "usefulRating": 3,
+        "userObjectId": "YBaNz0S9V3",
+        "workloadRating": 3
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "jXgvkFFRYX": {
+                "write": true
+            }
+        },
+        "comment": "Professor Ghannam is so nice that she is like my mother—she will feed you on your lonely Thanksgiving night, if you end up stuck here because your parents for whatever reason do not want to see your face. I imagine that the experience of the class will be different depending on where you are in your life, but a few things are to be expected if you decide to take this class. Like the class size,  for example, which is always about thirty. Although some might say it is too big, Professor Ghannam is armed with the magic of weaving together what everyone has to say in an almost seamless way, and you will feel happy about yourself because she will fool you into thinking that your bullshit makes sense. Do not despair if you are not very fond of bullshitting, for I myself have learned a lot from this class, regardless. The first half will dedicated to theoretical texts on the body that are important to anthropologists. You will get to read that famous Foucault book, which I now feel the urge to tear apart though in an endearing way, if you know what I mean. Whether or not the second half—dedicated to presentations by your peers, mostly—is fun really depends on your taste. You can always make it fun by giving a presentation on zombies.\n\nI took the class as a first-year, so I was lucky because it was the upperclassmen who had to put up with me who was still learning how to swim in this harsh world of Swarthmore academics. I have given advice to some of my anthropology senior friends not to take it, because they might not like the class filled with novices like me. I am being so exclusive! And perhaps mean, too! But such is life! Maybe? Take this class, regardless!",
+        "courseUniqueKey": "anth^049b^farha^ghannam",
+        "createdAt": "2014-12-04T06:33:09.895Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "T8rQhFQGee",
+        "overallRating": 5,
+        "updatedAt": "2014-12-04T19:14:36.187Z",
+        "usefulRating": 5,
+        "userObjectId": "jXgvkFFRYX",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "jXgvkFFRYX": {
+                "write": true
+            }
+        },
+        "comment": "The course title can be a little misleading, because what you will encounter in this class might deviate from your expectations. It is about the Global Enlightenment, true, but the syllabus is a jumble of seemingly random things. But randomness can fascinate, and if you trust Professor Azfar, who is really smart and talks a lot in class, you might enjoy the ride with him. He will make sure you notice his fascination with the sea, and in a way taking this class is like setting sail with him to somewhere beyond the horizon. At some point you might find yourself questioning what in the world you are doing—but there, you just evoke the concept of the world, something not to be taken for granted! Professor Azfar is really intent on making history exciting, and that I really appreciate. Secretly, there is the Benjaminian spirit that drives the class—and if you don't know who Benjamin is, consider yourself lucky. You will be writing blog posts, which can be fun, and you will get fascinated every time Azfar finds ways to make your blog posts sound intelligent, although you might write them at four in the morning. There are two papers, and he encourages us to do micro-histories by way of following certain things to see where they bring us.",
+        "courseUniqueKey": "hist^022^farid^azfar",
+        "createdAt": "2014-12-04T06:52:25.910Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "GfcIiqxvCj",
+        "overallRating": 4,
+        "updatedAt": "2014-12-04T06:52:25.910Z",
+        "usefulRating": 4,
+        "userObjectId": "jXgvkFFRYX",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "b3HobAX55a": {
+                "write": true
+            }
+        },
+        "comment": "To be honest, the course material really didn't interest me. I'm not a systems / hardware person. But the structure of the course compensated well. Kevin was really clear in his instructions. And he's super nice! I love how he recorded every lecture, so in case you don't completely understand the class you can always go back to it later. He had great powerpoints that were available online. Great resources provided. The down side was we had this 3-question quiz at the beginning of each class, it was kind of scary. Though it accounted for 5% of your grade (and another 5% for participation, so doing the clicker thing), you still have to nail it to get an A. But since this is a major-required class (so you have to take it anyways if you're a major), I would highly recommend taking it with Kevin! ",
+        "courseUniqueKey": "cpsc^031^kevin^webb",
+        "createdAt": "2015-01-18T01:36:25.555Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "Jk1CpKNsSs",
+        "overallRating": 4,
+        "updatedAt": "2015-01-18T01:36:25.555Z",
+        "usefulRating": 4,
+        "userObjectId": "b3HobAX55a",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "rXfm1tkOO9": {
+                "write": true
+            }
+        },
+        "comment": "Nice Professor, and though the concepts seem irrelevant and loosely linked together, you see in E12 how important each of them is. It would've been good to get grades back earlier, but I enjoyed the course. Plus, Piovoso is great at teaching the labs which can be very difficult to understand.",
+        "courseUniqueKey": "engr^011^lynne^molter",
+        "createdAt": "2015-01-18T19:14:24.622Z",
+        "difficultyRating": 3,
+        "interestRating": 3,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "ZurAF8YMaA",
+        "overallRating": 3,
+        "updatedAt": "2015-01-18T19:14:24.622Z",
+        "usefulRating": 3,
+        "userObjectId": "rXfm1tkOO9",
+        "workloadRating": 3
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "rXfm1tkOO9": {
+                "write": true
+            }
+        },
+        "comment": "Without a doubt one of the best classes I've taken at Swat. Cheever is amazing, though he expects A LOT from his students. Very fast paced, so you have to keep up. Expect to see new things on the exams, and have a lot of time pressure. Labs are similar to E11 with a little more MATLAB involved.",
+        "courseUniqueKey": "engr^012^erik^cheever",
+        "createdAt": "2015-01-18T19:15:37.124Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "9ypopJaMzp",
+        "overallRating": 5,
+        "updatedAt": "2015-01-18T19:15:37.124Z",
+        "usefulRating": 5,
+        "userObjectId": "rXfm1tkOO9",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "NMQc1h9uwj": {
+                "write": true
+            }
+        },
+        "comment": "A grudging two stars because you will learn some basic GIS skills, but it is just so poorly taught. It was incredibly frustrating. If you're considering it (and GIS is a good skill set to have) definitely talk with some people who have taken it first.",
+        "courseUniqueKey": "pols^037^ganapathy^narayanaraj",
+        "createdAt": "2015-01-18T19:16:01.803Z",
+        "difficultyRating": 2,
+        "interestRating": 2,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "SDmfJmgAtV",
+        "overallRating": 2,
+        "updatedAt": "2015-01-18T19:16:01.803Z",
+        "usefulRating": 2,
+        "userObjectId": "NMQc1h9uwj",
+        "workloadRating": 2
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "rXfm1tkOO9": {
+                "write": true
+            }
+        },
+        "comment": "I learned a lot in this class, though it was not incredibly challenging. One criticism I have is that the problem sets are not great preparation for the exams. In addition, the labs were very difficult to follow at some points. Overall a fun course if you want an intro into who digital systems work and how you can design and implement simple systems.",
+        "courseUniqueKey": "engr^015^matthew^zucker",
+        "createdAt": "2015-01-18T19:17:10.846Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "C53CQAcXKd",
+        "overallRating": 4,
+        "updatedAt": "2015-01-18T19:17:10.846Z",
+        "usefulRating": 4,
+        "userObjectId": "rXfm1tkOO9",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "rXfm1tkOO9": {
+                "write": true
+            }
+        },
+        "comment": "An interesting and different course from much of the rest of the core sequence. Macken is a great guy, but the entire course is very problem-focused. You are taught how to solve the problems, as opposed to being given a theoretical background into thermofluid mechanics. It's important to go into this class with an open mind, as many people felt it was too outside their area of interest. Also, the labs are kind of difficult, as with any engineering course.",
+        "courseUniqueKey": "engr^041^nelson^macken",
+        "createdAt": "2015-01-18T19:20:18.397Z",
+        "difficultyRating": 3,
+        "interestRating": 3,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "EYGvcYdzl4",
+        "overallRating": 3,
+        "updatedAt": "2015-01-18T19:20:18.397Z",
+        "usefulRating": 3,
+        "userObjectId": "rXfm1tkOO9",
+        "workloadRating": 3
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "rXfm1tkOO9": {
+                "write": true
+            }
+        },
+        "comment": "Prof. Brody is a great teacher - he really knows his stuff and explains concepts in a way that is relatively easy to understand. The labs are also a ton of fun, though they require A LOT of time. Expect to spend 5-10+ hours on some labs. You gain a lot of important skills in this class and learn a lot of fundamentals that are key to further programming work in any discipline. One criticism I have is the way quizzes are given. I don't think the study guides are generally good enough preparation for the problems you have to do on the quizzes, especially since there are no problem sets. It would be helpful to have more similar problems one could do to prepare as opposed to the few given on the study guide. Other than that, great course.",
+        "courseUniqueKey": "cpsc^035^joshua^brody",
+        "createdAt": "2015-01-18T19:23:26.312Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "hyXPyWnYh6",
+        "overallRating": 4,
+        "updatedAt": "2015-01-18T19:23:26.312Z",
+        "usefulRating": 4,
+        "userObjectId": "rXfm1tkOO9",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "NMQc1h9uwj": {
+                "write": true
+            }
+        },
+        "comment": " ",
+        "courseUniqueKey": "educ^151^diane^anderson",
+        "createdAt": "2015-01-18T19:23:48.252Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "2VVBZ24JiC",
+        "overallRating": 5,
+        "updatedAt": "2015-01-18T19:39:03.820Z",
+        "usefulRating": 5,
+        "userObjectId": "NMQc1h9uwj",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "AMScRS2zVB": {
+                "write": true
+            }
+        },
+        "comment": "This course is great! It is very beginner friendly, with online instructions, ninjas (student tutors) for labs, and a nice professor. Lisa learned our name within the first week even though there are 30+ students. And the lab assignments are pretty fun. We got to write programs for Wheel of Fortune and Flappy Bird. ",
+        "courseUniqueKey": "cpsc^021^lisa^meeden",
+        "createdAt": "2015-01-18T19:35:16.084Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "Ps1G1Yh4H3",
+        "overallRating": 5,
+        "updatedAt": "2015-01-18T19:35:16.084Z",
+        "usefulRating": 5,
+        "userObjectId": "AMScRS2zVB",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "NMQc1h9uwj": {
+                "write": true
+            }
+        },
+        "comment": "This is a solid intermediate course. It pretty much picks up where Bio 001 leaves off (which might make it a good first intermediate-level course) and it has a similar structure, but with more intense/interesting labs, some paper discussions, and student presentations at the end of the semester. \n\nVallen is really scrupulous about teaching well, which you can't say about every professor. For example, the first six labs fit together into one big project, and at the end of it you sit down with her and talk about what you've learned for 20 minutes instead of having a traditional written exam, because she really wants to give you a chance to show her what you've learned. If that sounds scary, don't worry; she doesn't bite. She expects some effort from you, but as long as you're trying, she wants you to do well.\n\nBasically Bio 001 2.0, taught well. It's a good choice if you want to learn more about little bio, and especially if you had Vallen in Bio 001 and liked her.",
+        "courseUniqueKey": "biol^014^elizabeth^vallen",
+        "createdAt": "2015-01-18T19:36:08.393Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "WNCdx5lcbh",
+        "overallRating": 5,
+        "updatedAt": "2015-01-18T19:36:08.393Z",
+        "usefulRating": 5,
+        "userObjectId": "NMQc1h9uwj",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "AMScRS2zVB": {
+                "write": true
+            }
+        },
+        "comment": "This class doesn't seem hard for the first couple weeks, but later it can be frustrating. A lot of the concepts are very theoretical. Even now, I'm still not sure why we learned them and if they are useful. For someone who doesn't have a lot of experience in writing proofs (like me), the assignments could be a challenge. However, professor Johnson is very nice. Go to her office hour, and she'll answer all the questions you have!",
+        "courseUniqueKey": "math^028^aimee^johnson",
+        "createdAt": "2015-01-18T19:40:28.302Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "ysXi9m3sOB",
+        "overallRating": 4,
+        "updatedAt": "2015-01-18T19:40:28.302Z",
+        "usefulRating": 4,
+        "userObjectId": "AMScRS2zVB",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "9sDDFJPQ7B": {
+                "write": true
+            }
+        },
+        "comment": "This was a great course! The class covers a lot of basic concepts that will pave the way for future CS courses, and the concepts were presented in a wholly digestible way. Professor Meeden was incredibly generous with her time, making herself available for extended lab sessions and reviews. The course itself wasn't too hard, though as the semester goes on more time will have to be dedicated to completing the weekly labs, due every Saturday at midnight. No midterm, but there were a number of short quizzes throughout the semester. ",
+        "courseUniqueKey": "cpsc^021^lisa^meeden",
+        "createdAt": "2015-01-18T19:42:20.119Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "8px8YBaM5H",
+        "overallRating": 4,
+        "updatedAt": "2015-01-18T19:42:20.119Z",
+        "usefulRating": 4,
+        "userObjectId": "9sDDFJPQ7B",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "9sDDFJPQ7B": {
+                "write": true
+            }
+        },
+        "comment": "It should first be noted that the likelihood of Professor Hazanov teaching this class again is slim, since he was a last-minute replacement from Penn. With that in mind, this class covers all the major historical events of the period, starting with the Industrial Revolution and ending with World War One. The readings were relatively light for each class, with a heavy focus on primary sources. The lecture format made any attempt at discussion a bit stilted, but overall the class was informative and interesting. ",
+        "courseUniqueKey": "hist^003a^alexander^hazanov",
+        "createdAt": "2015-01-18T19:59:20.919Z",
+        "difficultyRating": 3,
+        "interestRating": 3,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "jwyuKIIQp3",
+        "overallRating": 3,
+        "updatedAt": "2015-01-18T19:59:20.919Z",
+        "usefulRating": 3,
+        "userObjectId": "9sDDFJPQ7B",
+        "workloadRating": 3
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "BN9kbxR6xw": {
+                "write": true
+            }
+        },
+        "comment": "Disclaimer: I'm not a humanities guy.\n\nProfessor Song is a great teacher, a funny lecturer, and a fair grader. Got the grade I deserved because I didn't do some of the readings. He's not a boring guy. :) Would recommend to people who actually have a passion for literature to take this class.",
+        "courseUniqueKey": "engl^009e^eric^song",
+        "createdAt": "2015-01-18T20:31:13.487Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "eQm5uUrX8C",
+        "overallRating": 5,
+        "updatedAt": "2015-01-31T16:35:58.157Z",
+        "usefulRating": 5,
+        "userObjectId": "BN9kbxR6xw",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "BUpJQ1ehQ6": {
+                "write": true
+            }
+        },
+        "comment": "Don't take this if you have any interest in theoretical math. It is very applied and moves at a very slow pace. Also Aimee Johnson is annoying.",
+        "courseUniqueKey": "math^043^aimee^johnson",
+        "createdAt": "2015-01-19T00:20:03.999Z",
+        "difficultyRating": 2,
+        "interestRating": 2,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "ya14G0qQ7X",
+        "overallRating": 2,
+        "updatedAt": "2015-01-19T00:20:03.999Z",
+        "usefulRating": 2,
+        "userObjectId": "BUpJQ1ehQ6",
+        "workloadRating": 2
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "rxWgnexAjj": {
+                "write": true
+            }
+        },
+        "comment": "wonderful! very charismatic lecturer.",
+        "courseUniqueKey": "biol^034^vincent^formica",
+        "createdAt": "2015-01-19T01:18:02.210Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "nqsRFYyKF6",
+        "overallRating": 5,
+        "updatedAt": "2015-01-19T01:18:02.210Z",
+        "usefulRating": 5,
+        "userObjectId": "rxWgnexAjj",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "b3HobAX55a": {
+                "write": true
+            }
+        },
+        "comment": "Rich is a great professor. Don't get me wrong. While some of the students in the class find the material very interesting, I don't share the same sentiment. The way Rich is presenting his points is pretty disorganized. Often times, I weren't even sure what topic we're on at that time. He usually draws a lot of stuff on the blackboard. If I concentrate on listening to what he says and tries to understand the concepts, I'll miss out on copying down notes. The exams were of appropriate difficulty, though unexpectedly he's a hard grader. Overall I would say only take the class if you're into machine learning / NLP. ",
+        "courseUniqueKey": "cpsc^065^richard^wicentowski",
+        "createdAt": "2015-01-19T14:48:13.039Z",
+        "difficultyRating": 3,
+        "interestRating": 3,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "g8yeAEADzl",
+        "overallRating": 3,
+        "updatedAt": "2015-01-19T14:48:13.039Z",
+        "usefulRating": 3,
+        "userObjectId": "b3HobAX55a",
+        "workloadRating": 3
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "rPJh0I1xx4": {
+                "write": true
+            }
+        },
+        "comment": "This was an absolutely fascinating class on the study of counterfactual history. We spent the first month or so of class studying what exactly a counterfactual is and reading different scholars' opinions on their use. It really got me to think about the whole philosophy behind the study of history in ways like I'd never before. Then the last two-thirds of the class we just spent reading counterfactuals and alternate histories. It was really awesome to be reading this somewhat fantastical works in a history class and discussing them in depth. Lastly, the professor Burke is an awesome guy and really brilliant, the way he thought about and taught history was very engaging. This is one of the greatest classes I've ever taken and could not recommend it more.",
+        "courseUniqueKey": "hist^083^timothy^burke",
+        "createdAt": "2015-01-19T19:27:06.233Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "6q6312ICFE",
+        "overallRating": 5,
+        "updatedAt": "2015-01-19T19:27:06.233Z",
+        "usefulRating": 5,
+        "userObjectId": "rPJh0I1xx4",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "rPJh0I1xx4": {
+                "write": true
+            }
+        },
+        "comment": "Like the previous reviewer said, Jeff is just amazing. He's such an awesome professor and so good at breaking cs concepts down so that they're understandable. He's also super good about helping you with labs and stuff. The class isn't very hard either, just the labs, no other hw or anything. Definitely a fun and worthwhile class to take.",
+        "courseUniqueKey": "cpsc^021^jeffrey^knerr",
+        "createdAt": "2015-01-19T19:29:34.679Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "MRPUJjTP2v",
+        "overallRating": 5,
+        "updatedAt": "2015-01-19T19:29:34.679Z",
+        "usefulRating": 5,
+        "userObjectId": "rPJh0I1xx4",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "rPJh0I1xx4": {
+                "write": true
+            }
+        },
+        "comment": "An extremely boring class. Only take this if you are dead set on pre-med. I took this because I was interested in pre-med and it was so bad it convinced me to change course. The material is taught in a very dry manner. Professor Amy is a great person, but she doesn't explain the interesting or meaningful parts of physics; she simply teaches the concepts because we are going to be tested on them. She never demonstrates the ways in which physics can be awesome. I'm giving it two stars because although it's excruciatingly boring, it is an easy class. Test corrections make it so that you can still get an A with minimal effort.",
+        "courseUniqueKey": "phys^003^amy^graves",
+        "createdAt": "2015-01-19T19:33:21.299Z",
+        "difficultyRating": 2,
+        "interestRating": 2,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "yLIEAgeZmU",
+        "overallRating": 2,
+        "updatedAt": "2015-01-19T19:33:21.299Z",
+        "usefulRating": 2,
+        "userObjectId": "rPJh0I1xx4",
+        "workloadRating": 2
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "rPJh0I1xx4": {
+                "write": true
+            }
+        },
+        "comment": "This was a good class, but it was very hard to say the least. It's split up between two professors. When I took it there was Jo Sensei and Schad Sensei. Jo Sensei is an adequate professor. She \\ does not break down the fundamentals of japanese in a way that is very approachable for native english speakers, perhaps due to the fact that she is a native japanese speaker. Schad Sensei on the other hand is the greatest language professor I've ever had. He really knows japanese and english at high levels and as such explains the japanese language in a way that makes it much easier to understand and learn for beginners. He is also fantastic one on one in office hours and will try a myriad of methods to help you with any concepts you're struggling with. On top of all that, he's just an awesome guy who makes japanese class fun with his sense of humor and mannerisms. This class is worth it for him alone.",
+        "courseUniqueKey": "jpns^001^yoshiko^jo",
+        "createdAt": "2015-01-19T19:38:43.032Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "0MUiw0GiDx",
+        "overallRating": 4,
+        "updatedAt": "2015-01-19T19:38:43.032Z",
+        "usefulRating": 4,
+        "userObjectId": "rPJh0I1xx4",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "rnzWxJ25br": {
+                "write": true
+            }
+        },
+        "comment": "Although the material itself is very interesting, it is sometimes hard to reconcile the teaching style and the actual GIS software. Lots of rote memorization, but it is hard to get the kind of dynamic teaching that you might see in a different Swarthmore technology class.",
+        "courseUniqueKey": "pols^037^ganapathy^narayanaraj",
+        "createdAt": "2015-01-21T00:43:07.729Z",
+        "difficultyRating": 3,
+        "interestRating": 3,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "wd69ANopsp",
+        "overallRating": 3,
+        "updatedAt": "2015-01-21T00:43:07.729Z",
+        "usefulRating": 3,
+        "userObjectId": "rnzWxJ25br",
+        "workloadRating": 3
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "rnzWxJ25br": {
+                "write": true
+            }
+        },
+        "comment": "Although a lot of people are not to fond of McGarity's teaching style and may find his lectures kind of dry, I have to say that the material more than makes up for it. This is one of the few classes at Swat where I can say that I started learning directly applicable skills towards the beginning of class and I found the information genuinely interesting.",
+        "courseUniqueKey": "engr^057^arthur^mcgarity",
+        "createdAt": "2015-01-21T02:07:19.551Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "lHmsnOjsM3",
+        "overallRating": 4,
+        "updatedAt": "2015-01-21T02:07:19.551Z",
+        "usefulRating": 4,
+        "userObjectId": "rnzWxJ25br",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "rnzWxJ25br": {
+                "write": true
+            }
+        },
+        "comment": "Some say Raff is a genius, and that listening to him speak is like reading an excellent classic novel. However, I am not one of those individuals. Maybe it was that he was at too high of a level in his field for me to understand what he was talking about or maybe I was just less interested in the material than I thought I would be. Whatever the case, this ended up being the class that killed philosophy for me. There was a lot more memorization of Raff's interpretation and a lot less open to discussion from the students even given the seminar style of the class.",
+        "courseUniqueKey": "phil^010^charles^raff",
+        "createdAt": "2015-01-21T04:46:39.002Z",
+        "difficultyRating": 2,
+        "interestRating": 2,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "VUwaeajoIQ",
+        "overallRating": 2,
+        "updatedAt": "2015-01-21T04:46:39.002Z",
+        "usefulRating": 2,
+        "userObjectId": "rnzWxJ25br",
+        "workloadRating": 2
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "ygETq3TNB3": {
+                "write": true
+            }
+        },
+        "comment": "The class covered a lot of interesting material and does make you consider and challenge some of your preconceived ideas of what mental illness and disease are, especially in the context of different cultures. Reimer is very nice and an easy grader. However, discussion could be strained at times (partly perhaps because of the class makeup and partly because Reimer is not a wonderful discussion leader) and more in depth information on certain illnesses would have been appreciated. ",
+        "courseUniqueKey": "psyc^138^michele^reimer",
+        "createdAt": "2015-01-24T19:20:08.723Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "qdB0RCXq0l",
+        "overallRating": 4,
+        "updatedAt": "2015-01-24T19:33:50.415Z",
+        "usefulRating": 4,
+        "userObjectId": "ygETq3TNB3",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "ocWxRyy8AW": {
+                "write": true
+            }
+        },
+        "comment": ".",
+        "courseUniqueKey": "math^102^don^shimamoto",
+        "createdAt": "2015-01-24T20:39:46.816Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "JZfMhJuvm1",
+        "overallRating": 5,
+        "updatedAt": "2015-01-24T20:39:46.816Z",
+        "usefulRating": 5,
+        "userObjectId": "ocWxRyy8AW",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "BhMOCOnv5f": {
+                "write": true
+            }
+        },
+        "comment": "This class was enormous fun, especially if you're both interested in phonology and if you're unafraid to have opinions. I especially enjoyed getting up to write on the board and having everyone go, \"Gasp — that's [incredible/what I don't get it]!\" Easily my favorite course the semester I took it.",
+        "courseUniqueKey": "ling^052^nathan^sanders",
+        "createdAt": "2015-01-25T21:29:46.965Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "NzJbOVeXbn",
+        "overallRating": 5,
+        "updatedAt": "2015-01-25T21:29:46.965Z",
+        "usefulRating": 5,
+        "userObjectId": "BhMOCOnv5f",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "UtNxlStpti": {
+                "write": true
+            }
+        },
+        "comment": "Absolutely amazing!  ",
+        "courseUniqueKey": "math^015^cheryl^grood",
+        "createdAt": "2015-01-26T06:51:35.724Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "8PLtJZaitc",
+        "overallRating": 5,
+        "updatedAt": "2015-01-26T06:51:57.280Z",
+        "usefulRating": 5,
+        "userObjectId": "UtNxlStpti",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "UtNxlStpti": {
+                "write": true
+            }
+        },
+        "comment": "Interesting.",
+        "courseUniqueKey": "cpsc^052^son^nguyen",
+        "createdAt": "2015-01-26T20:30:32.802Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "NqWTTUlIVw",
+        "overallRating": 5,
+        "updatedAt": "2015-01-26T20:44:27.923Z",
+        "usefulRating": 5,
+        "userObjectId": "UtNxlStpti",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "AMScRS2zVB": {
+                "write": true
+            }
+        },
+        "comment": "This class is very beginner friendly. It's not too hard; labs are about designing simple games like wheel of fortune and flappy bird; there are a lot of help, from professor and ninjas. Lisa is a really nice professor. Her class is always well organized: lecture+coding time. ",
+        "courseUniqueKey": "cpsc^021^lisa^meeden",
+        "createdAt": "2015-01-28T04:08:32.754Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "bIgNTCFUja",
+        "overallRating": 5,
+        "updatedAt": "2015-01-28T04:31:39.572Z",
+        "usefulRating": 5,
+        "userObjectId": "AMScRS2zVB",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "pk6xtBVE49": {
+                "write": true
+            }
+        },
+        "comment": "The stuff taught in CS31 is a little bit boring, but Andy is very funny and that made the course into an enjoyable experience. ",
+        "courseUniqueKey": "cpsc^031^andrew^danner",
+        "createdAt": "2015-01-28T15:29:09.149Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "bKTJAKghFE",
+        "overallRating": 4,
+        "updatedAt": "2015-01-28T15:32:04.363Z",
+        "usefulRating": 4,
+        "userObjectId": "pk6xtBVE49",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "BN9kbxR6xw": {
+                "write": true
+            }
+        },
+        "comment": "Helpful teacher. She makes some mistakes on the board but she's very chill about it. She's REALLY great one-on-one so please take advantage of her office hours. I really have no complaints about her. The first week of class she tried to give the impression that she's a tough lady. Don't get me wrong, she's pretty tough, but she's also very nurturing! :)",
+        "courseUniqueKey": "math^027^janet^talvacchia",
+        "createdAt": "2015-01-31T16:35:44.053Z",
+        "difficultyRating": 4,
+        "interestRating": 4,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "hNIRpPiq43",
+        "overallRating": 4,
+        "updatedAt": "2015-01-31T16:35:44.053Z",
+        "usefulRating": 4,
+        "userObjectId": "BN9kbxR6xw",
+        "workloadRating": 4
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "BpSkATiX2C": {
+                "write": true
+            }
+        },
+        "comment": "This is one of the absolute best classes I have ever taken in my life.  Professor Berger never takes your interest for granted and spends each class demonstrating why what you're doing that day is important.  He gives powerpoint presentations every class but the class is mainly discussion driven.  He is fantastic in office hours.  I cannot not recommend this class enough.",
+        "courseUniqueKey": "pols^012^benjamin^berger",
+        "createdAt": "2015-02-01T18:38:00.120Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "M8EgoLqkf4",
+        "overallRating": 5,
+        "updatedAt": "2015-02-01T18:38:00.120Z",
+        "usefulRating": 5,
+        "userObjectId": "BpSkATiX2C",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "wRvjzx0aj5": {
+                "write": true
+            }
+        },
+        "comment": "Loved her -- she told funny stories occasionally and set a good (if rigorous) pace in the course. She really cares about her students and although I've never been to office hours my friends say she was amazing there as well.",
+        "courseUniqueKey": "math^027^janet^talvacchia",
+        "createdAt": "2015-02-03T01:45:40.830Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "eIR2ekKQMt",
+        "overallRating": 5,
+        "updatedAt": "2015-02-03T01:45:40.830Z",
+        "usefulRating": 5,
+        "userObjectId": "wRvjzx0aj5",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "wRvjzx0aj5": {
+                "write": true
+            }
+        },
+        "comment": "I rarely took much away from class time -- she goes over example problems in class but somehow it doesn't help. I took AP Physics in high school and had to rely heavily on that knowledge. But this is a must take for Engineering majors as well.. ",
+        "courseUniqueKey": "phys^003^amy^graves",
+        "createdAt": "2015-02-03T01:49:08.876Z",
+        "difficultyRating": 2,
+        "interestRating": 2,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "cM2GgG3fQg",
+        "overallRating": 2,
+        "updatedAt": "2015-02-03T01:49:08.876Z",
+        "usefulRating": 2,
+        "userObjectId": "wRvjzx0aj5",
+        "workloadRating": 2
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "gSOce0dKD3": {
+                "write": true
+            }
+        },
+        "comment": "Loved Intro Ed and  loved Jen. The readings for this class are great and really augment the fieldwork. Jen is incredibly smart but not hyper scholarly--very knowledgeable and approachable. She had her FYS students over for a home cooked meal during finals. We played Just Dance on the xbox with her kids. ",
+        "courseUniqueKey": "educ^014f^jennifer^bradley",
+        "createdAt": "2015-02-04T02:27:13.978Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "Ztw98ZmWjU",
+        "overallRating": 5,
+        "updatedAt": "2015-02-04T02:27:13.978Z",
+        "usefulRating": 5,
+        "userObjectId": "gSOce0dKD3",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "2wachIpFUD": {
+                "write": true
+            }
+        },
+        "comment": "This course is really the starting point for many prospective math majors, and is thus meant to be way more theoretical than the math most students have done previously. Without experience writing proofs, it can be a steep learning curve for the first few weeks. However, Aimee Johnson teaches in a very organized way and is always open to questions during class and her office hours, so it doesn't take long to catch up. Overall, really interesting course, and it made me want to be a math major.",
+        "courseUniqueKey": "math^028^aimee^johnson",
+        "createdAt": "2015-02-28T17:57:26.956Z",
+        "difficultyRating": 5,
+        "interestRating": 5,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "ljlMJYctq1",
+        "overallRating": 5,
+        "updatedAt": "2015-02-28T17:57:26.956Z",
+        "usefulRating": 5,
+        "userObjectId": "2wachIpFUD",
+        "workloadRating": 5
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true
+            },
+            "2wachIpFUD": {
+                "write": true
+            }
+        },
+        "comment": "The readings are really fun and Prof. Lefkowitz is such a nice guy, but I wish the class had fewer (ramble - y) lectures and more discussions. If you semi-keep up with the readings and do all the writing assignments, it's an easy A.",
+        "courseUniqueKey": "clst^036^jeremy^lefkowitz",
+        "createdAt": "2015-02-28T17:59:39.451Z",
+        "difficultyRating": 3,
+        "interestRating": 3,
+        "numDownVote": 0,
+        "numUpVote": 0,
+        "objectId": "AFhlPFc3Wg",
+        "overallRating": 3,
+        "updatedAt": "2015-02-28T17:59:39.451Z",
+        "usefulRating": 3,
+        "userObjectId": "2wachIpFUD",
+        "workloadRating": 3
+    }
+] }

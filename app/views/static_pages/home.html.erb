@@ -22,6 +22,36 @@
     <%= link_to "Browse by Departments", departments_path, class: "btn btn-lg btn-primary" %>
     <%= link_to "Browse by Professor", professors_path, class: "btn btn-lg btn-primary" %>
     
+    <!-- <div class="col-md-8"> -->
+      <h3>Recent Reviews</h3>
+        <ol class="reviews">
+
+          <% @recent.each do |review| %>
+            <%= link_to review.course do %>
+              <ul>
+                <li class="class name"><%= review.course.name %></li>
+                <%= render review %>
+              </ul>
+            <% end %>
+          <% end %>
+
+        </ol>
+
+        <h3>Active Reviews (VOTES)</h3>
+        <ol class="reviews">
+
+          <% @active.each do |review| %>
+            <%= link_to review.course do %>
+              <ul>
+                <li class="class name"><%= review.course.name %></li>
+                <%= render review %>
+              </ul>
+            <% end %>
+          <% end %>
+
+        </ol>
+    <!-- </div> -->
+
   <% end %>
 
 </div>
