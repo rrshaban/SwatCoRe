@@ -26,7 +26,21 @@
       <h3>Recent Reviews</h3>
         <ol class="reviews">
 
-          <% @reviews.each do |review| %>
+          <% @recent.each do |review| %>
+            <%= link_to review.course do %>
+              <ul>
+                <li class="class name"><%= review.course.name %></li>
+                <%= render review %>
+              </ul>
+            <% end %>
+          <% end %>
+
+        </ol>
+
+        <h3>Active Reviews (VOTES)</h3>
+        <ol class="reviews">
+
+          <% @active.each do |review| %>
             <%= link_to review.course do %>
               <ul>
                 <li class="class name"><%= review.course.name %></li>
