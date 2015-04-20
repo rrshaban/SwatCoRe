@@ -1,5 +1,5 @@
 <% provide(:title, @course.name) %>
-
+<% avgs = @course.avg %>
 <div class="row">
     <section class="course_info col-md-8">
       <%= render 'shared/course_info' %>
@@ -12,9 +12,9 @@
           <td><h4>Worth it?</h4></td>
         </thead>
         <tr>
-          <td><h3><%=  @course.avg[:clarity ]    %></h3></td>
-          <td><h3><%=  @course.avg[:workload]    %></h3></td>
-          <td><h3><%=  @course.avg[:worthit ]    %></h3></td>
+          <td><h3><%=  avgs[:clarity]    %></h3></td>
+          <td><h3><%=  avgs[:workload]   %></h3></td>
+          <td><h3><%=  avgs[:worthit]    %></h3></td>
         </tr>
       </table>
     </section>
