@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.2.1'
 
+gem 'dotenv-rails', :groups => [:development, :test]
 gem 'bootstrap-sass',       '3.3.4.1'
 gem 'rails',                '4.2.1'
 gem 'bcrypt',               '3.1.10'
@@ -22,7 +23,6 @@ gem 'devise',               '3.4.1'
 gem 'sendgrid',             '1.2.0'
 gem 'acts_as_votable',      '0.10.0'
 gem 'font-awesome-sass'
-gem 'dotenv-rails', :groups => [:development, :test]
 gem 'cancancan',            '1.10.1'
 
 group :development, :test do
