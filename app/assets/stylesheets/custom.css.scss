@@ -80,6 +80,10 @@ li{
   color: $gray;
 }
 
+ul{
+  list-style: none;
+}
+
 .btn{
   font-size: 16px;
   background-color: $green;
@@ -300,6 +304,15 @@ aside {
   background: none;
   .home-signup{
     margin-top: 50px;
+  }
+  .home-review{
+    margin-top: 100px;
+    li{
+      margin-bottom: 30px;
+    }
+    .class{
+      font-size: 18px;
+    }
   }
 }
 
