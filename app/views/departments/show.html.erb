@@ -1,6 +1,12 @@
 <% provide(:title, @department.name) %>
 <section class="row department_page">
   <h1><%= @department.name %></h1>
+  <% if current_user.admin? %>
+    <h5>
+    <%= link_to 'Edit this department', [:edit, @department] %>
+    <%= link_to 'Destroy', @department, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </h5>
+  <% end %>
   <div class="col-md-4">
     <h3><%= pluralize(@department.professors.count, "Professor") %> Found</h3>
 

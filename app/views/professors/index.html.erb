@@ -6,6 +6,11 @@
         <%= link_to d do %>
           <ul>
             <li class="professor name"><%= d.name %></li>
+
+            <% if current_user.admin? %>
+              <%= link_to 'Edit this professor', edit_professor_path(d) %>
+              <%= link_to 'Destroy', d, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
           </ul>
         <% end %>
       <% end %>

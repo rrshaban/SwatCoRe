@@ -1,8 +1,23 @@
 class ReviewsController < ApplicationController
-  # before_action :user_id
+  before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :admin_user, only: [:edit, :update, :destroy]
 
   
-  
+  def edit
+  end
+
+  def update
+    respond_to do |format|
+      if @review.update(review_params)
+        format.html { redirect_to @review.course, notice: 'Review was successfully updated.' }
+        format.json { render :show, status: :ok, location: @review.course }
+      else
+        format.html { render :edit }
+        format.json { render json: @review.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def create
 
     @course = Course.find(review_params[:course_id])
@@ -15,13 +30,19 @@ class ReviewsController < ApplicationController
     if @review.save
       flash[:success] = "Review created!"
     else
-      flash[:error] = "Error creating review."
+      flash[:error] = "Error creating review. Review must contain some text."
     end
 
     redirect_to course_path(id: @course)
   end
 
   def destroy
+    course = @review.course
+    @review.destroy
+    respond_to do |format|
+      format.html { redirect_to course, notice: 'Review was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   def upvote
@@ -37,6 +58,10 @@ class ReviewsController < ApplicationController
   end
 
   private
+
+    def set_review
+      @review = Review.find(params[:id])
+    end
 
     def review_params
       params.require(:review).permit(:review_id,
