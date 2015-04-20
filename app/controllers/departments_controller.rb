@@ -1,5 +1,6 @@
 class DepartmentsController < ApplicationController
-  # before_action :logged_in_user
+  before_action :set_dept, only: [:show, :edit, :update, :destroy]
+  
 
   def index
     @departments = Department.all
@@ -13,15 +14,16 @@ class DepartmentsController < ApplicationController
     @department = Department.find(params[:id])
   end
 
-  def create
-    @department = Department.new(department_params)
+  def edit
+  end
 
+  def update
     respond_to do |format|
-      if @department.save
-        format.html { redirect_to @department, notice: 'Department was successfully created.' }
-        format.json { render :show, status: :created, location: @department }
+      if @department.update(department_params)
+        format.html { redirect_to @department, notice: 'Department was successfully updated.' }
+        format.json { render :show, status: :ok, location: @department }
       else
-        format.html { render :new }
+        format.html { render :edit }
         format.json { render json: @department.errors, status: :unprocessable_entity }
       end
     end
@@ -52,6 +54,10 @@ class DepartmentsController < ApplicationController
 
 
   private
+
+    def set_dept
+      @department = Department.find(params[:id])
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def department_params

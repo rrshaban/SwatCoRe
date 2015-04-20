@@ -1,8 +1,22 @@
 class ReviewsController < ApplicationController
-  # before_action :user_id
+  before_action :set_review, only: [:show, :edit, :update, :destroy]
 
   
-  
+  def edit
+  end
+
+  def update
+    respond_to do |format|
+      if @review.update(review_params)
+        format.html { redirect_to @review.course, notice: 'Review was successfully updated.' }
+        format.json { render :show, status: :ok, location: @review.course }
+      else
+        format.html { render :edit }
+        format.json { render json: @review.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def create
 
     @course = Course.find(review_params[:course_id])
@@ -37,6 +51,10 @@ class ReviewsController < ApplicationController
   end
 
   private
+
+    def set_review
+      @review = Review.find(params[:id])
+    end
 
     def review_params
       params.require(:review).permit(:review_id,

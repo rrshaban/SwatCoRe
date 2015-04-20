@@ -10,7 +10,7 @@
 </p>
 
 <% if current_user.admin? %>
-ADMIN
+  <%= link_to 'Edit this course', edit_course_path(@course) %>
+  <%= link_to 'Destroy', @course, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
-
 

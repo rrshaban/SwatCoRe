@@ -1,0 +1,59 @@
+<%= form_for(@review) do |f| %>
+  <% if @review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+
+      <ul>
+      <% @review.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <datalist id="nums"><%# this allows for ticks on the sliders. HTML is dumb %>
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+    </datalist>
+
+    <%= f.label :clarity %>
+    <%#  COLD_SWEAT frowning SMILE  %>
+    <br />
+    <center>
+    <%= image_tag 'cold_sweat.png', height: 30, class: "emoji", 'align': "left"  %>
+    <%= image_tag 'frowning.png', height: 30, class: "emoji" %>
+    <%= image_tag 'smile.png', height: 30, class: "emoji", 'align': "right" %>
+    <%= f.range_field :clarity, in: 1..5, value: 3, step: 1, list: "nums" %>
+    </center>
+
+    <%= f.label :workload %>
+    <%# SOB, frowning, SUNGLASSES  %>
+    <br />
+    <center>
+    <%= image_tag 'sob.png', height: 30, class: "emoji", 'align': "left" %>
+    <%= image_tag 'confused.png', height: 30, class: "emoji" %>
+    <%= image_tag 'sunglasses.png', height: 30, class: "emoji", 'align': "right" %>
+    <%= f.range_field :intensity, in: 1..5, value: 3, step: 1, list: "nums" %>
+    </center>
+
+    <%= f.label :worthit %>
+    <%# SHIT, RELIEVED, 100 %>
+    <br />
+    <center>
+    <%= image_tag 'shit.png', height: 30, class: "emoji", 'align': "left" %>
+    <%= image_tag 'relieved.png', height: 30, class: "emoji" %>
+    <%= image_tag '100.png', height: 30, class: "emoji", 'align': "right" %>
+    <%= f.range_field :worthit, in: 1..5, value: 3, step: 1, list: "nums" %>
+    </center>
+
+    <%= f.text_area :content, placeholder: "Write new review..." %>
+
+    <%= f.submit "Post your review", class: "btn btn-primary" %>
+  </div>
+    
+<% end %>
+

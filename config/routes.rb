@@ -29,8 +29,8 @@ Rails.application.routes.draw do
 
   # below is the hierarchy: depts > professors > courses > reviews
   # once we thoroughly seed depts and professors, we can delete
-  resources :departments, only: [:index, :show, :new, :create]  # :new and :create
-  resources :professors, only: [:index, :show, :new, :create]
+  resources :departments #, only: [:index, :show, :new, :create]  # :new and :create
+  resources :professors #, only: [:index, :show, :new, :create]
   resources :courses
 
   get 'search'    => 'courses#search'
@@ -42,6 +42,6 @@ Rails.application.routes.draw do
   # patch 'helpful'   => 'reviews#helpful'
   # patch 'unhelpful' => 'reviews#unhelpful'
 
-  resources :reviews, only: [:create, :destroy]
+  resources :reviews, only: [:create, :destroy, :edit, :update]
 
 end
