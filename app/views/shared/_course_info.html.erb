@@ -9,4 +9,8 @@
  <p><%= @course.prof_name %> | <%= @course.dept_name %> | <em><%= @course.reviews.count %></em> Reviews
 </p>
 
+<% if current_user.admin? %>
+ADMIN
+<% end %>
+
 
