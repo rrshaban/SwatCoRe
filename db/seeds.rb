@@ -8,7 +8,7 @@
 name  = " "
 email = "parse@swarthmore.edu"
 password = ENV['PARSE_PASSWORD']
-password || = "password"
+password ||= "password"
 @user = User.new(name:              name,
              email:                 email,
              password:              password)
