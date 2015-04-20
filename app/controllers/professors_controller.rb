@@ -5,7 +5,7 @@ class ProfessorsController < ApplicationController
   before_action :get_profs
 
   def index
-    @professors = Professor.all
+    @professors = Professor.order(name: :asc)
   end
 
   def new

@@ -27,7 +27,7 @@
     <%= image_tag 'cold_sweat.png', height: 30, class: "emoji", 'align': "left"  %>
     <%= image_tag 'frowning.png', height: 30, class: "emoji" %>
     <%= image_tag 'smile.png', height: 30, class: "emoji", 'align': "right" %>
-    <%= f.range_field :clarity, in: 1..5, value: 3, step: 1, list: "nums" %>
+    <%= f.range_field :clarity, in: 1..5, value: @review.clarity, step: 1, list: "nums" %>
     </center>
 
     <%= f.label :workload %>
@@ -37,7 +37,7 @@
     <%= image_tag 'sob.png', height: 30, class: "emoji", 'align': "left" %>
     <%= image_tag 'confused.png', height: 30, class: "emoji" %>
     <%= image_tag 'sunglasses.png', height: 30, class: "emoji", 'align': "right" %>
-    <%= f.range_field :intensity, in: 1..5, value: 3, step: 1, list: "nums" %>
+    <%= f.range_field :intensity, in: 1..5, value: @review.intensity, step: 1, list: "nums" %>
     </center>
 
     <%= f.label :worthit %>
@@ -47,12 +47,12 @@
     <%= image_tag 'shit.png', height: 30, class: "emoji", 'align': "left" %>
     <%= image_tag 'relieved.png', height: 30, class: "emoji" %>
     <%= image_tag '100.png', height: 30, class: "emoji", 'align': "right" %>
-    <%= f.range_field :worthit, in: 1..5, value: 3, step: 1, list: "nums" %>
+    <%= f.range_field :worthit, in: 1..5, value: @review.worthit, step: 1, list: "nums" %>
     </center>
 
     <%= f.text_area :content, placeholder: "Write new review..." %>
 
-    <%= f.submit "Post your review", class: "btn btn-primary" %>
+    <%= f.submit "Edit this review", class: "btn btn-primary" %>
   </div>
     
 <% end %>

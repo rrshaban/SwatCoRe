@@ -1,15 +1,14 @@
-<%= link_to course do%>
+
 <% avgs = course.avg %>
 
 <ul>
-    <li class="course name"><%= course.name %> (<%= course.crn %>)</li>
-    <li class="course prof"><%= course.prof_name_raw %></li>
-    <li class="course ratings">
-    <span>Clarity: <%= avgs[:clarity]%></span>
-    <span>Workload: <%= avgs[:workload]%></span>
-    <span>Worth it?: <%= avgs[:worthit]%></span>
-    <li class="course last"><%= course.last %>
+    <%= link_to course do%>
+      <li class="course name"><%= course.name %> (<%= course.crn %>)</li>
+      <li class="course prof"><%= course.prof_name_raw %></li>
+      <li class="course ratings">
+      <span>Clarity: <%= avgs[:clarity]%></span>
+      <span>Workload: <%= avgs[:workload]%></span>
+      <span>Worth it?: <%= avgs[:worthit]%></span>
+      <li class="course last"><%= course.last %>
+    <% end %>
 </ul>
-      <td><%#= link_to 'Edit', edit_course_path(course) %></td>
-      <td><%#= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-<% end %>
