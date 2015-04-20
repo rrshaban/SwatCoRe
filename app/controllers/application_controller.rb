@@ -24,8 +24,8 @@ class ApplicationController < ActionController::Base
        @prof_options = Professor.all.map{|p| [p.name, p.id]}
     end
 
-
-
-
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
+    end
 
 end

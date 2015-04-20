@@ -22,21 +22,37 @@
     <%= link_to "Browse by Departments", departments_path, class: "btn btn-lg btn-primary" %>
     <%= link_to "Browse by Professor", professors_path, class: "btn btn-lg btn-primary" %>
     
+
+    <!-- <div class="col-md-8"> -->
     <div class="home-review row">
       <div class="col-md-offset-1 col-md-10">
-        <h3 class="text-left">Recent Reviews</h3>
-          <ul class="reviews text-left">
-            <% @reviews.each do |review| %>
-              <%= link_to review.course do %>
-                <ul>
-                  <div class="class name"><%= review.course.name %></div>
-                  <%= render review %>
-                </ul>
-              <% end %>
+      <h3 class="text-left">Recent Reviews</h3>
+        <ul class="reviews text-left">
+          <% @recent.each do |review| %>
+            <%= link_to review.course do %>
+              <ul>
+                <div class="class name"><%= review.course.name %></div>
+                <%= render review %>
+              </ul>
             <% end %>
-          </ul>
+          <% end %>
+
+        </ul>
+
+        <h3 class="text-left">Active Reviews (VOTES)</h3>
+        <ul class="reviews text-left">
+          <% @active.each do |review| %>
+            <%= link_to review.course do %>
+              <ul>
+                <div class="class name"><%= review.course.name %></div>
+                <%= render review %>
+              </ul>
+            <% end %>
+          <% end %>
+        </ul>
       </div>
     </div>
+
 
   <% end %>
 

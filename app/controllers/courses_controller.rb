@@ -3,6 +3,7 @@ class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
   before_action :get_depts
   before_action :get_profs
+  before_action :admin_user, only: [:edit, :update, :destroy]
 
   # GET /courses
   # GET /courses.json
@@ -20,7 +21,7 @@ class CoursesController < ApplicationController
   # GET /courses/1.json
   def show
     @course = Course.find(params[:id])
-    @reviews = @course.reviews.page(params[:page])
+    @reviews = @course.reviews.page(params[:page]).order(cached_votes_score: :desc, cached_votes_up: :desc)
     @new_review = @course.reviews.new()
     @current_user = User.find(session["warden.user.user.key"][0][0])
   end
