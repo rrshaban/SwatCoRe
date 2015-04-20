@@ -10,8 +10,7 @@ email = "parse@swarthmore.edu"
 password = "password"
 @user = User.new(name:              name,
              email:                 email,
-             password:              password,
-             admin:                 true)
+             password:              ENV['PARSE_PASSWORD'])
 
 # so we don't accidentally spam Swarthmore again
 @user.skip_confirmation_notification!
