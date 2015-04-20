@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :admin_user, only: [:edit, :update, :destroy]
 
   
   def edit

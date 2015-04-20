@@ -3,6 +3,7 @@ class ProfessorsController < ApplicationController
   before_action :set_prof, only: [:show, :edit, :update, :destroy]
   before_action :get_depts
   before_action :get_profs
+  before_action :admin_user, only: [:edit, :update, :destroy]
 
   def index
     @professors = Professor.order(name: :asc)
