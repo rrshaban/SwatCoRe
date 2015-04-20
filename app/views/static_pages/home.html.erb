@@ -23,9 +23,10 @@
     <%= link_to "Browse by Professor", professors_path, class: "btn btn-lg btn-primary" %>
     
     <!-- <div class="col-md-8"> -->
+    <div class="row">
+      <div class="col-md-8">
       <h3>Recent Reviews</h3>
         <ol class="reviews">
-
           <% @recent.each do |review| %>
             <%= link_to review.course do %>
               <ul>
@@ -50,6 +51,8 @@
           <% end %>
 
         </ol>
+      </div>
+    </div>
     <!-- </div> -->
 
   <% end %>

@@ -29,7 +29,7 @@ class ReviewsController < ApplicationController
     if @review.save
       flash[:success] = "Review created!"
     else
-      flash[:error] = "Error creating review."
+      flash[:error] = "Error creating review. Review must contain some text."
     end
 
     redirect_to course_path(id: @course)
