@@ -27,9 +27,16 @@
         </tr>
       </table>
 
-      <%= link_to image_tag(@course.syllabus.url(:pdf_thumbnail)), @course.syllabus.url if @course.syllabus?%>
+      <% if @course.syllabus? %>
+        <%= link_to image_tag(@course.syllabus.url(:pdf_thumbnail)), @course.syllabus.url %>
+        <br />
+        <% if @course.syllabus_uploader? and User.exists?(:id => @course.syllabus_uploader)%>
+          Uploaded by <%= User.find(@course.syllabus_uploader).name %>
+        <% end %>
+        <a href="mailto:swatcoreteam@gmail.com">Report an issue with this syllabus.</a>
+      <% end %>
+
     </section>
-    <%#= link_to 'Admin: Edit Course', edit_course_path(@course) %>
 </div>
 
 <div class="row">

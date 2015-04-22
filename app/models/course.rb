@@ -4,9 +4,9 @@ class Course < ActiveRecord::Base
 
   # SYLLABUS PDF ATTACHMENT
   has_attached_file :syllabus, 
-    :url => "/:course/:attachment/:id/:basename.:extension",
-    :path => ":rails_root/public/:course/:attachment/:id/:basename.:extension",
-    :styles => { :pdf_thumbnail => ["300x300>", :png]}
+    :url => "/:attachment/:id/:basename.:extension",
+    :path => ":rails_root/public/:attachment/:id/:basename.:extension",
+    :styles => { :pdf_thumbnail => ["400x400>", :png]}
   validates_attachment :syllabus,
     :content_type => { :content_type => "application/pdf" },  # MUST BE PDF
     :size => { :in => 0..1.megabytes }                        # MAX SIZE 1MB

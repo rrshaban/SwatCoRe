@@ -1,13 +1,9 @@
- <h1 class="text-left">
-  <%= @course.name %>
-</h1>
+<h1 class="text-left"><%= @course.name %></h1>
+<h3><%= @course.crn %></h3>
 
-<h3>
-  <%= @course.crn %>
-</h3>
+ <p><%= @course.prof_name %> | <%= @course.dept_name %> | <em><%= @course.reviews.count %></em> Reviews</p>
 
- <p><%= @course.prof_name %> | <%= @course.dept_name %> | <em><%= @course.reviews.count %></em> Reviews
-</p>
+<p><%= @course.description %></p>
 
 <% if current_user.admin? %>
   <%= link_to 'Edit this course', [:edit, @course] %>
