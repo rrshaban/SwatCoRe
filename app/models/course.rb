@@ -1,12 +1,22 @@
 class Course < ActiveRecord::Base
   include ActionView::Helpers::DateHelper # for time_ago_in_words
-  # include ActionController::Base.helpers.link_to
   include Rails.application.routes.url_helpers
 
-  # include Rails.application.routes.url_helpers
+  # SYLLABUS PDF ATTACHMENT
+  has_attached_file :syllabus, 
+    :url => "/:course/:attachment/:id/:basename.:extension",
+    :path => ":rails_root/public/:course/:attachment/:id/:basename.:extension"
+  validates_attachment :syllabus,
+    :content_type => { :content_type => "application/pdf" },  # MUST BE PDF
+    :size => { :in => 0..1.megabytes }                        # MAX SIZE 1MB
+  before_post_process :syllabus
+
+  # MODEL HIERARCHY
   has_many :reviews, dependent: :destroy
   has_one :professor
   has_one :department           # we can accept this for now
+
+  # MODEL ORDERING
   default_scope -> { order(crn: :asc) } ## cached_votes_score
  
 

@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/thoughtbot/paperclip.git
+  revision: c276ad8282cd743775cdeb97335739be66e9c4a2
+  specs:
+    paperclip (4.2.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.5)
+      mime-types
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -58,6 +68,10 @@ GEM
     cancancan (1.10.1)
     celluloid (0.16.0)
       timers (~> 4.0.0)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.7)
+      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -274,6 +288,7 @@ DEPENDENCIES
   minitest (= 5.5.1)
   minitest-reporters (= 1.0.5)
   oboe-heroku (= 0.9.18.1)
+  paperclip!
   pg (= 0.18.1)
   puma
   rails (= 4.2.1)
