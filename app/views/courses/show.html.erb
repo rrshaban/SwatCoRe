@@ -7,7 +7,11 @@
       <% if @course.syllabus? %>
         <%= link_to image_tag(@course.syllabus.url(:pdf_thumbnail)), @course.syllabus.url %>
       <% else %>
-        nope
+        <%= form_for @course, html: { multipart: true } do |f| %>
+          <%= f.label :syllabus, "Upload a syllabus (.pdf) for this class:" %>
+          <%= f.file_field(:syllabus, accept: "application/pdf") %>
+          <%= f.submit "Submit" %>
+        <% end %>
       <% end %>
 
     </section>
