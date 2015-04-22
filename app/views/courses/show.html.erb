@@ -3,6 +3,13 @@
 <div class="row">
     <section class="course_info col-md-8">
       <%= render 'shared/course_info' %>
+
+      <% if @course.syllabus? %>
+        <%= link_to image_tag(@course.syllabus.url(:pdf_thumbnail)), @course.syllabus.url %>
+      <% else %>
+        nope
+      <% end %>
+
     </section>
     <section class="course_avg_ratings col-md-4"?>
       <table>
