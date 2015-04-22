@@ -25,6 +25,7 @@ gem 'acts_as_votable',      '0.10.0'
 gem 'font-awesome-sass'
 gem 'cancancan',            '1.10.1'
 gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'aws-sdk'
 
 group :development, :test do
   # gem 'sqlite3',     '1.3.9'
