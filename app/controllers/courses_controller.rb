@@ -8,7 +8,7 @@ class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
   def index
-    @courses = Course.all
+    redirect_to(search_path) 
   end
 
   # GET /search
