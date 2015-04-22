@@ -4,9 +4,7 @@
     <section class="course_info col-md-8">
       <%= render 'shared/course_info' %>
 
-      <% if @course.syllabus? %>
-        <%= link_to image_tag(@course.syllabus.url(:pdf_thumbnail)), @course.syllabus.url %>
-      <% else %>
+      <% if !@course.syllabus? %>
         <%= form_for @course, html: { multipart: true } do |f| %>
           <%= f.label :syllabus, "Upload a syllabus (.pdf) for this class:" %>
           <%= f.file_field(:syllabus, accept: "application/pdf") %>
@@ -28,6 +26,8 @@
           <td><h3><%=  avgs[:worthit]    %></h3></td>
         </tr>
       </table>
+
+      <%= link_to image_tag(@course.syllabus.url(:pdf_thumbnail)), @course.syllabus.url if @course.syllabus?%>
     </section>
     <%#= link_to 'Admin: Edit Course', edit_course_path(@course) %>
 </div>

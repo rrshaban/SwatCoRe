@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422015922) do
+ActiveRecord::Schema.define(version: 20150422030720) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20150422015922) do
     t.integer  "syllabus_file_size"
     t.datetime "syllabus_updated_at"
     t.integer  "syllabus_uploader"
+    t.text     "description"
   end
 
   add_index "courses", ["crn"], name: "index_crn_on_courses", using: :btree
