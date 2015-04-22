@@ -5,12 +5,14 @@
       <%= render 'shared/course_info' %>
 
       <% if !@course.syllabus? %>
-        <%= form_for @course, html: { multipart: true } do |f| %>
+        <%= form_for @course, :url => upload_course_path(@course), html: { multipart: true } do |f| %>
           <%= f.label :syllabus, "Upload a syllabus (.pdf) for this class:" %>
           <%= f.file_field(:syllabus, accept: "application/pdf") %>
           <%= f.submit "Submit" %>
         <% end %>
       <% end %>
+
+
 
     </section>
     <section class="course_avg_ratings col-md-4"?>
@@ -27,6 +29,8 @@
         </tr>
       </table>
 
+
+
       <% if @course.syllabus? %>
         <%= link_to image_tag(@course.syllabus.url(:pdf_thumbnail)), @course.syllabus.url %>
         <br />
@@ -35,6 +39,7 @@
         <% end %>
         <a href="mailto:swatcoreteam@gmail.com">Report an issue with this syllabus.</a>
       <% end %>
+
 
     </section>
 </div>

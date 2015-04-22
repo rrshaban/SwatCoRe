@@ -28,7 +28,9 @@ Rails.application.routes.draw do
   # once we thoroughly seed depts and professors, we can delete
   resources :departments #, only: [:index, :show, :new, :create]  # :new and :create
   resources :professors #, only: [:index, :show, :new, :create]
-  resources :courses
+  resources :courses do
+    patch 'upload', on: :member # for uploading a syllabus
+  end
   resources :reviews, only: [:create, :destroy, :edit, :update]
 
 

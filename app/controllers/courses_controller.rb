@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
   # before_action :logged_in_user
-  before_action :set_course, only: [:show, :edit, :update, :destroy]
+  before_action :set_course, only: [:show, :edit, :update, :destroy, :upload]
   before_action :get_depts
   before_action :get_profs
   before_action :admin_user, only: [:edit, :update, :destroy]
@@ -60,6 +60,19 @@ class CoursesController < ApplicationController
         format.json { render :show, status: :ok, location: @course }
       else
         format.html { render :edit }
+        format.json { render json: @course.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+
+  def upload
+    respond_to do |format|
+      if @course.update(params.require(:course).permit(:syllabus))
+        format.html { redirect_to @course, notice: 'Syllabus was successfully uploaded.' }
+        format.json { render :show, status: :ok, location: @course }
+      else
+        format.html { render :show }
         format.json { render json: @course.errors, status: :unprocessable_entity }
       end
     end
