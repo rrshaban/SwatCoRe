@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20150422030720) do
   create_table "courses", force: :cascade do |t|
     t.string   "name"
     t.string   "crn"
+    t.text     "description"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
     t.integer  "professor_id"
@@ -28,7 +29,6 @@ ActiveRecord::Schema.define(version: 20150422030720) do
     t.integer  "syllabus_file_size"
     t.datetime "syllabus_updated_at"
     t.integer  "syllabus_uploader"
-    t.text     "description"
   end
 
   add_index "courses", ["crn"], name: "index_crn_on_courses", using: :btree
