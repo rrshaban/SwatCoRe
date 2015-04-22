@@ -1,4 +1,5 @@
 module ApplicationHelper
+  # include FontAwesome::Rails::IconHelper
 
 	def full_title(page_title = '')
 		base_title = "Swat Course Review"
