@@ -22,7 +22,6 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
     @reviews = @course.reviews.page(params[:page]).order(cached_votes_score: :desc, cached_votes_up: :desc)
-    @new_review = @course.reviews.new()
     @current_user = User.find(session["warden.user.user.key"][0][0])
   end
 
