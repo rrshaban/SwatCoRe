@@ -67,10 +67,9 @@ class CoursesController < ApplicationController
 
 
   def upload
-    @course.update(syllabus_uploader: current_user.id)
-
     respond_to do |format|
       if @course.update(params.require(:course).permit(:syllabus))
+        @course.update(syllabus_uploader: current_user.id)
         format.html { redirect_to @course, notice: 'Syllabus was successfully uploaded.' }
         format.json { render :show, status: :ok, location: @course }
       else

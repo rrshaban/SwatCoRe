@@ -1,3 +1,4 @@
+<% @new_review = @course.reviews.new() %>
 <%= form_for @new_review, :url => reviews_path do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">

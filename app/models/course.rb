@@ -8,8 +8,8 @@ class Course < ActiveRecord::Base
     :path => ":rails_root/public/:attachment/:id/:basename.:extension",
     :styles => { :pdf_thumbnail => ["400x400>", :png]}
   validates_attachment :syllabus,
-    :content_type => { :content_type => "application/pdf" },  # MUST BE PDF
-    :size => { :in => 0..1.megabytes }                        # MAX SIZE 1MB
+    :content_type => { :content_type => "application/pdf" }  # MUST BE PDF
+    #:size => { :in => 0..1.megabytes }                        # MAX SIZE 1MB -- but it's breaking things :/
   before_post_process :syllabus
 
   # MODEL HIERARCHY
