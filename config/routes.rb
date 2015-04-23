@@ -35,9 +35,8 @@ Rails.application.routes.draw do
   end
   resources :reviews, only: [:create, :destroy, :edit, :update]
 
+  get 'users/'    => 'users#index'
   get 'users/:id' => 'users#show', as: :user
-
-
 
 
 
