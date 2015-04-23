@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :admin_user, only: [:index]
-  before_action :set_user
+  before_action :set_user, only: [:show, :destroy]
 
   def show
     @reviews = @user.reviews
