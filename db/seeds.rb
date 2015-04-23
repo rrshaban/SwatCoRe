@@ -5,7 +5,7 @@
 #
 
 
-name  = " "
+name  = "parse swattie"
 email = "parse@swarthmore.edu"
 password = ENV['PARSE_PASSWORD']
 password ||= "password"
