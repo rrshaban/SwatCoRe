@@ -1,4 +1,5 @@
 <% provide(:title, @user.name) %>
+<% avgs = @user.avg %>
 <section class="row user_page">
   <h1><%= @user.name %></h1>
 
@@ -10,8 +11,12 @@
   <% end %>
 
   <div class="col-md-4">
-        <% avgs = @user.avg %>
-        Average Ratings
+        
+        Useful votes: <br />
+        <%= avgs[:up] %>/<%= avgs[:votes] %> <br />
+
+        Average Review: <br />
+        
         <table>
         <thead>
           <td><h4>Clarity</h4></td>

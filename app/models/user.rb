@@ -14,12 +14,14 @@ class User < ActiveRecord::Base
   def avg
     if self.reviews.any?
       count = self.reviews.count
-      clarity, intensity, worthit = 0.0, 0.0, 0.0
+      clarity, intensity, worthit, votes, up = 0.0, 0.0, 0.0, 0, 0
 
       self.reviews.each { |r|
         clarity   +=  r.clarity.to_f
         intensity +=  r.intensity.to_f
         worthit   +=  r.worthit.to_f
+        votes     +=  r.cached_votes_total
+        up        +=  r.cached_votes_up
       }
 
       clarity   /= count
@@ -28,12 +30,16 @@ class User < ActiveRecord::Base
 
       { clarity: clarity.round(1), 
         workload: intensity.round(1), 
-        worthit: worthit.round(1) 
+        worthit: worthit.round(1),
+        votes: votes,
+        up:    up
       }
     else
       { clarity: "n/a", 
         workload: "n/a", 
-        worthit: "n/a" 
+        worthit: "n/a",
+        votes: 0,
+        up: 0
       }
     end
   end

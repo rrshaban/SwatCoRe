@@ -15,8 +15,6 @@ Rails.application.routes.draw do
     registration: 'r'
   }
 
-  get 'users/:id' => 'users#show', as: :user
-
   root               'static_pages#home'
   get 'help'      => 'static_pages#help'
   get 'about'     => 'static_pages#about'
@@ -36,6 +34,9 @@ Rails.application.routes.draw do
     patch 'upload', on: :member # for uploading a syllabus
   end
   resources :reviews, only: [:create, :destroy, :edit, :update]
+
+  get 'users/:id' => 'users#show', as: :user
+
 
 
 
