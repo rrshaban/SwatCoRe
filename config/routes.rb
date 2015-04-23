@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'users/show'
+
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }, path: "user", path_names: {
@@ -12,6 +14,8 @@ Rails.application.routes.draw do
     unlock:       'unblock',
     registration: 'r'
   }
+
+  get 'users/:id' => 'users#show', as: :user
 
   root               'static_pages#home'
   get 'help'      => 'static_pages#help'

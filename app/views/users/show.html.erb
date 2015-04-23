@@ -1,0 +1,41 @@
+<% provide(:title, @user.name) %>
+<section class="row user_page">
+  <h1><%= @user.name %></h1>
+
+  <% if current_user.admin? %>
+    <h5>
+    <%= link_to 'Edit this user', [:edit, @user] %>
+    <%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </h5>
+  <% end %>
+
+  <div class="col-md-4">
+        <% avgs = @user.avg %>
+        Average Ratings
+        <table>
+        <thead>
+          <td><h4>Clarity</h4></td>
+          <td><h4>Workload</h4></td>
+          <td><h4>Worth it?</h4></td>
+        </thead>
+        <tr>
+          <td><h3><%=  avgs[:clarity]    %></h3></td>
+          <td><h3><%=  avgs[:workload]   %></h3></td>
+          <td><h3><%=  avgs[:worthit]    %></h3></td>
+        </tr>
+      </table>
+  </div>
+
+  <div class="col-md-8">
+    <% if @reviews.any? %>  
+      <h3>Reviews (<%= @reviews.count %>)</h3>
+      <ol class="reviews">
+        <%= render @reviews %>
+      </ol>
+      <%#= will_paginate @reviews %>
+    <% else %>
+      <h3>This user has yet to write any reviews :( </h3>
+    <% end %>
+  </div>
+
+</section>
