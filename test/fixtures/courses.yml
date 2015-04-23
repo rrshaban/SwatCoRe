@@ -1,11 +1,2 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-cs21:
-  name: Introduction to Computer Science
-  department: Computer Science
-  crn: CS021
-
-two:
-  name: MyString
-  department: MyString
-  crn: MyString
