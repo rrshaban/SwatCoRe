@@ -11,12 +11,6 @@ class CoursesController < ApplicationController
     redirect_to(search_path) 
   end
 
-  # GET /search
-  def search
-    @search = Course.ransack(params[:q])
-    @courses = @search.result(distinct: true)
-  end
-
   # GET /courses/1
   # GET /courses/1.json
   def show

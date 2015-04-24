@@ -20,8 +20,8 @@ Rails.application.routes.draw do
   get 'about'     => 'static_pages#about'
   get 'contact'   => 'static_pages#contact'
 
-  get 'search'    => 'courses#search'
-  post 'search'   => 'courses#search'
+  get 'search'    => 'search#form'
+  post 'search'   => 'search#search'
 
   get 'like'      => 'reviews#upvote'
   get 'dislike'   => 'reviews#downvote'
