@@ -6,6 +6,7 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Search", search_path %></li>
         <li><%= link_to "Help", help_path %></li>
 
         <% if user_signed_in? %>
@@ -16,7 +17,6 @@
               Account <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <!-- <li><%#= link_to "Edit Profile", edit_user_registration_path %></li> -->
               <li><%= link_to "Edit Account", edit_user_registration_path %></li>
               <li class="divider"></li>
               <li>
