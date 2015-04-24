@@ -1,6 +1,10 @@
 class Review < ActiveRecord::Base
   acts_as_votable
 
+  # # Let's not make reviews searchable yet 
+  # include PgSearch
+  # multisearchable :against => [:content]
+
   # before_create :logged_in_user
   # after_create :timestamp_user
   belongs_to :user

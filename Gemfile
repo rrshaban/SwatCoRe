@@ -15,7 +15,7 @@ gem 'jquery-rails',         '4.0.3'
 gem 'turbolinks',           '2.3.0'
 gem 'jbuilder',             '2.2.3'
 gem 'sdoc',                 '0.4.0', group: :doc
-gem 'ransack'
+gem 'pg_search'
 gem 'minitest',             '5.5.1'
 gem 'pg',                   '0.18.1'
 gem 'oboe-heroku',          '0.9.18.1'

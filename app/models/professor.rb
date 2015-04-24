@@ -3,6 +3,9 @@ class Professor < ActiveRecord::Base
   has_one  :department
   has_many :reviews,  through: :courses
 
+  include PgSearch
+  multisearchable :against => [:name]
+
   def dept
     Department.find(self.department_id)
   end

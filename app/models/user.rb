@@ -7,6 +7,10 @@ class User < ActiveRecord::Base
 
   acts_as_voter
   has_many :reviews, dependent: :destroy
+
+  # # Let's not make users searchable yet either
+  # include PgSearch
+  # multisearchable :against => [:name]
   
 
   validates_format_of :email, :with => /\A[a-z]*\d*@(swarthmore|haverford|brynmawr).edu\z/i

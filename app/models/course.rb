@@ -2,6 +2,9 @@ class Course < ActiveRecord::Base
   include ActionView::Helpers::DateHelper # for time_ago_in_words
   include Rails.application.routes.url_helpers
 
+  include PgSearch
+  multisearchable :against => [:name, :crn, :description]
+
   # SYLLABUS PDF ATTACHMENT
   has_attached_file :syllabus, 
     :url => "/:attachment/:id/:basename.:extension",
