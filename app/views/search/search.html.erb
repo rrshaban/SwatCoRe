@@ -31,13 +31,7 @@
 
 <% if @courses.any? %>
   <h3>Courses</h3>
-  <% @courses.each do |cc| %>
-    <% c = Course.find(cc.searchable_id) %>
-
-    <%= link_to c do %>
-      <ul>
-        <li class="course name"><%= c.name %></li>
-      </ul>
-    <% end %>
+  <% @courses.each do |c| %>
+    <%= render "shared/course_list", :course => Course.find(c.searchable_id) %>
   <% end %>
 <% end %>
