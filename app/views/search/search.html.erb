@@ -1,2 +1,41 @@
-<h1>Search#search</h1>
-<p>Find me in app/views/search/search.html.erb</p>
+<% if @departments.any? %>
+  <h3>Departments</h3>
+  <% @departments.each do |dept| %>
+    <% d = Department.find(dept.searchable_id) %>
+    
+    <%= link_to d do %>
+      <ul>
+        <li class="department name"><%= d.name %></li>
+      </ul>
+    <% end %>
+  <% end %>
+<% end %>
+
+<br />
+<br />
+
+<% if @professors.any? %>
+  <h3>Professors</h3>
+  <% @professors.each do |prof| %>
+    <% p = Professor.find(prof.searchable_id) %>
+    
+    <%= link_to p do %>
+      <ul>
+        <li class="professor name"><%= p.name %></li>
+      </ul>
+    <% end %>
+  <% end %>
+<% end %>
+
+<% if @courses.any? %>
+  <h3>Courses</h3>
+  <% @courses.each do |cc| %>
+    <% c = Course.find(cc.searchable_id) %>
+
+    <%= link_to c do %>
+      <ul>
+        <li class="course name"><%= c.name %></li>
+      </ul>
+    <% end %>
+  <% end %>
+<% end %>
