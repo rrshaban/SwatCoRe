@@ -6,10 +6,11 @@ class SearchController < ApplicationController
   end
 
   def search
-    query = q_params
-    @departments = PgSearch.multisearch(query).where(:searchable_type => "Department")
-    @professors = PgSearch.multisearch(query).where(:searchable_type => "Professor")
-    @courses = PgSearch.multisearch(query).where(:searchable_type => "Course")
+    q = q_params
+
+    @departments  = PgSearch.multisearch(q).where(:searchable_type => "Department")
+    @professors   = PgSearch.multisearch(q).where(:searchable_type => "Professor")
+    @courses      = PgSearch.multisearch(q).where(:searchable_type => "Course")
 
     if @departments.none? and @professors.none? and @courses.none?
       redirect_to search_path, notice: 'No results found. Please double-check your query.'
@@ -18,6 +19,6 @@ class SearchController < ApplicationController
 
   private
   def q_params
-      params.permit(:search)[:search]
-    end
+    params.permit(:search)[:search]
+  end
 end
