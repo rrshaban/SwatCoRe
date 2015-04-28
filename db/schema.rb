@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20150424010029) do
   create_table "courses", force: :cascade do |t|
     t.string   "name"
     t.string   "crn"
-    t.text     "description"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
     t.integer  "professor_id"
@@ -29,6 +28,7 @@ ActiveRecord::Schema.define(version: 20150424010029) do
     t.integer  "syllabus_file_size"
     t.datetime "syllabus_updated_at"
     t.integer  "syllabus_uploader"
+    t.text     "description"
   end
 
   add_index "courses", ["crn"], name: "index_crn_on_courses", using: :btree
@@ -40,20 +40,6 @@ ActiveRecord::Schema.define(version: 20150424010029) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  create_table "flaggings", force: :cascade do |t|
-    t.string   "flaggable_type"
-    t.integer  "flaggable_id"
-    t.string   "flagger_type"
-    t.integer  "flagger_id"
-    t.integer  "flaggings_count"
-    t.text     "reason"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "flaggings", ["flaggable_type", "flaggable_id"], name: "index_flaggings_on_flaggable_type_and_flaggable_id", using: :btree
-  add_index "flaggings", ["flagger_type", "flagger_id", "flaggable_type", "flaggable_id"], name: "access_flaggings", using: :btree
 
   create_table "pg_search_documents", force: :cascade do |t|
     t.text     "content"

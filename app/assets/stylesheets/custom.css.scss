@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 36px;
   letter-spacing: -2px;
   text-align: center;
   margin: 30px 0 20px 0;
@@ -102,6 +102,8 @@ ul{
     background-color: $green !important;
   }
 }
+
+input
 
 a{
   &:visited{
@@ -297,6 +299,11 @@ aside {
 .homepage{
   h1{
     text-align: center;
+    font-size: 60px;
+    padding: 55px 0 40px 0;
+  }
+  #or{
+    padding: 10px 0 30px 0;
   }
   .search-by{
     line-height: 45px;
@@ -313,7 +320,31 @@ aside {
     .class{
       font-size: 18px;
     }
+    .active-review{
+      margin-left: 15px;
+      margin-right: -15px;
+    }
   }
+
+  ul{
+    padding: 0;
+  }
+}
+
+.search-field{
+  input[type="text"]{
+    font-size: 16px;
+    padding: 14px !important;
+    margin-bottom: 10px;
+    margin-right: -2px;
+  }
+}
+
+input[type="file"]{
+  font-size: 16px;
+  padding: 14px !important;
+  margin-bottom: 10px;
+  margin-right: -2px;
 }
 
 .field{
@@ -416,6 +447,82 @@ input {
     overflow: auto;
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+/* reviews */
+
+.reviews {
+  list-style: none;
+  padding: 0 30px 0 30px;
+  margin-top: 25px;
+
+  li {
+    padding: 15px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid $lightest-gray;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+
+  .photo{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin-top: 8px;
+    background: $lightest-gray;
+    border-radius: 50px;
+    h3{
+      font-size: 30px;
+      margin: 0;
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+  .name{
+    font-weight: bold !important;
+    line-height: 30px;
+  }
+  .ratings{
+    line-height: 30px;
+  }
+  .timestamp {
+    color: $gray-light;
+    font-size: 12px;
+  }
+  i{
+    margin-right: 4px;
+  }
+  a{
+    .vcount{
+      margin: 0 !important; //this is really ugly, just a quick fix.
+    }
+  }
+  .vote{
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  .helpful{
+    color: $green;
+    font-weight: bold;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
   }
 }
 
