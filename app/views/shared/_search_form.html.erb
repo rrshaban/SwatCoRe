@@ -1,8 +1,7 @@
 <%= form_tag(search_path, method: "post") do %>
-  <div class="field">
-
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search by Department, Professor, or Course", class: "btn btn-primary" %>
+  <div class="search-field row">
+    <%= text_field_tag :search, params[:search], class: "col-md-offset-2 col-md-6" %>
+    <%= submit_tag "Go!", class: "btn btn-primary col-md-2" %>
 
   </div>
 <% end %>
