@@ -3,7 +3,9 @@
 
 <p><%= @course.prof_name %> | <%= @course.dept_name %> | <em><%= @course.reviews.count %></em> Reviews</p>
 
-<%= @course.description ? @course.description : "No description found for this class." %> <br /><br />
+<div class="course-desc">
+	<%= @course.description ? @course.description : "No description found for this class."%> <br /><br />
+</div>
 
 <% if current_user.admin? %>
   <%= link_to 'Edit this course', [:edit, @course] %>
