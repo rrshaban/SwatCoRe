@@ -7,13 +7,12 @@
       <% if !@course.syllabus? %>
         <%= form_for @course, :url => upload_course_path(@course), html: { multipart: true } do |f| %>
           <%= f.label :syllabus, "Upload a syllabus (.pdf) for this class:" %>
-          <%= f.file_field(:syllabus, accept: "application/pdf") %>
-          <%= f.submit "Submit" %>
+          <div class="row">
+            <%= f.file_field(:syllabus, accept: "application/pdf", class: "col-md-8" )%>
+            <%= f.submit "Submit", class: "btn btn-lg btn-primary col-md-4" %>
+          </div>
         <% end %>
       <% end %>
-
-
-
     </section>
     <section class="course_avg_ratings col-md-4"?>
       <table>

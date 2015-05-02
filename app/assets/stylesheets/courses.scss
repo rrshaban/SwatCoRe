@@ -45,6 +45,7 @@
       font-size: 14px;
     }
   }
+  
 	img{
 		height: 30px;
 		width: 30px;
@@ -59,81 +60,12 @@
 		}
 	}
 }
-
-/* reviews */
-
-.reviews {
-  list-style: none;
-  padding: 0 30px 0 30px;
-  margin-top: 25px;
-  span{
-  	margin-right: 8px;
+.course_info{
+  .course-desc{
+    margin: 20px 0 20px 0;
   }
-  li {
-    padding: 15px 0;
-    margin-bottom: 15px;
-    border-bottom: 1px solid $lightest-gray;
-  }
-  .user {
-    margin-top: 5em;
-    padding-top: 0;
-  }
-  .content {
-    display: block;
-    img {
-      display: block;
-      padding: 5px 0;
-    }
-  }
-
-  .photo{
-    position: relative;
-    height: 100px;
-    width: 100px;
-    margin-top: 8px;
-    background: $lightest-gray;
-    border-radius: 50px;
-    h3{
-      font-size: 30px;
-      margin: 0;
-      position: relative;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-    }
-  }
-  .name{
-  	font-weight: bold;
-  	line-height: 30px;
-  }
-  .ratings{
-  	line-height: 30px;
-  }
-  .timestamp {
-    color: $gray-light;
-    font-size: 12px;
-  }
-  i{
-    margin-right: 4px;
-  }
-  a{
-    .vcount{
-      margin: 0 !important; //this is really ugly, just a quick fix.
-    }
-  }
-  .vote{
-	  &:hover{
-  		text-decoration: underline;
-  	}
-  }
-  .helpful{
-  	color: $green;
-  	font-weight: bold;
-  }
-  .gravatar {
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
+  .row{
+    margin: 0 !important;
   }
 }
+
