@@ -288,3 +288,14 @@ reviewList['results'].each{ |review|
 #                               worthit: 3) 
 #   end
 # }
+corrected_prof_names = File.read(File.dirname(__FILE__) + '/professors.json')
+prof_parse = JSON.parse(corrected_prof_names)
+
+prof_parse.each{ |p|
+	print p
+	key = p['key']
+	name = p['name']
+	if Professor.find_by(name: key)
+		(Professor.find_by(name: key)).update(name: name)
+	end 
+}
