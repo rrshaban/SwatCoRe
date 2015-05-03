@@ -26,27 +26,32 @@ prof_dict = []
 #other = []
 for prof in profs:
 	# remove commas and extra spaces from professor names
-	name = ''
-	for c in prof:
-		if c == ',' or c == ', ':
-			pass
-		else:
-			name += c
-	if name[-1] == ' ':
-		name = name[:-1]
-	if name == '':
-		continue
+	# name = ''
+
+	name = prof.split(',')[0]
+
+	# for c in prof:
+	# 	if c == ',' or c == ', ':
+	# 		pass
+	# 	else:
+	# 		name += c
+	# if name[-1] == ' ':
+	# 	name = name[:-1]
+	# if name == '':
+	# 	continue
 	namel = name.split(" ")
+	if len(namel) < 2 or namel[0] == '':
+		continue
 	
 	# Store professor names in a dictionary with the form:
 	#	'Professor Name' : 'Name, P'
 	# so we can easily match the value to the existing database
+	print name, namel
+	prof_dict.append({'name': name, 'key':(namel[-1] + ', ' + namel[0][0])})
 
-	if len(namel) == 2: 
-		prof_dict.append({'name': name, 'key':(namel[1] + ', ' + namel[0][0])})
-	if len(namel) == 3:
-		if '.' in namel[1]:
-			prof_dict.append({'name':name, 'key':(namel[2] + ', ' + namel[0][0])}) 
+	# if len(namel) == 3:
+	# 	if '.' in namel[1]:
+	# 		prof_dict.append({'name':name, 'key':(namel[2] + ', ' + namel[0][0])}) 
 	# use this to check for names that need to be inserted manually
 	#	if len(namel) > 3:
 	#		other.append(name)

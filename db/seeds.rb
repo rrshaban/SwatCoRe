@@ -293,9 +293,8 @@ prof_parse = JSON.parse(corrected_prof_names)
 
 prof_parse.each{ |p|
 	print p
-	key = p['key']
-	name = p['name']
-	if Professor.find_by(name: key)
-		(Professor.find_by(name: key)).update(name: name)
+	if Professor.find_by(name: p['key'])
+    print Professor
+		(Professor.find_by(name: p['key'])).update(name: p['name'])
 	end 
 }
