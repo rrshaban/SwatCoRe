@@ -26,19 +26,9 @@ prof_dict = []
 #other = []
 for prof in profs:
 	# remove commas and extra spaces from professor names
-	# name = ''
 
 	name = prof.split(',')[0]
 
-	# for c in prof:
-	# 	if c == ',' or c == ', ':
-	# 		pass
-	# 	else:
-	# 		name += c
-	# if name[-1] == ' ':
-	# 	name = name[:-1]
-	# if name == '':
-	# 	continue
 	namel = name.split(" ")
 	if len(namel) < 2 or namel[0] == '':
 		continue
