@@ -23,7 +23,7 @@
           <% @recent.each do |review| %>
             <%= link_to review.course do %>
               <ul>
-                <div class="class name"><%= review.course.name %></div>
+                <div class="class name"><%= review.course.name %> (<%= review.course.prof_name %>)</div>
                 <%= render review %>
               </ul>
             <% end %>
@@ -37,7 +37,7 @@
           <% @active.each do |review| %>
             <%= link_to review.course do %>
               <ul>
-                <div class="class name"><%= review.course.name %> (<%= review.course.prof_name)</div>
+                <div class="class name"><%= review.course.name %> (<%= review.course.prof_name %>)</div>
                 <%= render review %>
               </ul>
             <% end %>
