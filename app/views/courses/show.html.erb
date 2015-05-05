@@ -13,6 +13,16 @@
           </div>
         <% end %>
       <% end %>
+
+       <% if @course.syllabus? %>
+        <%= link_to image_tag(@course.syllabus.url(:pdf_thumbnail)), @course.syllabus.url %>
+        <br />
+        <% if @course.syllabus_uploader? and User.exists?(:id => @course.syllabus_uploader)%>
+          Uploaded by <%= User.find(@course.syllabus_uploader).name %><br />
+        <% end %>
+        <a href="mailto:swatcoreteam@gmail.com">Report an issue with this syllabus.</a>
+      <% end %>
+
     </section>
     <section class="course_avg_ratings col-md-4"?>
       <table>
@@ -28,16 +38,6 @@
         </tr>
       </table>
 
-
-
-      <% if @course.syllabus? %>
-        <%= link_to image_tag(@course.syllabus.url(:pdf_thumbnail)), @course.syllabus.url %>
-        <br />
-        <% if @course.syllabus_uploader? and User.exists?(:id => @course.syllabus_uploader)%>
-          Uploaded by <%= User.find(@course.syllabus_uploader).name %><br />
-        <% end %>
-        <a href="mailto:swatcoreteam@gmail.com">Report an issue with this syllabus.</a>
-      <% end %>
 
 
     </section>
