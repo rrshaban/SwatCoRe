@@ -72,7 +72,8 @@ class ReviewsController < ApplicationController
                                     :professor_id,
                                     :department_id,
                                     :course_id,
-                                    :id)
+                                    :id,
+                                    :hidden)
     end
 
 end

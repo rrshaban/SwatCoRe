@@ -48,6 +48,9 @@
     
     <%= f.text_area :content, placeholder: "Write new review..." %>
 
+    <%= check_box("review", "hidden", {}, true, false) %>
+    <%= f.label "Delay until grades are in" %>
+
     <%= f.submit "Post your review", class: "btn btn-primary" %>
   </div>
 <% end %>

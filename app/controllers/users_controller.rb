@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :destroy]
 
   def show
-    @reviews = @user.reviews
+    @reviews = @user.reviews.where(hidden: false).order(created_at: :desc)
   end
 
   def index

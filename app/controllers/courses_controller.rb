@@ -15,7 +15,7 @@ class CoursesController < ApplicationController
   # GET /courses/1.json
   def show
     @course = Course.find(params[:id])
-    @reviews = @course.reviews.page(params[:page]).order(cached_votes_score: :desc, cached_votes_up: :desc)
+    @reviews = @course.reviews.where(hidden: false).page(params[:page]).order(cached_votes_score: :desc, cached_votes_up: :desc)
     @current_user = User.find(session["warden.user.user.key"][0][0])
   end
 
