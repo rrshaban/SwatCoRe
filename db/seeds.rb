@@ -18,6 +18,14 @@ password ||= "password"
 @user.save!
 @user.confirm!
 
+@razi = User.new(name:    "Razi Shaban",
+                email:    "rshaban1@swarthmore.edu",
+                password: "password") # y'all clowns if you think I'm putting
+                                      # my password on github
+@razi.skip_confirmation_notification!
+@razi.save!
+@razi.confirm!
+
 
 require 'json'
 fall14 = File.read(File.dirname(__FILE__) + '/fall2014.json')
