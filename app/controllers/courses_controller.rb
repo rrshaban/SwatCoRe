@@ -66,7 +66,7 @@ class CoursesController < ApplicationController
         format.html { redirect_to @course, notice: 'Syllabus was successfully uploaded.' }
         format.json { render :show, status: :ok, location: @course }
       else
-        format.html { redirect_to @course, notice: 'Error uploading syllabus.' }
+        format.html { redirect_to @course, notice: 'Error uploading syllabus - only PDFs are allowed.' }
         format.json { render json: @course.errors, status: :unprocessable_entity }
       end
     end
