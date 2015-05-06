@@ -11,9 +11,9 @@ class Course < ActiveRecord::Base
     :path => ":rails_root/public/:attachment/:id/:basename.:extension",
     :styles => { :pdf_thumbnail => ["400x400>", :png]}
   validates_attachment :syllabus,
-    :content_type => { :content_type => "application/pdf","application/msword", 
+    :content_type => { :content_type => ["application/pdf","application/msword", 
              "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
-             "text/plain" }  # MUST BE PDF
+             "text/plain"] }  # MUST BE PDF
     #:size => { :in => 0..1.megabytes }                        # MAX SIZE 1MB -- but it's breaking things :/
   before_post_process :syllabus
 
