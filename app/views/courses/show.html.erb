@@ -54,6 +54,9 @@
     <% else %>
       <h3>No reviews yet for this class :( </h3>
     <% end %>
+    <% if @hidden > 0 %> 
+      <%= pluralize(@hidden, "review") %> will be published after grades are released.
+    <% end %>
   </div>
   <!-- <div class="col-md-1"></div> -->
   <section class="review_form col-md-4">

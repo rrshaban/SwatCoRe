@@ -16,6 +16,7 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
     @reviews = @course.reviews.where(hidden: false).order(cached_votes_score: :desc, cached_votes_up: :desc).paginate(page: params[:page], per_page: 10)
+    @hidden = @course.reviews.where(hidden: true).count
     @current_user = User.find(session["warden.user.user.key"][0][0])
   end
 
