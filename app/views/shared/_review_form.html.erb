@@ -22,13 +22,13 @@
     <%= f.range_field :clarity, in: 1..5, value: 3, step: 1, list: "nums" %>
     </center>
 
-    <%= f.label :workload %>
+    <label for="review_workload">Difficulty</label>
     <%# SOB, frowning, SUNGLASSES  %>
     <br />
     <center>
-    <%= image_tag 'sob.png', height: 30, class: "emoji", 'align': "left" %>
+    <%= image_tag 'sunglasses.png', height: 30, class: "emoji", 'align': "left" %>
     <%= image_tag 'confused.png', height: 30, class: "emoji" %>
-    <%= image_tag 'sunglasses.png', height: 30, class: "emoji", 'align': "right" %>
+    <%= image_tag 'sob.png', height: 30, class: "emoji", 'align': "right" %>
     <%= f.range_field :intensity, in: 1..5, value: 3, step: 1, list: "nums" %>
     </center>
 
