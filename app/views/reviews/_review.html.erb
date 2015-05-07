@@ -7,7 +7,7 @@
     <span class="ratings clarity">  Clarity:    <%=   review.clarity    %></span>     
     <span class="ratings workload"> Difficulty:   <%=   review.intensity  %></span> 
     <span class="ratings worthit">  Worth it?:  <%=   review.worthit    %></span>  <br />
-    <span class="content">     <%=                    review.content    %></span>  <br /> 
+    <span class="content">     <%=h                    review.content    %></span>  <br /> 
 
     <%= link_to like_path(review), 
       :remote => true, 

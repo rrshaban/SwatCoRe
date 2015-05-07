@@ -1,10 +1,13 @@
 <div class="center homepage">
   <h1>Swat Course Review.</h1>
 
-  <% if not user_signed_in? %>
+  <% if not user_signed_in? %>  
+  <%############   NOT SIGNED IN  #######################%>
     <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary home-signup" %>
 
   <% else %>
+
+  <%############    SIGNED IN   #######################%>
     <div class="row">
       <h3>Search by Department, Professor, or Course.</h3>
       <%= render 'shared/search_form' %>
