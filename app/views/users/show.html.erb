@@ -36,7 +36,13 @@
     <% if @reviews.any? %>  
       <h3>Reviews (<%= @reviews.count %>)</h3>
       <ol class="reviews">
-        <%= render @reviews %>
+        <% @reviews.each do |review| %>
+          <%= link_to review.course do %>
+          <div class="class name"><%= review.course.name %> (<%= review.course.prof_name %>)</div>
+          <% end %> 
+          <%= render review %>
+          
+        <% end %>
       </ol>
       <%#= will_paginate @reviews %>
     <% else %>
