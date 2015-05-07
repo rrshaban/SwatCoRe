@@ -2,7 +2,7 @@ module ApplicationHelper
   # include FontAwesome::Rails::IconHelper
 
 	def full_title(page_title = '')
-		base_title = "Swat Course Review"
+		base_title = "Swarthmore Course Review"
 		if page_title.empty?
 			base_title
 		else
