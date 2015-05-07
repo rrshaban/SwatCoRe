@@ -1,6 +1,7 @@
 class Course < ActiveRecord::Base
   include ActionView::Helpers::DateHelper # for time_ago_in_words
   include Rails.application.routes.url_helpers
+  include ActionView::Helpers::TextHelper
 
   include PgSearch
   multisearchable :against => [:name, :crn, :description]
@@ -56,9 +57,10 @@ class Course < ActiveRecord::Base
 
   def last
     if self.reviews.any?
-      "Last reviewed " + time_ago_in_words(self.reviews.order('updated_at DESC')[0].updated_at) + " ago."
+      pluralize(self.reviews.count, "review")
+      # "Last reviewed " + time_ago_in_words(self.reviews.order('updated_at DESC')[0].updated_at) + " ago."
     else
-      "No reviews yet — you could be the first!"
+      ""
     end
   end
 

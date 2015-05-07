@@ -9,6 +9,6 @@
       <span>Clarity: <%= avgs[:clarity]%></span>
       <span>Difficulty: <%= avgs[:workload]%></span>
       <span>Worth it?: <%= avgs[:worthit]%></span>
-      <li class="course last"><%= course.last %>
+      <li class="course last"><%=h course.last %>
     <% end %>
 </ul>
