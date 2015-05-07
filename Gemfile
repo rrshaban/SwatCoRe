@@ -26,6 +26,8 @@ gem 'font-awesome-rails'
 gem 'cancancan',            '1.10.1'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk-v1'
+gem 'dalli',                '2.7.4'
+gem 'memcachier',           '0.0.2'
 
 group :development, :test do
   # gem 'sqlite3',     '1.3.9'
