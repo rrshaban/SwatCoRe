@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'help'      => 'static_pages#help'
   get 'about'     => 'static_pages#about'
   get 'contact'   => 'static_pages#contact'
+  get 'stats'     => 'static_pages#stats'
 
   get 'search'    => 'search#form'
   post 'search'   => 'search#search'

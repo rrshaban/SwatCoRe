@@ -1,0 +1,11 @@
+<% provide(:title, "Statistics")  %>
+
+<h1>SwatCoRe by the numbers</h1>
+
+<p><%= pluralize(User.count, "user") %></p>
+<p><%= pluralize(Review.count, "review") %></p>
+<p><%= pluralize(Review.where("cached_votes_total > ?", 0).count, "review") %> rated helpful</p>
+<p><%= pluralize(Review.where("cached_votes_total < ?", 0).count, "review") %> rated unhelpful</p>
+
+<p><%= pluralize(Professor.count, "professor") %></p>
+<p><%= pluralize(Course.count, "course") %></p>
