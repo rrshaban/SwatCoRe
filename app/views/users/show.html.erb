@@ -5,6 +5,7 @@
 
   <% if current_user.admin? %>
     <h5>
+    <%= @user.email %>
     <%#= link_to 'Edit this user', [:edit, @user] %>
     <%= link_to 'Destroy this user', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
     </h5>
