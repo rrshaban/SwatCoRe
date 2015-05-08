@@ -34,9 +34,9 @@
         </span>
     <% end %>
 
-    <% if current_user.admin? %>
-        <%= link_to 'EDIT this review', [:edit, review] %>
-        <%= link_to 'DESTROY', review, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% if current_user.admin? or (review.user == current_user) %>
+        <%= link_to 'edit', [:edit, review] %>
+        <%= link_to 'delete', review, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
 
   </div>

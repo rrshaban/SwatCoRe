@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
-  before_action :admin_user, only: [:edit, :update, :destroy]
-
+  # before_action :admin_user, only: []
+  before_action :check_current_user, only: [:edit, :update, :destroy]
   
   def edit
   end
@@ -58,6 +58,12 @@ class ReviewsController < ApplicationController
   end
 
   private
+
+    def check_current_user
+      if (@review.user_id != current_user.id) and not current_user.admin?
+        redirect_to course_path(id: @review.course_id)
+      end
+    end
 
     def set_review
       @review = Review.find(params[:id])

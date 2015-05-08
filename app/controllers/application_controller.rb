@@ -10,8 +10,8 @@ class ApplicationController < ActionController::Base
   #   resource_path
   # end
 
-  protected
 
+  protected
 
   def configure_devise_permitted_parameters
     registration_params = [:name, :email, :password, :password_confirmation]
@@ -30,9 +30,7 @@ class ApplicationController < ActionController::Base
   private 
 
     # def current_user
-
-    # User.find(session["warden.user.user.key"][0][0])
-
+    #   User.find(session["warden.user.user.key"][0][0])
     # end
 
     def get_depts
