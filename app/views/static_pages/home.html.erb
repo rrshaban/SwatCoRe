@@ -14,8 +14,16 @@
     <br />
     <br />
     <br />
+     <ul class="reviews text-left">
+      <h3 class="text-left">Featured Review</h3>
+      <%= link_to @top.course do %>
+          <div class="class name"><%= fa_icon "file-pdf-o" if @top.course.syllabus? %><%= @top.course.name %> (<%= @top.course.prof_name %>) </div>
+          <%= render @top %>
+      <% end %>
+    </ul>
     <br />
     <br />
+
     <br />
     <br />
     <br />

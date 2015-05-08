@@ -4,6 +4,7 @@ class StaticPagesController < ApplicationController
   def home
     @recent = Review.order(created_at: :asc).last(10).reverse
     @active = Review.order(updated_at: :asc).last(10).reverse
+    @top = Review.order("cached_votes_score DESC").first
   end
 
   def help
