@@ -1,7 +1,7 @@
-rewrite repo
+Swarthmore Course Review (SwatCoRe)   [![Build Status](https://travis-ci.org/rrshaban/swatcore-dev.svg?branch=master)](https://travis-ci.org/rrshaban/swatcore-dev)
 
-production branch hosted on http://swatcore.herokuapp.com
+The production branch of this repo is auto-deployed to https://www.swatcoursereview.com/
 
-travis isn't properly set up yet, so don't worry about it
+Want to contribute? Contact swatcoreteam@gmail.com or submit an issue/pull request.
 
-[![Build Status](https://travis-ci.org/rrshaban/swatcore-dev.svg?branch=master)](https://travis-ci.org/rrshaban/swatcore-dev)
+
