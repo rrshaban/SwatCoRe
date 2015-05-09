@@ -15,8 +15,6 @@ Rails.application.routes.draw do
     registration: 'r'
   }
 
-  get 'google41c74e5616ec5e48.html', :to => redirect('/google41c74e5616ec5e48.html')
-
   root               'static_pages#home'
   get 'help'      => 'static_pages#help'
   get 'about'     => 'static_pages#about'
@@ -43,6 +41,9 @@ Rails.application.routes.draw do
   get 'users/'    => 'users#index'
   get 'users/:id' => 'users#show', as: :user
   delete 'users/:id' => 'users#destroy'
+
+  get 'google41c74e5616ec5e48.html', :to => redirect('/google41c74e5616ec5e48.html')
+  get 'sitemap.xml', :to => redirect('sitemap.xml')
 
 
 end
