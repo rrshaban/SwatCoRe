@@ -11,6 +11,10 @@ class CoursesController < ApplicationController
     redirect_to(search_path) 
   end
 
+  def syllabi
+    @courses = Course.where.not(syllabus_uploader: nil)
+  end
+
   # GET /courses/1
   # GET /courses/1.json
   def show

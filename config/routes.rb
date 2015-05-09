@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   get 'like'      => 'reviews#upvote'
   get 'dislike'   => 'reviews#downvote'
 
+  get 'syllabi'   => 'courses#syllabi'
+
   # below is the hierarchy: depts > professors > courses > reviews
   # once we thoroughly seed depts and professors, we can delete
   resources :departments #, only: [:index, :show, :new, :create]  # :new and :create

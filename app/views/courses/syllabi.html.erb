@@ -1,0 +1,14 @@
+<div class="course_index">
+  <div class="list row">
+    <div class="col-lg-8 col-md-offset-2">
+    <h2>Courses</h2>
+      
+      <%= render partial: "shared/course_list", collection: @courses, as: :course %>
+
+    <br>
+    <div class="add_course">
+      <%= link_to "#{image_tag("plus.png")}Add a Course".html_safe, new_course_path %>
+    </div>
+    </div>
+  </div>
+</div>
