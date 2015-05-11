@@ -12,7 +12,7 @@ class CoursesController < ApplicationController
   end
 
   def syllabi
-    @courses = Course.where.not(syllabus_uploader: nil)
+    @courses = Course.where.not(syllabus_uploader: nil).order(updated_at: :desc)
   end
 
   # GET /courses/1
