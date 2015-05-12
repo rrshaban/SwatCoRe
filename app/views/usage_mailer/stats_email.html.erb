@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>SwatCoRe by the numbers</h1>
+
+    <p><%= pluralize(User.count, "user") %></p>
+    <p><%= pluralize(Review.count, "review") %></p>
+    <p><%= pluralize(Review.where("cached_votes_total > ?", 0).count, "review") %> rated helpful</p>
+    <p><%= pluralize(Review.where("cached_votes_total < ?", 0).count, "review") %> rated unhelpful</p>
+    <p>Only <%= pluralize(Course.where.not(syllabus_uploader: nil).count, "syllabus") %> uploaded - get to it!</p>
+    <p><%= pluralize(Professor.count, "professor") %></p>
+    <p><%= pluralize(Course.count, "course") %></p>
+  </body>
+</html>
