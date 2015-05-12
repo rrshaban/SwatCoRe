@@ -1,0 +1,9 @@
+SwatCoRe by the numbers
+
+<%= pluralize(User.count, "user") %>
+<%= pluralize(Review.count, "review") %>
+<%= pluralize(Review.where("cached_votes_total > ?", 0).count, "review") %> rated helpful
+<%= pluralize(Review.where("cached_votes_total < ?", 0).count, "review") %> rated unhelpful
+Only <%= link_to syllabi_path do %><%= pluralize(Course.where.not(syllabus_uploader: nil).count, "syllabus") %><% end %> uploaded - get to it!
+<%= pluralize(Professor.count, "professor") %>
+<%= pluralize(Course.count, "course") %>
