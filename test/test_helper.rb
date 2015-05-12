@@ -8,7 +8,7 @@ ActiveRecord::Migration.maintain_test_schema! if defined?(ActiveRecord::Migratio
 class ActiveSupport::TestCase
   include Devise::TestHelpers
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
-  fixtures :all
+  # fixtures :all
 
   # Returns true if a test user is logged in.
   def is_logged_in?
