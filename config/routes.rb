@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get 'dislike'   => 'reviews#downvote'
 
   get 'syllabi'   => 'courses#syllabi'
+  get 'karma'     => 'users#karma'
 
   # below is the hierarchy: depts > professors > courses > reviews
   # once we thoroughly seed depts and professors, we can delete

@@ -2,6 +2,10 @@ class UsersController < ApplicationController
   before_action :admin_user, only: [:index]
   before_action :set_user, only: [:show, :destroy]
 
+  def karma
+    @users = User.all.sort_by {|u| u.karma }.last(20).reverse
+  end
+
   def show
     @reviews = @user.reviews.where(hidden: false).order(created_at: :desc)
   end

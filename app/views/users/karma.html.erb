@@ -1,0 +1,15 @@
+<div class="user_index">
+  <div class="list row">
+    <div class="col-lg-8 col-md-offset-2">
+      <h1>Karma Leaderboard</h1>
+      <% @users.each do |u| %>
+        <%= link_to u do %>
+          <ul>
+            <li class="user name"><%= u.name %> (<%= u.avg[:score] %>) </li>
+          </ul>
+        <% end %>
+      <% end %>
+    <br>
+    </div>
+  </div>
+</div>

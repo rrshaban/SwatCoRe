@@ -15,6 +15,10 @@ class User < ActiveRecord::Base
 
   validates_format_of :email, :with => /\A[a-z]*\d*@(swarthmore|haverford|brynmawr).edu\z/i
 
+  def karma
+    avg[:score]
+  end
+
   def avg
     if self.reviews.any?
       count = self.reviews.count
