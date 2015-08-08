@@ -13,8 +13,8 @@
     <% if @department.professors.any? %>
       <% @department.professors.each do |p| %>
         <%= link_to p do %>
-          <ul>
-            <li class="prof name"><%= p.name %>     
+          <ul class="search-result-wrap">
+            <li class="prof name"><%= p.name %>
           </ul>
         <% end %>
       <% end %>

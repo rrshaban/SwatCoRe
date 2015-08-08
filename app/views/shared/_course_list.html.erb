@@ -1,7 +1,7 @@
 
 <% avgs = course.avg %>
 
-<ul>
+<ul class="search-result-wrap">
     <%= link_to course do%>
       <li class="course name"><%= course.name %> (<%= course.crn %>) <%= fa_icon "file-pdf-o" if course.syllabus? %></li>
       <li class="course prof"><%= course.prof_name_raw %></li>
