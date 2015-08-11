@@ -34,7 +34,7 @@ fall15 = File.read(File.dirname(__FILE__) + '/fall2015.json')
 json_parse = JSON.parse(fall14) + JSON.parse(spring15) + JSON.parse(fall15)
 
 courseList = json_parse
-depts = Hash.new 
+depts = Hash.new
 profs = Hash.new
 courses = Hash.new
 
@@ -47,7 +47,7 @@ courses = Hash.new
 #     "Misc": " ",
 #     "Registration-ID": "ANCH 016 01"
 # }
-###### COURSE MODEL 
+###### COURSE MODEL
 #     t.string   "name"
 #     t.string   "crn"
 #     t.datetime "created_at",    null: false
@@ -91,7 +91,7 @@ depts.keys.each{ |dept|
 
 profs.keys.each{ |prof|
   dept_id = Department.find_by(name: profs[prof].keys[0]).id
-  Professor.create!( 
+  Professor.create!(
     name: prof,
     department_id: dept_id)
 }
@@ -103,7 +103,7 @@ courseList.each{ |course|
   course_dept = Department.find_by(name: course['Registration-ID'].split[0])
   course_crn  = course['Registration-ID'].split[0..1].join
 
-  
+
   if !courses.include?(course_crn)
     courses[course_crn] = { 'course_prof' => { course_prof => 1},
                             'course_name' => course_name,
@@ -139,10 +139,10 @@ Department.all.each{ |dept|
   # Changes the key to the full name - ugly, but it works
   case dept.name
     when "ANCH"
-      dept.update(name: "Ancient History") 
+      dept.update(name: "Ancient History")
     when "ANTH"
       dept.update(name: "Anthropology")
-    when "ARAB" 
+    when "ARAB"
       dept.update(name: "Arabic")
     when "ARTH"
       dept.update(name: "Art History")
@@ -247,14 +247,14 @@ Department.all.each{ |dept|
 Professor.find_by(name: " ").destroy
 
 
-oldReviews = File.read(File.dirname(__FILE__) + '/Review.json') 
+oldReviews = File.read(File.dirname(__FILE__) + '/Review.json')
 reviewList = JSON.parse(oldReviews)
 
 reviewList['results'].each{ |review|
   	courseString = review['courseUniqueKey']
   	clarity = intensity = worthit = review['overallRating']
 
-  	comment = review['comment'] 
+  	comment = review['comment']
 
     # turn courseString into useful information
   	courseCRN = (courseString.split('^')[0] + courseString.split('^')[1]).upcase
@@ -272,13 +272,13 @@ reviewList['results'].each{ |review|
   	course_id = Course.find_by(crn: courseCRN).id
   	# puts courseString
 
-  	Review.create( 
+  	Review.create(
   	    content: comment,
   	    clarity: clarity,
   	    intensity: intensity,
   	    worthit: worthit,
   	    user_id: 1,
-  	    course_id: course_id, 
+  	    course_id: course_id,
   	    professor_id: prof_id,
   	    department_id: dept_id)
 }
@@ -287,22 +287,20 @@ reviewList['results'].each{ |review|
 # Course.all.each{ |course|
 #   3.times do
 #   content = Faker::Lorem.sentence(3)
-#   course.reviews.create!(content: content, 
+#   course.reviews.create!(content: content,
 #                               department_id:  course.department_id,
 #                               professor_id:   course.professor_id,
-#                               user: User.find_by(id: 1), 
+#                               user: User.find_by(id: 1),
 #                               clarity: 3,
 #                               intensity: 3,
-#                               worthit: 3) 
+#                               worthit: 3)
 #   end
 # }
 corrected_prof_names = File.read(File.dirname(__FILE__) + '/professors.json')
 prof_parse = JSON.parse(corrected_prof_names)
 
 prof_parse.each{ |p|
-	print p
 	if Professor.find_by(name: p['key'])
-    print Professor
 		(Professor.find_by(name: p['key'])).update(name: p['name'])
-	end 
+	end
 }
