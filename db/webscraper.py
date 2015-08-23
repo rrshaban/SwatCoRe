@@ -38,30 +38,47 @@
 #   "First Year Seminar": false
 # } ]
 
+
+# Pretty regex: <a href="#" onclick="showCourse\('(?<catoid>\d+)', '(?<coid>\d+)',this, '(?<display_options>.+)'\); return false;">(?<crn>.*)&nbsp;(?<name>.*)<\/a>
 #import html.parser
-#import re
+import re
 import json
 import lxml.html
-#from lxml.html.clean import Cleaner
 from bs4 import BeautifulSoup
 import requests
 
 # Top level values, these don't change.
-url = 'http://www.swarthmore.edu/college-catalog/computer-science'
+url = 'http://www.swarthmore.edu/college-catalog/biology'
 response = requests.get(url)
 soup = BeautifulSoup(response.content, 'lxml')
-content_soup = soup.find("div", "content") #Includes all info about the dept.
 
-course_soup = content_soup.find('h3', string="Courses").parent.next_siblings
+# Find all links to a course
+links = soup.find_all("a", onclick=re.compile("showCourse.*"))
+
+# Regex for extracting relevant info from the onclick function in the links
+pattern = r"""<a href="#" onclick="showCourse\('(?P<catoid>\d+)', '(?P<coid>\d+)',this, '(?P<display_options>.+)'\); return false;">(?P<crn>.*)\.(?P<name>.*)<\/a>"""
+
+for link in links:
+    output = re.search(pattern, unicode(link)) # match regex to link
+
+    #access using:
+    catoid = output.group('catoid')
+    coid = output.group('coid')
+    display_options = output.group('display_options')
+
+    #need to request url based on output catoid, coid and display_options
+    course_url = 'http://catalog.swarthmore.edu/ajax/preview_course.php?catoid={}&coid={}&display_options={}&show'.format(catoid, coid, display_options)
+    print course_url
+    #format http://catalog.swarthmore.edu/ajax/preview_course.php?catoid=7&coid=7746&display_options=a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:4:~4085~;}&show
 
 
-courses = []
+# IN PROGRESS:
+'''courses = []
 course = {}
-for sibling in course_soup:
-    #print sibling
+pre = False # for keeping track of prereqs
+for sibling in links:
     if sibling.name == "h5":
         # First half of class data
-
         if not course:
             #new class
             title_string = unicode(sibling.contents[1]) # a string with format "CPSC 068. Bioinformatics"
@@ -72,7 +89,7 @@ for sibling in course_soup:
             course['name'] =  name
             course['dept'] = dept
             course['crn'] = crn
-        
+
             if 'First-Year Seminar:' in name:
                 course['FYS'] = True
             else:
@@ -92,22 +109,26 @@ for sibling in course_soup:
             course = {}
 
     if sibling.name == "p":
+        #print sibling
+        #print '______'
+        #for element in sibling.contents:
+            #print element
         # Second half of class data
-
-        # Look for keys in strings
         for string in sibling.stripped_strings:
+            # Look for keys in strings
             if 'Lab work required' in string:
-                #print 'lab = true'
                 course['lab'] = True
             if 'Natural sciences and engineering practicum' in string:
-                #print 'NSEP = true'
                 course['NSEP'] = True
             if 'Writing course' in string:
-                #print 'writing = true'
                 course['writing'] = True
             if 'credit.' in string and not 'COGS' in string:
-                #print string.split()[0] + ' credit'
                 course['credit'] = float(string.split()[0])
+            if 'No prerequisites' in string:
+                course['prereqs'] = 'None'
+
+        sibling_string = str(sibling)
+        print "____begin____" + sibling_string + "____end____"
 
         # If key not found in strings, then trait does not apply
         if course.get('lab') == None:
@@ -119,13 +140,13 @@ for sibling in course_soup:
         if course.get('credit') == None:
             course['credit'] = 'N/A'
 
+
         # save
         courses.append(course)
 
         # reset
         course = {}
 
-            # still need to figure out how to deal with prerequisites
         # [u'(Cross-listed as ', <a href="http://www.swarthmore.edu/cc_linguisti
         # cs.xml#LING_020">BIOL</a>, u' 068)', <br/>, u' This course is an intro
         # duction to the fields of bioinformatics and computational biology, wit
@@ -141,4 +162,4 @@ for sibling in course_soup:
         # ml#CPSC_035">CPSC 035</a>, u' required.', <br/>, u' Lab work required.
         # ', <br/>, u' 1 credit.', <br/>, u' Fall 2014. Soni.']
 #with open("classes.json", 'w') as outfile:
-print json.dumps(courses, indent = 2, separators=(',', ': '))
+#print json.dumps(courses, indent = 2, separators=(',', ': '))'''
