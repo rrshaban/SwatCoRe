@@ -38,128 +38,198 @@
 #   "First Year Seminar": false
 # } ]
 
-
 # Pretty regex: <a href="#" onclick="showCourse\('(?<catoid>\d+)', '(?<coid>\d+)',this, '(?<display_options>.+)'\); return false;">(?<crn>.*)&nbsp;(?<name>.*)<\/a>
-#import html.parser
+
 import re
 import json
 import lxml.html
 from bs4 import BeautifulSoup
 import requests
 
-# Top level values, these don't change.
-url = 'http://www.swarthmore.edu/college-catalog/biology'
-response = requests.get(url)
-soup = BeautifulSoup(response.content, 'lxml')
-
-# Find all links to a course
-links = soup.find_all("a", onclick=re.compile("showCourse.*"))
-
+# Top level values: these don't change.
+#
+# Url to source page
+url = 'http://www.swarthmore.edu/college-catalog/computer-science'
 # Regex for extracting relevant info from the onclick function in the links
 pattern = r"""<a href="#" onclick="showCourse\('(?P<catoid>\d+)', '(?P<coid>\d+)',this, '(?P<display_options>.+)'\); return false;">(?P<crn>.*)\.(?P<name>.*)<\/a>"""
 
-for link in links:
-    output = re.search(pattern, unicode(link)) # match regex to link
+# Returns a list of course object attributes
+def get_course_objects(url):
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, 'lxml')
 
-    #access using:
-    catoid = output.group('catoid')
-    coid = output.group('coid')
-    display_options = output.group('display_options')
+    # Find all links to a course
+    object_attributes = soup.find_all("a", onclick=re.compile("showCourse.*"))
 
-    #need to request url based on output catoid, coid and display_options
-    course_url = 'http://catalog.swarthmore.edu/ajax/preview_course.php?catoid={}&coid={}&display_options={}&show'.format(catoid, coid, display_options)
-    print course_url
-    #format http://catalog.swarthmore.edu/ajax/preview_course.php?catoid=7&coid=7746&display_options=a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:4:~4085~;}&show
+    return object_attributes
 
+# Processes a list of object attributes and returns a list of the format:
+#       [
+#           [ crn,
+#             department,
+#             name,
+#             url ]
+#       ]
+def get_urls(object_attributes):
+    course_urls = []
+    #links = links[1] # Comment to run one course only
 
-# IN PROGRESS:
-'''courses = []
-course = {}
-pre = False # for keeping track of prereqs
-for sibling in links:
-    if sibling.name == "h5":
-        # First half of class data
-        if not course:
-            #new class
-            title_string = unicode(sibling.contents[1]) # a string with format "CPSC 068. Bioinformatics"
-            dept = title_string.split()[0]
-            crn = title_string.split()[1][:-1] # to remove period
-            name = ' '.join(title_string.split()[2:]) # to join remaining words into the course name
+    for course in object_attributes:
+        output = re.search(pattern, unicode(course)) # match regex to link
 
-            course['name'] =  name
-            course['dept'] = dept
-            course['crn'] = crn
+        # access using:
+        catoid = output.group('catoid')
+        coid = output.group('coid')
+        display_options = output.group('display_options')
+        crn = output.group('crn')
+        name = output.group('name')
 
-            if 'First-Year Seminar:' in name:
-                course['FYS'] = True
-            else:
-                course['FYS'] = False
+        # Request url based on the regex groups catoid, coid and display_options
+        # Format: http://catalog.swarthmore.edu/ajax/preview_course.php?catoid=7&coid=7746&display_options=a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:4:~4085~;}&show
+        course_url = 'http://catalog.swarthmore.edu/ajax/preview_course.php?catoid={}&coid={}&display_options={}&show'.format(catoid, coid, display_options)
 
+        # Separate the CRN from the Department
+        # TODO: Check this works
+        dept = crn.split()[0]
+        crn = crn.split()[1]
+
+        # Add course info and url the list of urls
+        course_urls.append([crn, name, dept, course_url])
+
+    return course_urls
+
+# Scrapes a single course page for all relevant information and returns course
+# data in a dictionary that can be easily converted to json.
+# Note: course_url is of the same format as that of the get_urls() function.
+def scrape(course_url):
+    # Set up the course object with known values
+    course = {}
+    course['crn'] = course_url[0]
+    course['dept'] = course_url[1]
+    course['name'] = course_url[2]
+    if 'First-Year Seminar:' in course_url[2]:
+        course['FYS'] = True
+    else:
+        course['FYS'] = False
+
+    # Scrape!
+    course_response = requests.get(course_url[3])
+    course_soup = BeautifulSoup(course_response.content, 'lxml')
+    course_tag = course_soup.find('div', class_="ajaxcourseindentfix", style=False)
+    strings = course_tag.stripped_strings
+
+    # Get description
+    description = ""
+    flip = True
+    start = course_soup.find_all('hr')[0]
+    end = start.find_next('br')
+    current = start.next_sibling
+    while current != end:
+        if current.name == 'a':
+            description += current.string
+        elif current.name == 'span':
+            pass
         else:
-            # a class exists with no description, save to output
-            course['lab'] = 'N/A'
-            course['NSEP'] = 'N/A'
-            course['writing'] = 'N/A'
-            course['credit'] = 'N/A'
+            description += unicode(current)
+        current = current.next_sibling
 
-            # save
-            courses.append(course)
+    course['description'] = description
 
-            # reset
-            course = {}
-
-    if sibling.name == "p":
-        #print sibling
-        #print '______'
-        #for element in sibling.contents:
-            #print element
-        # Second half of class data
-        for string in sibling.stripped_strings:
-            # Look for keys in strings
-            if 'Lab work required' in string:
-                course['lab'] = True
-            if 'Natural sciences and engineering practicum' in string:
-                course['NSEP'] = True
-            if 'Writing course' in string:
-                course['writing'] = True
-            if 'credit.' in string and not 'COGS' in string:
-                course['credit'] = float(string.split()[0])
+    # Get lab, NSEP, writing, credit and prereqs
+    for string in strings:
+        # Look for keywords in strings
+        if 'Lab work required' in string:
+            course['lab'] = True
+        if 'Natural sciences and engineering practicum' in string:
+            course['NSEP'] = True
+        if 'Writing course' in string:
+            course['writing'] = True
+        if 'credit.' in string and not 'COGS' in string:
+            course['credit'] = float(string.split()[0])
+        if 'prerequisite' in string:
             if 'No prerequisites' in string:
                 course['prereqs'] = 'None'
+            else:
+                # Add regex for extracting names of prereqs
+                pass
 
-        sibling_string = str(sibling)
-        print "____begin____" + sibling_string + "____end____"
+    # If keywords not found in strings, then trait does not apply
+    if course.get('lab') == None:
+        course['lab'] = False
+    if course.get('NSEP') == None:
+        course['NSEP'] = False
+    if course.get('writing') == None:
+        course['writing'] = False
+    if course.get('credit') == None:
+        course['credit'] = 'N/A'
+    if course.get('prereqs') == None:
+        course['prereqs'] = 'N/A'
+    if course.get('description') == None:
+        course['description'] = 'N/A'
 
-        # If key not found in strings, then trait does not apply
-        if course.get('lab') == None:
-            course['lab'] = False
-        if course.get('NSEP') == None:
-            course['NSEP'] = False
-        if course.get('writing') == None:
-            course['writing'] = False
-        if course.get('credit') == None:
-            course['credit'] = 'N/A'
+    return course
+
+# Brings together all scraping data and returns a finished json object
+def create_json(course_urls):
+    pass
 
 
-        # save
-        courses.append(course)
+'''
+    if 'First-Year Seminar:' in name:
+        course['FYS'] = True
+    else:
+        course['FYS'] = False
 
-        # reset
-        course = {}
+    for string in descendants:
+        # Look for keys in strings
+        if 'Lab work required' in string:
+            course['lab'] = True
+        if 'Natural sciences and engineering practicum' in string:
+            course['NSEP'] = True
+        if 'Writing course' in string:
+            course['writing'] = True
+        if 'credit.' in string and not 'COGS' in string:
+            course['credit'] = float(string.split()[0])
+        if 'No prerequisites' in string:
+            course['prereqs'] = 'None'
 
-        # [u'(Cross-listed as ', <a href="http://www.swarthmore.edu/cc_linguisti
-        # cs.xml#LING_020">BIOL</a>, u' 068)', <br/>, u' This course is an intro
-        # duction to the fields of bioinformatics and computational biology, wit
-        # h a central focus on algorithms and their application to a diverse set
-        # of computational problems in molecular biology. Computational themes w
-        # ill include dynamic programming, greedy algorithms, supervised learnin
-        # g and classification, data clustering, trees, graphical models, data m
-        # anagement, and structured data representation. Applications will inclu
-        # de genetic sequence analysis, pairwise-sequence alignment, phylogeneti
-        # c trees, motif finding, gene-expression analysis, and protein-structur
-        # e prediction. No prior biology experience is necessary.', <br/>, u' Pr
-        # erequisite: ', <a href="http://www.swarthmore.edu/cc_computerscience.x
-        # ml#CPSC_035">CPSC 035</a>, u' required.', <br/>, u' Lab work required.
-        # ', <br/>, u' 1 credit.', <br/>, u' Fall 2014. Soni.']
-#with open("classes.json", 'w') as outfile:
-#print json.dumps(courses, indent = 2, separators=(',', ': '))'''
+    # If key not found in strings, then trait does not apply
+    if course.get('lab') == None:
+        course['lab'] = False
+    if course.get('NSEP') == None:
+        course['NSEP'] = False
+    if course.get('writing') == None:
+        course['writing'] = False
+    if course.get('credit') == None:
+        course['credit'] = 'N/A'
+
+    # save
+    courses.append(course)
+
+    # reset
+    print course
+    course = {}
+
+
+
+    # [u'(Cross-listed as ', <a href="http://www.swarthmore.edu/cc_linguisti
+    # cs.xml#LING_020">BIOL</a>, u' 068)', <br/>, u' This course is an intro
+    # duction to the fields of bioinformatics and computational biology, wit
+    # h a central focus on algorithms and their application to a diverse set
+    # of computational problems in molecular biology. Computational themes w
+    # ill include dynamic programming, greedy algorithms, supervised learnin
+    # g and classification, data clustering, trees, graphical models, data m
+    # anagement, and structured data representation. Applications will inclu
+    # de genetic sequence analysis, pairwise-sequence alignment, phylogeneti
+    # c trees, motif finding, gene-expression analysis, and protein-structur
+    # e prediction. No prior biology experience is necessary.', <br/>, u' Pr
+    # erequisite: ', <a href="http://www.swarthmore.edu/cc_computerscience.x
+    # ml#CPSC_035">CPSC 035</a>, u' required.', <br/>, u' Lab work required.
+    # ', <br/>, u' 1 credit.', <br/>, u' Fall 2014. Soni.']
+    #with open("classes.json", 'w') as outfile:
+    #print json.dumps(courses, indent = 2, separators=(',', ': '))'''
+
+
+attributes = get_course_objects(url)
+urls = get_urls(attributes)
+scrape(urls[0])
