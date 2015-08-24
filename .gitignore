@@ -18,3 +18,9 @@
 
 # Ignore .env file
 *.env
+
+#Ignore Sass Cache
+.sass-cache/*
+
+#Ignore ruby version
+.ruby-version

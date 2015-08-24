@@ -4,9 +4,9 @@
   <h3>Departments</h3>
   <% @departments.each do |dept| %>
     <% d = Department.find(dept.searchable_id) %>
-    
+
     <%= link_to d do %>
-      <ul>
+      <ul class="search-result-wrap">
         <li class="department name"><%= d.name %></li>
       </ul>
     <% end %>
@@ -20,9 +20,9 @@
   <h3>Professors</h3>
   <% @professors.each do |prof| %>
     <% p = Professor.find(prof.searchable_id) %>
-    
+
     <%= link_to p do %>
-      <ul>
+      <ul class="search-result-wrap">
         <li class="professor name"><%= p.name %></li>
       </ul>
     <% end %>
