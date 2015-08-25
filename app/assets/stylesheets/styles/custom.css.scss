@@ -93,7 +93,7 @@ ul{
   text-transform: uppercase;
   padding: 14px !important;
   margin-bottom: 10px;
-  color: white !important; 
+  color: white !important;
   &:hover{
     background-color: rgba(0, 66, 55, 0.7) !important;
     color: white !important;
@@ -123,7 +123,7 @@ textarea, input{
   &:focus{
     border-color: $green;
     outline-style: none;
-  } 
+  }
 }
 
 select {
@@ -138,10 +138,30 @@ select {
   &:focus{
     border-color: $green !important;
     outline-style: none !important;
-  } 
+  }
 }
 ::-ms-expand {
   display: none;
+}
+
+.nav-drop-img{
+  background: url(nav_drop.png) no-repeat;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  margin-right: 30px;
+  padding: 0;
+  float: right;
+  display: none;
+}
+
+@media (max-width: 844px){
+  .navbar-nav{
+    display: none;
+  }
+  .nav-drop-img{
+    display: block;
+  }
 }
 
 /* header */
@@ -150,7 +170,7 @@ select {
   border-bottom: 1px $gray-lighter solid;
   a{
     &:hover, &:active &:visited{
-      color: black !important; 
+      color: black !important;
       background: none;
     }
   }
@@ -291,7 +311,7 @@ aside {
   }
   label{
     padding-left: 0;
-  } 
+  }
   input[type="text"]{
     margin-top: 0;
   }
@@ -358,7 +378,7 @@ input[type="file"]{
   }
   h3{
     margin: 10px 0 35px 0 ;
-    font-weight: bold; 
+    font-weight: bold;
   }
  }
 
