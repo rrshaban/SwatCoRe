@@ -45,7 +45,7 @@
 
 <div class="row">
   <div class="col-md-8">
-    <% if @course.reviews.any? %>  
+    <% if @course.reviews.any? %>
       <h3>Reviews (<%= @course.reviews.count %>)</h3>
       <ol class="reviews">
         <%= render @reviews %>
@@ -54,7 +54,7 @@
     <% else %>
       <h3>No reviews yet for this class :( </h3>
     <% end %>
-    <% if @hidden > 0 %> 
+    <% if @hidden > 0 %>
       <%= pluralize(@hidden, "review") %> will be published after grades are released.
     <% end %>
   </div>

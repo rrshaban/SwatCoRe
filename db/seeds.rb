@@ -304,3 +304,17 @@ prof_parse.each{ |p|
 		(Professor.find_by(name: p['key'])).update(name: p['name'])
 	end
 }
+
+# Razi's suggestion: Course.where(crn: "ANCH042")[0].update(name: "Democratic Athens (W)")
+more_class_info = File.read(File.dirname(__FILE__) + '/classes.json')
+class_info_list = JSON.parse(more_class_info)
+
+class_info_list.each{ |course|
+  updating_course = Course.find_by(crn: (course['dept'] + course['crn']))
+  if updating_course
+    updating_course.update(name: course['name'],
+    fys: course['FYS'], credit: course['credit'], lab: course['lab'],
+    writing: course['writing'], description: course['description'])
+    # prereqs: course['prereqs'], nsep: course['NSEP']
+  end
+}

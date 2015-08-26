@@ -4,6 +4,7 @@
 #       does it have a lab?
 #       how many credit hours does it fulfill?
 #       what are the prerequisite classes? (if any?)
+#       does it qualify for Natural Science and Engineering Practicum?
 #
 # Plan of action: from this url http://www.swarthmore.edu/college-catalog
 #       go through every department page,
@@ -27,15 +28,16 @@
 #
 # Desired json output:
 # [ {
-#   "Course Name": "Bioinformatics",
-#   "Department": "CPSC",
-#   "Course ID": 068,
-#   "Prerequisites": ["http://
+#   "name": "Bioinformatics",
+#   "dept": "CPSC",
+#   "crn": 068,
+#   "prereqs": ["http://
 #                     www.swarthmore.edu/cc_computerscience.xml#CPSC_035"],
-#   "Credits": 1.0,
-#   "Writing Class": false,
-#   "Laboratory": true,
-#   "First Year Seminar": false
+#   "credit": 1.0,
+#   "writing": false,
+#   "lab": true,
+#   "FYS": false,
+#   "NSEP": false
 # } ]
 
 import re
@@ -57,7 +59,7 @@ departments = ['Arabic',
 'Art',
 'Asian-Studies'
 'Biology',
-'Black-Studies', # This link doesn't wo
+'Black-Studies',
 'Chemistry-And-Biochemistry',
 'Chinese',
 'Classics',
@@ -96,6 +98,7 @@ departments = ['Arabic',
 
 # Returns a list of department pages
 def get_department_urls():
+    # For scraping the department urls - currently doesnt work for some reason
     '''catalog_response = requests.get(catalog)
     soup = BeautifulSoup(catalog_response.content, 'lxml')
 
@@ -108,6 +111,8 @@ def get_department_urls():
         if match:
             dept_url = root + match.group(1)
             department_urls.append(dept_url)'''
+
+    # Using the manual department input
     department_urls = []
     for dept in departments:
         department_urls.append('http://www.swarthmore.edu/college-catalog/' + dept)
@@ -179,6 +184,17 @@ def scrape(course_url):
     strings = course_tag.stripped_strings
 
     # In progress: finding descriptions
+    # This is very simplistic and will not properly populate course descriptions
+    # that have links or paragraph breaks. However, it is a decent solution for now.
+    i = 0
+    for string in strings:
+        if i == 1:
+            course['description'] = string
+            break
+        else:
+            i += 1
+
+    # Other possible method:
     '''# Get description
     description = ""
     flip = True
@@ -228,6 +244,12 @@ def scrape(course_url):
             '''else:
                 match = re.search('(\w{4} \d{3}))', string)'''
 
+        # To catch courses that are crosslisted and don't have descriptions
+        # The other course will have (Cross-listed as ... , so it will not be caught
+        if '(See' in string:
+            course['description'] = 'N/A'
+
+
 
     # If keywords not found in strings, then trait does not apply
     if course.get('lab') == None:
@@ -243,6 +265,9 @@ def scrape(course_url):
     if course.get('description') == None:
         course['description'] = 'N/A'
 
+    print course
+    print ''
+    print ''
     return course
 
 # Brings together all scraping data and returns a finished json object

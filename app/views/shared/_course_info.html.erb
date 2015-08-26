@@ -7,20 +7,12 @@
 	<%= @course.description ? @course.description : "No description found for this class."%> <br /><br />
 </div>
 
-<div class="test-show">
-	<% if @course.fys %>
-	   fys: true
-	<% end %>
-	<% if @course.lab %>
-	   lab: true
-	<% end %>
-	<% if @course.writing %>
-	   writing: true
-	<% end %>
-	<% if @course.credit %>
-	   credit: <%= @course.credit %>
-	<% end %>
-</div>
+<!div class="test-show">
+	   <!fys: <%= @course.fys %>
+	   <!| lab: <%= @course.lab %>
+	   <!| writing: <%= @course.writing %>
+	   <!| credit: <%= @course.credit %>
+<!/div>
 <% if current_user.admin? %>
   <%= link_to 'Edit this course', [:edit, @course] %>
   <%= link_to 'Destroy', @course, method: :delete, data: { confirm: 'Are you sure?' } %>
