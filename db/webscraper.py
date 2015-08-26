@@ -4,6 +4,7 @@
 #       does it have a lab?
 #       how many credit hours does it fulfill?
 #       what are the prerequisite classes? (if any?)
+#       does it qualify for Natural Science and Engineering Practicum?
 #
 # Plan of action: from this url http://www.swarthmore.edu/college-catalog
 #       go through every department page,
@@ -27,15 +28,16 @@
 #
 # Desired json output:
 # [ {
-#   "Course Name": "Bioinformatics",
-#   "Department": "CPSC",
-#   "Course ID": 068,
-#   "Prerequisites": ["http://
+#   "name": "Bioinformatics",
+#   "dept": "CPSC",
+#   "crn": 068,
+#   "prereqs": ["http://
 #                     www.swarthmore.edu/cc_computerscience.xml#CPSC_035"],
-#   "Credits": 1.0,
-#   "Writing Class": false,
-#   "Laboratory": true,
-#   "First Year Seminar": false
+#   "credit": 1.0,
+#   "writing": false,
+#   "lab": true,
+#   "FYS": false,
+#   "NSEP": false
 # } ]
 
 import re
