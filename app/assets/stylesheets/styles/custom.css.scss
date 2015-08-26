@@ -33,11 +33,12 @@ textarea {
     margin-bottom: 10px;
   }
 }
-
-.container{
-  max-width: 1024px;
-  padding-left: 3rem;
-  padding-right: 3rem;
+@media (max-width: 844px){
+  .container{
+    max-width: 1024px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 /* typography */
@@ -91,7 +92,6 @@ ul{
   background-color: $green;
   border-radius: 3px;
   border:none;
-  text-transform: uppercase;
   padding: 14px !important;
   margin-bottom: 10px;
   color: white !important;
