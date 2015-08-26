@@ -314,7 +314,7 @@ class_info_list.each{ |course|
   if updating_course
     updating_course.update(name: course['name'],
     fys: course['FYS'], credit: course['credit'], lab: course['lab'],
-    writing: course['writing'])# description: course['description'],
+    writing: course['writing'], description: course['description'])
     # prereqs: course['prereqs'], nsep: course['NSEP']
   end
 }
