@@ -4,38 +4,37 @@
       <h3 class="logo"><em>Swat</em>CourseReview.</h1>
     <% end %>
     <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <% if user_signed_in? %>
-          <li><%= link_to "Search", search_path %></li>
-        <% end %>
-        <li><%= link_to "Help", help_path %></li>
+    <div class="nav-drop-img"></div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Home", root_path %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to "Search", search_path %></li>
+      <% end %>
+      <li><%= link_to "Help", help_path %></li>
 
-        <% if user_signed_in? %>
-          <li><%= link_to "Leaderboard", karma_path %></li>
-          <!-- <li><%#= link_to "Users", users_path %></li> -->
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Account <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-              <li><%= link_to "My Profile", user_path(current_user) %></li>
-              <li class="divider"></li>
-              <li>
-                <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-              </li>
-            </ul>
-          </li>
+      <% if user_signed_in? %>
+        <li><%= link_to "Leaderboard", karma_path %></li>
+        <!-- <li><%#= link_to "Users", users_path %></li> -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Account <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+            <li><%= link_to "My Profile", user_path(current_user) %></li>
+            <li>
+              <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+            </li>
+          </ul>
+        </li>
 
-        <% else %>
+      <% else %>
 
-          <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li>
-          <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
+        <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li>
+        <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
 
-        <% end %>
-      </ul>
-      <div class="nav-drop-img"></div>
+      <% end %>
+    </ul>
     </nav>
   </div>
 </header>
