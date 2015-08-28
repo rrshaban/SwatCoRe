@@ -33,10 +33,12 @@ textarea {
     margin-bottom: 10px;
   }
 }
-
-.container{
-  max-width: 1024px;
-  padding: 0;
+@media (max-width: 844px){
+  .container{
+    max-width: 1024px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 /* typography */
@@ -90,10 +92,9 @@ ul{
   background-color: $green;
   border-radius: 3px;
   border:none;
-  text-transform: uppercase;
   padding: 14px !important;
   margin-bottom: 10px;
-  color: white !important; 
+  color: white !important;
   &:hover{
     background-color: rgba(0, 66, 55, 0.7) !important;
     color: white !important;
@@ -123,7 +124,7 @@ textarea, input{
   &:focus{
     border-color: $green;
     outline-style: none;
-  } 
+  }
 }
 
 select {
@@ -138,22 +139,72 @@ select {
   &:focus{
     border-color: $green !important;
     outline-style: none !important;
-  } 
+  }
 }
 ::-ms-expand {
   display: none;
 }
 
-/* header */
-.header{
-  background-color: white;
-  border-bottom: 1px $gray-lighter solid;
-  a{
-    &:hover, &:active &:visited{
-      color: black !important; 
-      background: none;
+.navbar-nav{
+  li a{
+      color: black !important;
+      background: white;
+      line-height: 2em;
+      &:hover{
+        opacity: .6;
+      }
+  }
+}
+
+.nav-drop-img{
+  background: url(nav_drop.png) no-repeat;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  margin-right: 30px;
+  padding: 0;
+  float: right;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 844px){
+  .navbar-nav{
+    display: none;
+    width: 30%;
+    position: absolute;
+    top: 43px;
+    background-color: white;
+    border: $lightest-gray 1px solid;
+    right: 54px;
+      li{
+        border-bottom: 1px solid $lightest-gray;
+        width: 100%;
+        &:last-child{
+          border: 0;
+        }
+      }
+  }
+  .nav-drop-img{
+    display: block;
+  }
+}
+
+.navbar-inverse{
+  .navbar-nav{
+    .open{
+      a{
+        background: white !important;
+        color: black !important;
+      }
     }
   }
+}
+
+/* header */
+.header{
+  background: white;
+  border-bottom: 1px $gray-lighter solid;
   .dropdown-toggle{
     color: $gray;
     background: none;
@@ -291,7 +342,7 @@ aside {
   }
   label{
     padding-left: 0;
-  } 
+  }
   input[type="text"]{
     margin-top: 0;
   }
@@ -358,7 +409,7 @@ input[type="file"]{
   }
   h3{
     margin: 10px 0 35px 0 ;
-    font-weight: bold; 
+    font-weight: bold;
   }
  }
 
