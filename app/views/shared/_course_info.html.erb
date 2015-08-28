@@ -9,16 +9,16 @@
 
 <div class="test-show">
 	<% if @course.fys %>
-	   fys: true
+	   FYS <br />
 	<% end %>
 	<% if @course.lab %>
-	   lab: true
+	   Lab class <br />
 	<% end %>
 	<% if @course.writing %>
-	   writing: true
+	   Writing course <br />
 	<% end %>
 	<% if @course.credit %>
-	   credit: <%= @course.credit %>
+	   <%= @course.credit %> credits <br />
 	<% end %>
 </div>
 <% if current_user.admin? %>
