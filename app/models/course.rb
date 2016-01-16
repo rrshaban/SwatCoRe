@@ -18,6 +18,9 @@ class Course < ActiveRecord::Base
     #:size => { :in => 0..1.megabytes }                        # MAX SIZE 1MB -- but it's breaking things :/
   before_post_process :syllabus
 
+  # this should turn crn into a list?
+  serialize :crn, Array
+
   # MODEL HIERARCHY
   has_many :reviews, dependent: :destroy
   has_one :professor
