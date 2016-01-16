@@ -18,15 +18,6 @@
 # @user.save!
 # @user.confirm!
 
-# @razi = User.new(name:    "Razi Shaban",
-#                 email:    "rshaban1@swarthmore.edu",
-#                 password: "password") # y'all clowns if you think I'm putting
-#                                       # my password on github
-# @razi.skip_confirmation_notification!
-# @razi.save!
-# @razi.confirm!
-
-
 require 'json'
 fall14 = File.read(File.dirname(__FILE__) + '/fall2014.json')
 spring15 = File.read(File.dirname(__FILE__) + '/spring2015.json')
@@ -284,18 +275,6 @@ reviewList['results'].each{ |review|
 }
 
 
-# Course.all.each{ |course|
-#   3.times do
-#   content = Faker::Lorem.sentence(3)
-#   course.reviews.create!(content: content,
-#                               department_id:  course.department_id,
-#                               professor_id:   course.professor_id,
-#                               user: User.find_by(id: 1),
-#                               clarity: 3,
-#                               intensity: 3,
-#                               worthit: 3)
-#   end
-# }
 corrected_prof_names = File.read(File.dirname(__FILE__) + '/professors.json')
 prof_parse = JSON.parse(corrected_prof_names)
 
