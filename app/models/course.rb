@@ -18,6 +18,10 @@ class Course < ActiveRecord::Base
     #:size => { :in => 0..1.megabytes }                        # MAX SIZE 1MB -- but it's breaking things :/
   before_post_process :syllabus
 
+  # Serialize CRNs as an Array. 
+  before_create :check_serialized
+  serialize :crn      #, Array   # <- if we force this, we can't migrate from str->[]
+
   # MODEL HIERARCHY
   has_many :reviews, dependent: :destroy
   has_one :professor
@@ -96,5 +100,11 @@ class Course < ActiveRecord::Base
       }
     end
   end
+
+  private
+    def check_serialized
+      # Checking that CRN is saved as an array and not a string
+      self.crn = [self.crn]
+    end
   
 end

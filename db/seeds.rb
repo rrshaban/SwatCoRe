@@ -5,26 +5,26 @@
 #
 
 
-name  = "parse swattie"
-email = "parse@swarthmore.edu"
-password = ENV['PARSE_PASSWORD']
-password ||= "password"
-@user = User.new(name:              name,
-             email:                 email,
-             password:              password)
+# name  = "parse swattie"
+# email = "parse@swarthmore.edu"
+# password = ENV['PARSE_PASSWORD']
+# password ||= "password"
+# @user = User.new(name:              name,
+#              email:                 email,
+#              password:              password)
 
-# so we don't accidentally spam Swarthmore again
-@user.skip_confirmation_notification!
-@user.save!
-@user.confirm!
+# # so we don't accidentally spam Swarthmore again
+# @user.skip_confirmation_notification!
+# @user.save!
+# @user.confirm!
 
-@razi = User.new(name:    "Razi Shaban",
-                email:    "rshaban1@swarthmore.edu",
-                password: "password") # y'all clowns if you think I'm putting
-                                      # my password on github
-@razi.skip_confirmation_notification!
-@razi.save!
-@razi.confirm!
+# @razi = User.new(name:    "Razi Shaban",
+#                 email:    "rshaban1@swarthmore.edu",
+#                 password: "password") # y'all clowns if you think I'm putting
+#                                       # my password on github
+# @razi.skip_confirmation_notification!
+# @razi.save!
+# @razi.confirm!
 
 
 require 'json'
