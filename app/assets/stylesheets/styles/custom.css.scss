@@ -89,19 +89,19 @@ ul{
 
 .btn{
   font-size: 16px;
-  background-color: $green;
+  background-color: $dark-turquoise;
   border-radius: 3px;
   border:none;
   padding: 14px !important;
   margin-bottom: 10px;
   color: white !important;
   &:hover{
-    background-color: rgba(0, 66, 55, 0.7) !important;
+    background-color: $turquoise !important;
     color: white !important;
   }
   &:visited, &:active, &:focus{
     color: white;
-    background-color: $green !important;
+    background-color: $dark-turquoise;
   }
 }
 
@@ -122,7 +122,7 @@ textarea, input{
   padding: 5px;
   margin: 15px 0 30px 0;
   &:focus{
-    border-color: $green;
+    border-color: $dark-turquoise;
     outline-style: none;
   }
 }
@@ -137,7 +137,7 @@ select {
   background: url(dropdown_sm.png) no-repeat 98% 50%;
   border-radius: 0px;
   &:focus{
-    border-color: $green !important;
+    border-color: $dark-turquoise !important;
     outline-style: none !important;
   }
 }
@@ -218,7 +218,7 @@ select {
     line-height:50px;
     font-weight: bold;
     em{
-      color: $green;
+      color: $dark-turquoise;
       font-style: normal;
     }
     &:hover {
@@ -298,7 +298,7 @@ aside {
     line-height: 35px;
   }
   em{
-    color: $green;
+    color: $dark-turquoise;
     font-style: normal;
     font-weight: bold;
   }
@@ -323,7 +323,7 @@ aside {
     }
     tr{
       h3{
-        color: $green;
+        color: $dark-turquoise;
         font-weight: bold;
       }
     }
@@ -437,7 +437,7 @@ input {
 }
 
 .alert-notice, .alert-alert{
-  color: $green;
+  color: $dark-turquoise;
   background: rgba(0, 102, 85, 0.15);
 }
 
@@ -535,7 +535,7 @@ input {
     }
   }
   .helpful{
-    color: $green;
+    color: $dark-turquoise;
     font-weight: bold;
   }
   .gravatar {
