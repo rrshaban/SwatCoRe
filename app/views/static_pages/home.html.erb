@@ -1,38 +1,17 @@
 <div class="center homepage">
   <h1>Swat Course Review.</h1>
+  <%= image_tag "pic_main.svg", id: "banner" %>
+  <br>
 
-  <% if not user_signed_in? %>  
+  <% if not user_signed_in? %>
   <%############   NOT SIGNED IN  #######################%>
     <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary home-signup" %>
-    
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+
      <ul class="reviews text-left">
       <h3 class="text-left">Featured Review</h3>
-      <%= link_to @top.course do %>
-          <div class="class name"><%= fa_icon "file-pdf-o" if @top.course.syllabus? %><%= @top.course.name %> (<%= @top.course.prof_name %>) </div>
-          <%= render @top %>
-      <% end %>
     </ul>
-    <br />
-    <br />
 
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <%= render "about" %>
+    <%= render "landing" %>
 
   <% else %>
 
@@ -45,7 +24,7 @@
     <h3 id="or">OR</h3>
     <%= link_to "Browse by Department", departments_path, class: "btn btn-lg btn-primary" %>
     <%= link_to "Browse by Professor", professors_path, class: "btn btn-lg btn-primary" %>
-    
+
 
     <!-- <div class="col-md-8"> -->
     <div class="home-review row">
@@ -77,7 +56,6 @@
         </ul>
       </div>
     </div>
-
 
   <% end %>
 

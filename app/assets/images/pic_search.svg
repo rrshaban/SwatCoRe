@@ -1,0 +1,116 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.54 142.18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #414042;
+      }
+
+      .cls-2 {
+        fill: #1e1e1e;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: #d1d3d4;
+      }
+
+      .cls-5 {
+        fill: #1bbcbb;
+      }
+
+      .cls-6 {
+        fill: #dcb427;
+      }
+
+      .cls-7 {
+        fill: #fdddc9;
+      }
+
+      .cls-8 {
+        fill: #231f20;
+      }
+
+      .cls-9 {
+        fill: #3c2415;
+      }
+
+      .cls-10 {
+        fill: #ffdc25;
+      }
+
+      .cls-11 {
+        fill: #f04e59;
+      }
+
+      .cls-12 {
+        fill: #efefef;
+      }
+    </style>
+  </defs>
+  <title>pic_search</title>
+  <circle class="cls-1" cx="69.41" cy="56.94" r="40"/>
+  <path class="cls-2" d="M159.32,387.48l-55.15,44.37s19,11.75,42.42-5.55C146.59,426.3,165.57,410.65,159.32,387.48Z" transform="translate(-51.16 -338.98)"/>
+  <circle class="cls-3" cx="69.41" cy="56.94" r="33.2"/>
+  <rect class="cls-1" x="67.36" y="94.85" width="4.09" height="9.67"/>
+  <rect class="cls-1" x="64.51" y="108.18" width="9.79" height="34"/>
+  <rect class="cls-2" x="69.41" y="108.18" width="4.33" height="34"/>
+  <rect class="cls-4" x="43.15" y="56.29" width="21.51" height="17.33" rx="6.63" ry="6.63"/>
+  <path class="cls-4" d="M96,407.75s-0.77,5.44-2.42,6.1a16.63,16.63,0,0,1,6-1.51" transform="translate(-51.16 -338.98)"/>
+  <rect class="cls-4" x="115.82" y="377.19" width="28.97" height="20.58" rx="7.45" ry="7.45" transform="translate(209.46 435.98) rotate(180)"/>
+  <path class="cls-4" d="M144.25,383.19s1-6,2.65-6.68a18.21,18.21,0,0,1-6.56,1.65" transform="translate(-51.16 -338.98)"/>
+  <circle class="cls-5" cx="19.78" cy="96.18" r="19.78"/>
+  <g>
+    <ellipse class="cls-3" cx="19.78" cy="96.18" rx="13.23" ry="11.1"/>
+    <g>
+      <path class="cls-6" d="M69.29,446l-1.58,2.58s2.68,1.49,4.31.65L71,446S69.63,445.43,69.29,446Z" transform="translate(-51.16 -338.98)"/>
+      <path class="cls-7" d="M81.61,439.08s-6.56.72-10.67,0.72-10.67-.72-10.67-0.72a1.14,1.14,0,0,1-1.14-1.14v-5a1.14,1.14,0,0,1,1.14-1.14s6.69,0.42,10.52.42c3.64,0,10.83-.42,10.83-0.42A1.14,1.14,0,0,1,82.75,433v5A1.14,1.14,0,0,1,81.61,439.08Z" transform="translate(-51.16 -338.98)"/>
+      <g>
+        <circle class="cls-8" cx="14.29" cy="95.7" r="0.78"/>
+        <circle class="cls-8" cx="25.26" cy="95.7" r="0.78"/>
+      </g>
+      <ellipse class="cls-9" cx="18.78" cy="109.82" rx="0.38" ry="0.4"/>
+      <g>
+        <path class="cls-10" d="M78.44,426.31a8.19,8.19,0,0,0,2.37-5.43s2.11,2,2.11,4-2.24,2.89-2.24,2.89Z" transform="translate(-51.16 -338.98)"/>
+        <path class="cls-10" d="M63.45,426.31a8.19,8.19,0,0,1-2.37-5.43s-2.11,2-2.11,4,2.24,2.89,2.24,2.89Z" transform="translate(-51.16 -338.98)"/>
+      </g>
+      <path class="cls-10" d="M67.72,448.57a11.66,11.66,0,0,1,4.31.65l-0.87-3a2.83,2.83,0,0,0-1.94-.09Z" transform="translate(-51.16 -338.98)"/>
+      <g>
+        <path class="cls-1" d="M65.62,425s-1.28,4.23,2.74,3.74c0.91-.11,1.19-1.53,3.49-1.3s0.46-3.28.46-3.28A15.83,15.83,0,0,0,65.62,425Z" transform="translate(-51.16 -338.98)"/>
+        <path class="cls-1" d="M59.56,440.83s0.35-.7,2.14.14a3.61,3.61,0,0,1,1.58,1.62,1.09,1.09,0,0,1-.21,1.5A12.67,12.67,0,0,1,59.56,440.83Z" transform="translate(-51.16 -338.98)"/>
+        <path class="cls-1" d="M81.63,428.62s-1.24.71-.74,1.29,1,0,1.31.63a1,1,0,0,0,1,.54A10.88,10.88,0,0,0,81.63,428.62Z" transform="translate(-51.16 -338.98)"/>
+        <path class="cls-1" d="M73.47,446.05s-2.11-3.37.64-2.63c0.62,0.17.61,0.92,1.68,0.43s0.82-.55,1.57-0.89A1.18,1.18,0,0,1,78.9,444,14.41,14.41,0,0,1,73.47,446.05Z" transform="translate(-51.16 -338.98)"/>
+      </g>
+    </g>
+  </g>
+  <circle class="cls-10" cx="120.81" cy="19.73" r="19.73"/>
+  <g>
+    <rect class="cls-3" x="182.12" y="342.99" width="0.42" height="2.43" transform="translate(-258.2 -5.65) rotate(-60.49)"/>
+    <rect class="cls-8" x="179.38" y="345.36" width="3.81" height="1.38" transform="translate(-260.33 -5.62) rotate(-60.49)"/>
+    <polygon class="cls-8" points="128.78 8.27 127.04 7.29 126.79 7.73 131.27 10.26 131.51 9.82 129.98 8.95 128.78 8.27"/>
+    <rect class="cls-8" x="175.26" y="349.48" width="6.62" height="2.76" transform="translate(-265.9 -5.55) rotate(-60.49)"/>
+    <g>
+      <rect class="cls-3" x="181.84" y="344.62" width="0.39" height="0.39" transform="translate(-138.44 -276.14) rotate(-15.85)"/>
+      <rect class="cls-3" x="181.32" y="345.56" width="0.39" height="0.39" transform="translate(-138.72 -276.24) rotate(-15.85)"/>
+      <rect class="cls-3" x="180.81" y="346.49" width="0.39" height="0.39" transform="translate(-138.99 -276.35) rotate(-15.85)"/>
+    </g>
+    <g>
+      <ellipse class="cls-5" cx="121.15" cy="20.28" rx="13.2" ry="11.07"/>
+      <polygon class="cls-5" points="111.49 12.74 108.15 8.69 105.7 11.24 110.61 13.63 111.49 12.74"/>
+      <polygon class="cls-5" points="110.61 13.63 105.7 12.51 105.7 14.37 109.84 14.57 110.61 13.63"/>
+    </g>
+    <path class="cls-7" d="M183,363.17s-6.54.71-10.65,0.71-10.65-.71-10.65-0.71a1.14,1.14,0,0,1-1.13-1.13V357.1a1.14,1.14,0,0,1,1.13-1.13s6.67,0.42,10.49.42c3.63,0,10.8-.42,10.8-0.42a1.14,1.14,0,0,1,1.13,1.13V362A1.14,1.14,0,0,1,183,363.17Z" transform="translate(-51.16 -338.98)"/>
+    <g>
+      <circle class="cls-8" cx="115.67" cy="19.8" r="0.78"/>
+      <circle class="cls-8" cx="126.62" cy="19.8" r="0.78"/>
+    </g>
+    <polygon class="cls-8" points="116.45 18.6 116.77 18.18 114 17.69 113.61 18.15 116.45 18.6"/>
+    <polygon class="cls-8" points="125.67 18.6 125.35 18.18 128.13 17.69 128.51 18.15 125.67 18.6"/>
+  </g>
+  <polygon class="cls-5" points="71.69 50.87 76.19 46.12 80.69 48.5 86.61 46.12 81 50.62 76.33 48.02 71.69 50.87"/>
+  <polygon class="cls-10" points="47.47 67.18 51.35 63.08 55.23 65.13 60.34 63.08 55.51 66.96 51.48 64.72 47.47 67.18"/>
+  <rect class="cls-11" x="60.74" y="104.11" width="17.33" height="4.67"/>
+  <path class="cls-12" d="M148.51,411.62c0.23-.35-32.83,16.16-32.83,16.16S136.8,429.7,148.51,411.62Z" transform="translate(-51.16 -338.98)"/>
+</svg>

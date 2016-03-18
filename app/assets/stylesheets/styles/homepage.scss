@@ -1,0 +1,52 @@
+.homepage{
+  h1{
+    text-align: center;
+    font-size: 60px;
+    padding: 55px 0 40px 0;
+  }
+
+  #banner {
+    width: 75em;
+    height: 25em;
+    padding: 0 15% 0 0;
+    @media (max-width: 991px) {
+      width: 50em;
+      height: 25em;
+    }
+    @media (max-width: 730px) {
+      width: 40em;
+      height: 25em;
+    }
+    @media (max-width: 600px) {
+      padding: 0 25% 0 0;
+    }
+  }
+
+  #or{
+    padding: 10px 0 30px 0;
+  }
+  .search-by{
+    line-height: 45px;
+  }
+  background: none;
+  .home-signup{
+    margin-top: 50px;
+  }
+  .home-review{
+    margin-top: 100px;
+    li{
+      margin-bottom: 30px;
+    }
+    .class{
+      font-size: 18px;
+    }
+    .active-review{
+      margin-left: 15px;
+      margin-right: -15px;
+    }
+  }
+
+  ul{
+    padding: 0;
+  }
+}
