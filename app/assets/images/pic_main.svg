@@ -69,17 +69,104 @@
       .cls-15 {
         fill: #89c765;
       }
+      <!-- Animate -->
+      @keyframes wobble {
+        0% {
+          -webkit-transform: translateX(38%);
+          -moz-transform: translateX(38%);
+          -ms-transform: translateX(38%);
+          transform: translateX(38%);
+        }
+        50% {
+          -webkit-transform: translate(13%, 25%);
+          -moz-transform: translate(13%, 25%);
+          -ms-transform: translate(13%, 25%);
+          transform: translate(13%, 25%);
+        }
+        100% {
+          -webkit-transform: translateX(38%);
+          -moz-transform: translateX(38%);
+          -ms-transform: translateX(38%);
+          transform: translateX(38%);
+        }
+      }
+      @keyframes bubbling {
+        0% {
+          transform: translateY(-1.7px);
+        }
+        70% {
+          transform: translateY(5px);
+        }
+      }
+      @keyframes flying {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(30deg) scale(0.8, 0.9);
+        }
+        100% {
+          transform: rotate(0deg);
+  }
+      }
+      @keyframes gliding{
+        0% {
+          transform: translate(-15%, 0px);
+        }
+        100% {
+          transform: translate(15%, 80%);
+        }
+      }
+      @keyframes rotate {
+        0%{
+          transform: rotate(20deg);
+        }
+        70%{
+          transform: rotate(40deg);
+        }
+        100%{
+          transform: rotate(20deg);
+        }
+      }
+
+      .bubble-1{
+        animation: bubbling 1.5s alternate ease infinite;
+      }
+      .bubble-2{
+        animation: wobble 3s ease-in-out reverse infinite -2.5s;
+      }
+      .bubble-3{
+        animation: wobble 4s ease-in-out infinite -.5s;
+      }
+      .bubble-4{
+        animation: wobble 2s reverse infinite ease-in-out -.2s;
+      }
+      .yellow-sticky-note{
+        transform-origin: left top;
+        animation: rotate 2.5s reverse infinite ease-in-out -.2s;
+      }
+      .plane{
+        transform-origin: left top;
+        animation: flying 4s forwards ease-in-out infinite;
+      }
+      .plane-container {
+        width: 200px;
+        margin: 0px auto;
+        z-index: 3;
+        animation: gliding 4s alternate infinite;
+      }
+
     </style>
   </defs>
   <title>pic_main</title>
   <path class="cls-1" d="M146.34,292.39H127.6c-5.62,0,12.6-39,12.6-39V242.57H136.8c-1.87-2.32,0-5.16,0-5.16h19.42s1.87,2.84,0,5.16h-3.41v10.84s18.23,39,12.6,39H146.34Z" transform="translate(-25.11 -131.88)"/>
   <path class="cls-2" d="M138.15,263.84s-8.1,21.72-8.1,26.25H163c0-4.53-8.1-26.25-8.1-26.25" transform="translate(-25.11 -131.88)"/>
-  <circle class="cls-2" cx="125.07" cy="131.59" r="1.67"/>
-  <circle class="cls-3" cx="117.29" cy="149.73" r="2.14"/>
-  <circle class="cls-3" cx="112.84" cy="142.58" r="1.15"/>
-  <circle class="cls-3" cx="117.69" cy="138.67" r="0.5"/>
+  <circle class="cls-2 bubble-1" cx="125.07" cy="131.59" r="1.67"/>
+  <circle class="cls-3 bubble-2" cx="117.29" cy="149.73" r="2.14"/>
+  <circle class="cls-3 bubble-3" cx="112.84" cy="142.58" r="1.15"/>
+  <circle class="cls-3 bubble-4" cx="117.69" cy="138.67" r="0.5"/>
   <path class="cls-4" d="M158.25,273.3S163,285.56,163,290.09H146.24" transform="translate(-25.11 -131.88)"/>
-  <g>
+  <g class="monitor">
     <rect class="cls-1" x="139.93" y="115.61" width="160.5" height="19.83" rx="4" ry="4"/>
     <rect class="cls-5" x="139.93" y="28.93" width="160.5" height="89.59" rx="4" ry="4"/>
     <path class="cls-6" d="M245.29,254.73" transform="translate(-25.11 -131.88)"/>
@@ -93,10 +180,12 @@
   <rect class="cls-8" x="82.79" y="160.9" width="276.29" height="3.21" rx="1.61" ry="1.61"/>
   <rect class="cls-2" x="252.69" y="128.78" width="14.95" height="14.95"/>
   <rect class="cls-9" x="162.69" y="128.78" width="14.95" height="14.95"/>
-  <rect class="cls-10" x="274.09" y="128.78" width="14.95" height="14.95"/>
-  <path class="cls-11" d="M302.91,266.2a0.1,0.1,0,0,0-.06.17l0.08,0a0.21,0.21,0,0,0,.23-0.18,0.16,0.16,0,0,0-.22-0.15,0.13,0.13,0,0,0,.05.23" transform="translate(-25.11 -131.88)"/>
-  <path class="cls-11" d="M310.52,265.78a0.18,0.18,0,0,0-.33.06,0.18,0.18,0,0,0,.31.1,0.17,0.17,0,0,0-.23-0.22" transform="translate(-25.11 -131.88)"/>
-  <path class="cls-11" d="M304.83,267.3a3.13,3.13,0,0,0,3.27-.11,1.05,1.05,0,0,1,.31-0.17" transform="translate(-25.11 -131.88)"/>
+  <g class="yellow-sticky-note">
+    <rect class="cls-10 sticky-note" x="274.09" y="128.78" width="14.95" height="14.95"/>
+    <path class="cls-11" d="M302.91,266.2a0.1,0.1,0,0,0-.06.17l0.08,0a0.21,0.21,0,0,0,.23-0.18,0.16,0.16,0,0,0-.22-0.15,0.13,0.13,0,0,0,.05.23" transform="translate(-25.11 -131.88)"/>
+    <path class="cls-11" d="M310.52,265.78a0.18,0.18,0,0,0-.33.06,0.18,0.18,0,0,0,.31.1,0.17,0.17,0,0,0-.23-0.22" transform="translate(-25.11 -131.88)"/>
+    <path class="cls-11" d="M304.83,267.3a3.13,3.13,0,0,0,3.27-.11,1.05,1.05,0,0,1,.31-0.17" transform="translate(-25.11 -131.88)"/>
+  </g>
   <rect class="cls-2" x="313.19" y="98.15" width="16.9" height="62.75"/>
   <polyline class="cls-4" points="329.99 135.49 313.19 160.9 329.99 160.9"/>
   <rect class="cls-3" x="317.01" y="104.9" width="9.26" height="43.68"/>
@@ -106,24 +195,30 @@
   <polyline class="cls-12" points="346.83 126.12 330.04 160.9 346.83 160.9"/>
   <rect class="cls-3" x="333.81" y="101.63" width="9.26" height="46.23"/>
   <ellipse class="cls-3" cx="338.44" cy="155.04" rx="2.93" ry="3.17"/>
-  <polygon class="cls-10" points="63.21 5.19 123.48 0 74.86 15.1 63.21 5.19"/>
-  <polygon class="cls-13" points="74.86 15.1 74.51 23.38 123.48 0 74.86 15.1"/>
-  <polyline class="cls-10" points="92.2 29.72 79.06 19.7 123.48 0"/>
-  <polygon class="cls-14" points="74.51 23.38 79.06 19.7 81.48 21.54 74.51 23.38"/>
-  <path class="cls-11" d="M97.06,163.89" transform="translate(-25.11 -131.88)"/>
-  <path class="cls-11" d="M25.29,165.2l2.5,1" transform="translate(-25.11 -131.88)"/>
-  <path class="cls-11" d="M32.79,169.22l3,0.55" transform="translate(-25.11 -131.88)"/>
-  <path class="cls-11" d="M41.29,171.7h3" transform="translate(-25.11 -131.88)"/>
-  <path class="cls-11" d="M49.31,172.29l2.49-.52" transform="translate(-25.11 -131.88)"/>
-  <path class="cls-11" d="M55.82,168.23l2-1.5" transform="translate(-25.11 -131.88)"/>
-  <path class="cls-11" d="M60.73,161.14A4.8,4.8,0,0,0,62,157.69" transform="translate(-25.11 -131.88)"/>
-  <path class="cls-11" d="M58.31,152.69a6.11,6.11,0,0,0-3-3.46" transform="translate(-25.11 -131.88)"/>
-  <path class="cls-11" d="M49.2,149.54a5.42,5.42,0,0,0-2.34,3.17" transform="translate(-25.11 -131.88)"/>
-  <path class="cls-11" d="M50.12,158.64a2.39,2.39,0,0,0,2.17,2.94" transform="translate(-25.11 -131.88)"/>
-  <path class="cls-11" d="M58.79,164.2h4" transform="translate(-25.11 -131.88)"/>
-  <path class="cls-11" d="M70.8,164.18a18.24,18.24,0,0,0,6.56-.79" transform="translate(-25.11 -131.88)"/>
-  <path class="cls-11" d="M84.76,160.79a4.1,4.1,0,0,0,4.72-1.46" transform="translate(-25.11 -131.88)"/>
-  <g>
+  <g class='plane-container'>
+    <g class="plane">
+      <polygon class="cls-10" points="63.21 5.19 123.48 0 74.86 15.1 63.21 5.19"/>
+      <polygon class="cls-13" points="74.86 15.1 74.51 23.38 123.48 0 74.86 15.1"/>
+      <polyline class="cls-10" points="92.2 29.72 79.06 19.7 123.48 0"/>
+      <polygon class="cls-14" points="74.51 23.38 79.06 19.7 81.48 21.54 74.51 23.38"/>
+    </g>
+  </g>
+  <!-- <g class='plane-path'>
+    <path class="cls-11" d="M97.06,163.89" transform="translate(-25.11 -131.88)"/>
+    <path class="cls-11" d="M25.29,165.2l2.5,1" transform="translate(-25.11 -131.88)"/>
+    <path class="cls-11" d="M32.79,169.22l3,0.55" transform="translate(-25.11 -131.88)"/>
+    <path class="cls-11" d="M41.29,171.7h3" transform="translate(-25.11 -131.88)"/>
+    <path class="cls-11" d="M49.31,172.29l2.49-.52" transform="translate(-25.11 -131.88)"/>
+    <path class="cls-11" d="M55.82,168.23l2-1.5" transform="translate(-25.11 -131.88)"/>
+    <path class="cls-11" d="M60.73,161.14A4.8,4.8,0,0,0,62,157.69" transform="translate(-25.11 -131.88)"/>
+    <path class="cls-11" d="M58.31,152.69a6.11,6.11,0,0,0-3-3.46" transform="translate(-25.11 -131.88)"/>
+    <path class="cls-11" d="M49.2,149.54a5.42,5.42,0,0,0-2.34,3.17" transform="translate(-25.11 -131.88)"/>
+    <path class="cls-11" d="M50.12,158.64a2.39,2.39,0,0,0,2.17,2.94" transform="translate(-25.11 -131.88)"/>
+    <path class="cls-11" d="M58.79,164.2h4" transform="translate(-25.11 -131.88)"/>
+    <path class="cls-11" d="M70.8,164.18a18.24,18.24,0,0,0,6.56-.79" transform="translate(-25.11 -131.88)"/>
+    <path class="cls-11" d="M84.76,160.79a4.1,4.1,0,0,0,4.72-1.46" transform="translate(-25.11 -131.88)"/>
+  </g> -->
+  <g class="tree">
     <ellipse class="cls-15" cx="220.18" cy="74.06" rx="17.32" ry="16.92"/>
     <g>
       <path class="cls-16" d="M245.86,202.13a4.68,4.68,0,0,0-.06,1.39,31.68,31.68,0,0,1-.08,4.34" transform="translate(-25.11 -131.88)"/>
