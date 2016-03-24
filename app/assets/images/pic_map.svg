@@ -39,6 +39,22 @@
         stroke-miterlimit: 10;
         stroke-width: 4px;
       }
+      <!-- Animate -->
+      @keyframes wobble {
+        0% {
+          transform: rotate(-25deg);
+        }
+        50% {
+          transform: rotate(5deg);
+        }
+        100% {
+          transform: rotate(-25deg);
+        }
+      }
+      .compass-needle{
+        transform-origin: center center;
+        animation: wobble 3s ease infinite -1.5s;
+      }
     </style>
   </defs>
   <title>pic_map</title>
@@ -51,8 +67,10 @@
   <circle class="cls-5" cx="27.09" cy="123.59" r="22.48"/>
   <path class="cls-6" d="M87.08,704c0.17-.27-20.55,11.08-20.55,11.08S78.18,717.77,87.08,704Z" transform="translate(-42.58 -572)"/>
   <rect class="cls-4" x="22.52" y="89.24" width="9.28" height="4.09"/>
-  <polygon class="cls-7" points="29.45 124.84 27.38 123.58 25.31 122.32 30.65 115.87 35.98 109.41 32.72 117.12 29.45 124.84"/>
-  <polygon class="cls-8" points="25.72 122.49 27.4 123.51 29.09 124.54 23.95 131.11 18.8 137.68 22.26 130.08 25.72 122.49"/>
+  <g class="compass-needle">
+    <polygon class="cls-7" points="29.45 124.84 27.38 123.58 25.31 122.32 30.65 115.87 35.98 109.41 32.72 117.12 29.45 124.84"/>
+    <polygon class="cls-8" points="25.72 122.49 27.4 123.51 29.09 124.54 23.95 131.11 18.8 137.68 22.26 130.08 25.72 122.49"/>
+  </g>
   <path class="cls-4" d="M73.19,657.28l3.72-6c1.7-2.74-2.62-5.25-4.32-2.52l-3.72,6c-1.7,2.74,2.62,5.25,4.32,2.52h0Z" transform="translate(-42.58 -572)"/>
   <path class="cls-4" d="M82.58,648.46a15.7,15.7,0,0,1,4.76-2c3.12-.76,1.8-5.58-1.33-4.82a20.15,20.15,0,0,0-6,2.52c-2.72,1.71-.21,6,2.52,4.32h0Z" transform="translate(-42.58 -572)"/>
   <path class="cls-4" d="M95,645.84a16.19,16.19,0,0,1,6.66.94c3,1.09,4.34-3.74,1.33-4.82a19.92,19.92,0,0,0-8-1.12c-3.2.21-3.22,5.21,0,5h0Z" transform="translate(-42.58 -572)"/>
