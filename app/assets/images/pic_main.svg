@@ -146,7 +146,7 @@
         animation: rotate 2.5s reverse infinite ease-in-out -.2s;
       }
       .plane{
-        transform-origin: left top;
+        transform-origin: top;
         animation: flying 4s forwards ease-in-out infinite;
       }
       .plane-container {
