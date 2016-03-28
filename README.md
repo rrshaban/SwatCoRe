@@ -6,11 +6,14 @@ Want to contribute? Contact swatcoreteam@gmail.com or submit an issue/pull reque
 
 ##Troubleshoot:
 ####Starting postgres
-postgres -D /usr/local/var/postgres
+`postgres -D /usr/local/var/postgres`
+
+####No file postmaster.pid
+`pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start`
 
 ####Starting server
 If you see this:
-	`start_tcp_server': no acceptor,
+	`start_tcp_server: no acceptor`,
 do this:
-	ps ax | grep rails
-	kill -9 [x]
+	`ps ax | grep rails
+	kill -9 [x]`
