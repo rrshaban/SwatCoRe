@@ -1,7 +1,7 @@
 <div class="user_signup row">
   <div class="col-sm-5 col-sm-offset-1 col-xs-8 col-xs-offset-2">
     <h1>Sign up</h1>
-
+    <h4>Unlock <%= pluralize(Review.count, "review") %> and <%= pluralize(Course.where.not(syllabus_uploader: nil).count, "syllabus") %> from Swatties.</h4>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
 
