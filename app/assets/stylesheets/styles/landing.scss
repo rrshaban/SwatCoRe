@@ -1,20 +1,26 @@
 .landing {
-
+  margin-top: 10em;
   .feature-banner {
     overflow: auto;
   }
 
-  #features {
+  .landing-pic {
     width: 25em;
     height: 20em;
   }
 
-  #features-alt {
-    width: 25em;
-    height: 20em;
-  }
+  .description{
+    padding-top: 4em;
+    .description-title{
+      font-size: 28px;
+      line-height: 120%;
 
-  .description {
-    text-align: center;
+    }
+    .description-text {
+      text-align: center;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: lighter;
+    }
   }
 }
