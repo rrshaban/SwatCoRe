@@ -3,16 +3,16 @@
     <h1>Log in</h1>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="field">
+      <div class="login">
         <%= f.email_field :email, autofocus: true, placeholder:"Your Swatmail" %>
-    
+
         <%= f.password_field :password, autocomplete: "off", placeholder:"Password" %>
 
         <% if devise_mapping.rememberable? -%>
         <div class="row">
            <%= f.check_box :remember_me, class: "col-xs-1"%>
            <%= f.label :remember_me, class: "col-xs-5" %>
-        </div>             
+        </div>
         <% end -%>
         <%= f.submit "Log in", class: "btn btn-primary" %>
       <% end %>

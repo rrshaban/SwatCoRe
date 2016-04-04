@@ -352,7 +352,7 @@ aside {
 .search-field{
   input[type="text"]{
     font-size: 16px;
-    padding: 14px !important;
+    padding: 16px !important;
     margin-bottom: 10px;
     margin-right: -2px;
   }
@@ -438,7 +438,7 @@ input {
 
 .alert-notice, .alert-alert{
   color: $dark-turquoise;
-  background: rgba(0, 102, 85, 0.15);
+  background: $light-gray;
 }
 
 .checkbox {
