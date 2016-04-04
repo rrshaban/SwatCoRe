@@ -45,11 +45,11 @@
     <%= hidden_field_tag 'review[course_id]', @course.id %>
     <%= hidden_field_tag 'review[professor_id]', @course.professor_id %>
     <%= hidden_field_tag 'review[department_id]', @course.department_id %>
-    
+
     <%= f.text_area :content, placeholder: "Write new review...", rows: "8" %>
 
     <%= check_box("review", "hidden", {}, true, false) %>
-    <%= f.label "Delay until grades are in" %>
+    <%= f.label "Delay until grades are in"%>
 
     <%= f.submit "Post your review", class: "btn btn-primary" %>
   </div>

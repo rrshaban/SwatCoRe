@@ -87,6 +87,13 @@ ul{
   list-style: none;
 }
 
+label{
+  font-weight: normal;
+  color: $gray !important;
+  font-size: 13px;
+
+}
+
 .btn{
   font-size: 16px;
   background-color: $dark-turquoise;
@@ -105,7 +112,7 @@ ul{
   }
 }
 
-input
+//input
 
 a{
   &:visited{
@@ -125,6 +132,13 @@ textarea, input{
     border-color: $dark-turquoise;
     outline-style: none;
   }
+}
+
+input[type="file"]{
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-right: -2px;
 }
 
 select {
@@ -309,14 +323,14 @@ aside {
   table{
     margin: 0 auto;
     border-collapse: separate;
-    border: solid 2px $gray-light;
+    border: solid 2px $light-gray;
     border-radius: 3px ;
     width: 85%;
     max-width: 300px;
     height: 90px;
     table-layout: fixed;
     td{
-      border-left:  solid 2px $gray-light;
+      border-left:  solid 2px $light-gray;
       &:first-child{
         border:none;
       }
@@ -358,12 +372,6 @@ aside {
   }
 }
 
-input[type="file"]{
-  font-size: 16px;
-  padding: 14px !important;
-  margin-bottom: 10px;
-  margin-right: -2px;
-}
 
 .field{
   padding: 10px 20px;
