@@ -115,13 +115,12 @@ label{
 //input
 
 a{
+  background: none;
   &:visited{
-    color: $gray-lighter;
-    background: none !important;
+    color: $light-gray;
   }
   &:focus{
     color: black !important;
-    background: none !important;
   }
 }
 
