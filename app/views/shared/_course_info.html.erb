@@ -1,5 +1,5 @@
 <h1 class="text-left"><%= @course.name %></h1>
-<h3><%= @course.crn %></h3>
+<h3><%= @course.crn.to_sentence %></h3>
 
 <p><%= @course.prof_name %> | <%= @course.dept_name %> | <em><%= @course.reviews.count %></em> Reviews</p>
 
