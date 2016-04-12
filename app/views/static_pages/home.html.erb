@@ -33,11 +33,10 @@
         <ul class="reviews text-left">
           <% @recent.each do |review| %>
             <%= link_to review.course do %>
-              <ul>
-                <div class="class name"><%= fa_icon "file-pdf-o" if review.course.syllabus? %><%= review.course.name %> (<%= review.course.prof_name %>) </div>
-                <%= render review %>
-              </ul>
+              <div class="name"><%= fa_icon "file-pdf-o" if review.course.syllabus? %> <%= review.course.name %></div>
             <% end %>
+            <div class="name">(<%= review.course.prof_name%>)</div>
+            <%= render review %>
           <% end %>
 
         </ul>
@@ -47,11 +46,10 @@
         <ul class="reviews text-left">
           <% @active.each do |review| %>
             <%= link_to review.course do %>
-              <ul>
-                <div class="class name"><%= fa_icon "file-pdf-o" if review.course.syllabus? %><%= review.course.name %> (<%= review.course.prof_name %>) </div>
-                <%= render review %>
-              </ul>
+                <div class="name"><%= fa_icon "file-pdf-o" if review.course.syllabus? %><%= review.course.name %></div>
             <% end %>
+            <div class="name">(<%= review.course.prof_name %>)</div>
+            <%= render review %>
           <% end %>
         </ul>
       </div>
