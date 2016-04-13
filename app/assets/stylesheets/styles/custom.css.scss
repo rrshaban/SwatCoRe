@@ -518,8 +518,13 @@ input {
     }
   }
   .name{
+    color: $turquoise !important;
     font-weight: bold !important;
     line-height: 30px;
+    display: inline-block;
+    &:hover{
+      text-decoration: underline;
+    }
   }
   .ratings{
     line-height: 30px;
@@ -531,9 +536,13 @@ input {
   i{
     margin-right: 4px;
   }
+
   a{
     .vcount{
       margin: 0 !important; //this is really ugly, just a quick fix.
+    }
+    &:hover{
+      color: $dark-turquoise !important;
     }
   }
   .vote{
