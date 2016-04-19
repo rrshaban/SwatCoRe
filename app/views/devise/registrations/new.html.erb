@@ -1,22 +1,25 @@
 <div class="user_signup row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-sm-5 col-sm-offset-1 col-xs-8 col-xs-offset-2">
     <h1>Sign up</h1>
-
+    <h4>Unlock <%= pluralize(Review.count, "review") %> and <%= pluralize(Course.where.not(syllabus_uploader: nil).count, "syllabus") %> from Swatties.</h4>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
 
-      <div class="field">
+      <div>
         <%= f.text_field :name, autofocus: true, placeholder: "Your Name" %>
         <%= f.email_field :email, autofocus: true, placeholder: "Your Swatmail" %>
         <% if @validatable %>
-        <%= f.password_field :password, autocomplete: "off", placeholder: "Password ("+ @minimum_password_length.to_s + " characters minimum)"%>  
+        <%= f.password_field :password, autocomplete: "off", placeholder: "Password ("+ @minimum_password_length.to_s + " characters minimum)"%>
         <% end %>
-        <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Re-enter Password" %> 
+        <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Re-enter Password" %>
         <%= f.submit "Sign up", class:"btn btn-primary" %>
       </div>
 
     <% end %>
 
     <%= render "devise/shared/links" %>
+  </div>
+  <div class="col-sm-5 col-sm-offset-1 col-xs-8 col-xs-offset-2">
+    <%= image_tag "pic_signup.svg", id: "signup_pic", class: "col-sm-4 pic img-responsive" %>
   </div>
 </div>

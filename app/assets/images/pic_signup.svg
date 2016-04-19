@@ -1,0 +1,44 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.44 74.9">
+	<defs>
+		<style>
+			.cls-1{
+				fill: #e6e7e8;
+			}
+			.cls-2{
+				fill: #1cbbbb;
+			}
+			.cls-3{
+				fill: #ef4e58;
+			}
+			.cls-4{
+				fill: none;
+				stroke: #414042;
+				stroke-miterlimit: 10;
+				stroke-width: 4px;
+			}
+			.cls-5{
+				fill: #ffdc25;
+			}
+			.cls-6{
+				fill: #dcb427;
+			}
+			.cls-7{
+				fill: #be9d2f;
+			}
+		</style>
+	</defs>
+	<title>pic_signup</title>
+	<rect class="cls-1" x="488.1" y="441.17" width="45.07" height="32.01" rx="12.86" ry="12.86" transform="translate(567.71 474.25) rotate(180)"/>
+	<path class="cls-1" d="M532.31,450.49s1.58-9.37,4.12-10.39a28.32,28.32,0,0,1-10.2,2.57" transform="translate(-453.56 -440.1)"/>
+	<polygon class="cls-2" points="45.47 20.77 52.47 13.38 59.47 17.07 68.68 13.38 59.96 20.38 52.7 16.34 45.47 20.77"/>
+	<rect class="cls-1" x="1.08" y="29.2" width="33.46" height="26.95" rx="9.9" ry="9.9"/>
+	<path class="cls-1" d="M457.33,488.7s-1.19,8.47-3.77,9.49a25.87,25.87,0,0,1,9.32-2.35" transform="translate(-453.56 -440.1)"/>
+	<polygon class="cls-3" points="7.8 46.13 13.84 39.75 19.88 42.94 27.82 39.75 20.3 45.79 14.04 42.3 7.8 46.13"/>
+	<g class="lock">
+		<path class="cls-4" d="M514.75,474s0.12-5,.38-11c0.14-3.25,3-7.25,10.25-7.25,6.44,0,9.63,3.5,9.63,7.24v27" transform="translate(-453.56 -440.1)"/>
+	</g>
+	<rect class="cls-5" x="49.94" y="42.04" width="44.5" height="32.87"/>
+	<polygon class="cls-6" points="94.44 46.57 55.27 74.9 94.44 74.9 94.44 46.57"/>
+	<polygon id="_Path_" class="cls-7" points="71.19 57.01 74.47 57 75.41 64.91 70.12 64.93 71.19 57.01"/>
+	<circle class="cls-7" cx="526.42" cy="496.35" r="3.35" transform="translate(-512.74 -368.67) rotate(-7.35)"/>
+	</svg>

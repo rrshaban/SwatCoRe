@@ -7,8 +7,21 @@ $(document).ready(function(){
 });
 
 function bind(){
+	readjustText();
 	$(document).on('click', '.nav-drop-img', function(e){
 		e.stopPropagation();
 		$(this).parent().find('.navbar-nav').toggleClass('show');
 	});
+	$(window).resize(function(){
+		readjustText();
+	})
 };
+
+function readjustText(){
+	$this = $(".feature-banner-map");
+	if ($(window).width() < 992){
+		$this.prepend($this.children(".landing-pic"));
+	} else{
+		$this.append($this.children(".landing-pic"));
+	}
+}

@@ -15,7 +15,7 @@ h3{
 }
 a{
     .name{
-      color: $green !important;
+      color: $dark-turquoise !important;
       font-weight: bold;
       font-size: 14px;
     }
@@ -27,7 +27,7 @@ a{
 }
 ul{
   &.search-result-wrap{
-    border: 2px $gray-light solid;
+    border: 2px $light-gray solid;
     border-radius: 3px;
     padding: 15px 25px;
     margin-bottom: 15px;
@@ -43,7 +43,7 @@ ul{
 
 .name{
   a{
-    color: $green !important;
+    color: $dark-turquoise !important;
     font-weight: bold;
     font-size: 14px;
   }

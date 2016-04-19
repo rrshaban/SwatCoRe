@@ -1,0 +1,50 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.46 122.51">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e6e7e8;
+      }
+
+      .cls-2 {
+        fill: #f04e59;
+      }
+
+      .cls-3 {
+        fill: #1bbcbb;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        fill: #ffdc25;
+      }
+      <!-- Animate -->
+       @keyframes sizing{
+        0% {
+          transform: scale(.8, .8);
+        }
+        50% {
+          transform: scale(1, 1);
+        }
+        100% {
+          transform: scale(.8, .8);
+        }
+      }
+      .shield{
+        transform-origin: center center;
+        animation: sizing 4s ease-in-out infinite -1.2s;
+      }
+    </style>
+  </defs>
+  <title>pic_secure</title>
+  <rect class="cls-1" x="8.1" width="96.75" height="76.79" rx="29.1" ry="29.1"/>
+  <path class="cls-1" d="M281.12,407.91s-4.39,24.78-11.12,27.46a77.62,77.62,0,0,1,27.51-6.78" transform="translate(-269.99 -354.04)"/>
+  <polygon class="cls-2" points="27.51 48.95 44.98 30.51 62.45 39.73 85.42 30.51 63.67 47.98 45.55 37.88 27.51 48.95"/>
+  <g class="shield">
+    <path class="cls-3" d="M368.17,476.55c22.55-11.67,29.28-52.78,29.28-52.78l-14.6-14.14H353.49l-14.6,14.14S345.63,464.88,368.17,476.55Z" transform="translate(-269.99 -354.04)"/>
+    <polygon class="cls-4" points="89.54 89.36 86.81 91.96 96.66 101.32 115.34 78.73 112.66 76.79 96.41 96.32 89.54 89.36"/>
+  </g>
+  <path class="cls-5" d="M360.49,379.28" transform="translate(-269.99 -354.04)"/>
+</svg>

@@ -87,34 +87,40 @@ ul{
   list-style: none;
 }
 
+label{
+  font-weight: normal;
+  color: $gray !important;
+  font-size: 13px;
+
+}
+
 .btn{
   font-size: 16px;
-  background-color: $green;
+  background-color: $dark-turquoise;
   border-radius: 3px;
   border:none;
   padding: 14px !important;
   margin-bottom: 10px;
   color: white !important;
   &:hover{
-    background-color: rgba(0, 66, 55, 0.7) !important;
+    background-color: $turquoise !important;
     color: white !important;
   }
   &:visited, &:active, &:focus{
     color: white;
-    background-color: $green !important;
+    background-color: $dark-turquoise;
   }
 }
 
-input
+//input
 
 a{
+  background: none;
   &:visited{
-    color: $gray-lighter;
-    background: none !important;
+    color: $light-gray;
   }
   &:focus{
     color: black !important;
-    background: none !important;
   }
 }
 
@@ -122,9 +128,16 @@ textarea, input{
   padding: 5px;
   margin: 15px 0 30px 0;
   &:focus{
-    border-color: $green;
+    border-color: $dark-turquoise;
     outline-style: none;
   }
+}
+
+input[type="file"]{
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-right: -2px;
 }
 
 select {
@@ -137,7 +150,7 @@ select {
   background: url(dropdown_sm.png) no-repeat 98% 50%;
   border-radius: 0px;
   &:focus{
-    border-color: $green !important;
+    border-color: $dark-turquoise !important;
     outline-style: none !important;
   }
 }
@@ -218,7 +231,7 @@ select {
     line-height:50px;
     font-weight: bold;
     em{
-      color: $green;
+      color: $dark-turquoise;
       font-style: normal;
     }
     &:hover {
@@ -298,7 +311,7 @@ aside {
     line-height: 35px;
   }
   em{
-    color: $green;
+    color: $dark-turquoise;
     font-style: normal;
     font-weight: bold;
   }
@@ -309,21 +322,21 @@ aside {
   table{
     margin: 0 auto;
     border-collapse: separate;
-    border: solid 2px $gray-light;
+    border: solid 2px $light-gray;
     border-radius: 3px ;
     width: 85%;
     max-width: 300px;
     height: 90px;
     table-layout: fixed;
     td{
-      border-left:  solid 2px $gray-light;
+      border-left:  solid 2px $light-gray;
       &:first-child{
         border:none;
       }
     }
     tr{
       h3{
-        color: $green;
+        color: $dark-turquoise;
         font-weight: bold;
       }
     }
@@ -331,7 +344,7 @@ aside {
  }
 
 
-.user_signup, .user_login, .new_course, .new_department, .new_professor{
+.user_login, .new_course, .new_department, .new_professor{
   a{
     &:hover{
       text-decoration: underline;
@@ -348,56 +361,16 @@ aside {
   }
 }
 
-.homepage{
-  h1{
-    text-align: center;
-    font-size: 60px;
-    padding: 55px 0 40px 0;
-  }
-  #or{
-    padding: 10px 0 30px 0;
-  }
-  .search-by{
-    line-height: 45px;
-  }
-  background: none;
-  .home-signup{
-    margin-top: 50px;
-  }
-  .home-review{
-    margin-top: 100px;
-    li{
-      margin-bottom: 30px;
-    }
-    .class{
-      font-size: 18px;
-    }
-    .active-review{
-      margin-left: 15px;
-      margin-right: -15px;
-    }
-  }
-
-  ul{
-    padding: 0;
-  }
-}
 
 .search-field{
   input[type="text"]{
     font-size: 16px;
-    padding: 14px !important;
+    padding: 16px !important;
     margin-bottom: 10px;
     margin-right: -2px;
   }
 }
 
-input[type="file"]{
-  font-size: 16px;
-  padding: 14px !important;
-  margin-bottom: 10px;
-  margin-right: -2px;
-}
 
 .field{
   padding: 10px 20px;
@@ -471,8 +444,8 @@ input {
 }
 
 .alert-notice, .alert-alert{
-  color: $green;
-  background: rgba(0, 102, 85, 0.15);
+  color: $dark-turquoise;
+  background: $light-gray;
 }
 
 .checkbox {
@@ -545,8 +518,13 @@ input {
     }
   }
   .name{
+    color: $turquoise !important;
     font-weight: bold !important;
     line-height: 30px;
+    display: inline-block;
+    &:hover{
+      text-decoration: underline;
+    }
   }
   .ratings{
     line-height: 30px;
@@ -558,9 +536,13 @@ input {
   i{
     margin-right: 4px;
   }
+
   a{
     .vcount{
       margin: 0 !important; //this is really ugly, just a quick fix.
+    }
+    &:hover{
+      color: $dark-turquoise !important;
     }
   }
   .vote{
@@ -569,7 +551,7 @@ input {
     }
   }
   .helpful{
-    color: $green;
+    color: $dark-turquoise;
     font-weight: bold;
   }
   .gravatar {
