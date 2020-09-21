@@ -94,6 +94,7 @@ departments = ['Arabic',
 'Spanish',
 'Theater']
 
+
 # Returns a list of department pages
 def get_department_urls():
     '''catalog_response = requests.get(catalog)
@@ -112,7 +113,6 @@ def get_department_urls():
     for dept in departments:
         department_urls.append('http://www.swarthmore.edu/college-catalog/' + dept)
 
-    print department_urls
     return department_urls
 
 
@@ -173,13 +173,14 @@ def scrape(course_url):
         course['FYS'] = False
 
     # Scrape!
+    print course_url[3]
     course_response = requests.get(course_url[3])
     course_soup = BeautifulSoup(course_response.content, 'lxml')
     course_tag = course_soup.find('div', class_="ajaxcourseindentfix", style=False)
     strings = course_tag.stripped_strings
 
     # In progress: finding descriptions
-    '''# Get description
+    # Get description
     description = ""
     flip = True
     start = course_soup.find_all('hr')[0]
@@ -189,7 +190,7 @@ def scrape(course_url):
     if not isinstance(current, NavigableString):
         description = 'N/A'
     else:
-        while current != end:
+        while current != end and current != None:
             if current.name == 'a':
                 description += current.string
             elif current.name == 'p':
@@ -202,7 +203,7 @@ def scrape(course_url):
                 description += unicode(current)
             current = current.next_sibling
 
-    course['description'] = description'''
+    course['description'] = description
 
     # Get lab, NSEP, writing, credit and prereqs
     for string in strings:
@@ -249,9 +250,10 @@ def scrape(course_url):
 def create_json(course_urls):
     courses = []
     for department in course_urls:
-        for course_url in department:
-            course = scrape(course_url)
-            courses.append(course)
+      for course_url in department:
+        course = scrape(course_url)
+        print course
+        courses.append(course)
 
     with open("classes.json", 'w') as outfile:
         json.dump(courses, outfile, indent = 2, separators=(',', ': '))
